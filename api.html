@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Blogger API Example</title>
+  </head>
+  <body>
+    <div id="content"></div>
+    <script>
+      function handleResponse(response) {
+        document.getElementById("content").innerHTML += "<h1>" + response.title + "</h1>" + response.content;
+      }
+    </script>
+    <!-- <script
+    src="https://www.googleapis.com/blogger/v3/blogs/3213900/posts/8398240586497962757?callback=handleResponse&key=AIzaSyBVaR_6QgTHa1F1NAkHEgh9clSkfZ2mUws"></script> -->
+    <script
+        src="https://www.googleapis.com/blogger/v3/blogs/byurl?url=https://vitfreshers2020.blogspot.com/?callback=handleResponse&key=AIzaSyBVaR_6QgTHa1F1NAkHEgh9clSkfZ2mUws">
+        </script>
+  
+  </body>
+</html>
