@@ -51,7 +51,7 @@ app.post("/",(req,res)=>{
         }
     }
     let ques=req.body.question_area;
-    if(ques.length > 0){
+    if(ques.length!=undefined){
         categories()
         const newQuestion=new question({question:ques,category:cat});
         newQuestion.save()
@@ -81,8 +81,26 @@ app.get("/blog_admin",(req,res)=>{
 
 
 app.post("/i-super-user",(req,res)=>{
-    console.log("I Super User");
-    res.render("i-super-user");
+    let ques=[];
+    // sending full data from data-base
+    question.find(function(err,que){
+        if(err){
+            console.log(err)
+        }
+        else{
+            ques.push(que);
+            console.log(que);
+        }
+    });
+    console.log(ques.length);
+    ques=[{
+        _id: "5f1ba6ec55f1aa1662eae14c",
+        question: 'helloe enfnf nknkenfnenfkee nkwnkwnknnek knwwkkmeol2klem nknkdnfk',
+        category: [ 'Academics', 'Clubs/Teams' ],
+        __v: 0
+    }
+    ];
+    res.render("i-super-user",{all_ques:ques});
 });
 
 

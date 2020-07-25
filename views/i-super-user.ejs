@@ -3,82 +3,66 @@
     <h1>Super-User Panel</h1>
     <table class="table">
         <thead>
-          <tr>
-            <th scope="col">Sr.No</th>
-            <th scope="col">Question</th>
-            <th scope="col">Status</th>
-            <th scope="col">Date</th>
-            <th scope="col">Edit</th>
-        </tr>
+            <tr>
+                <th scope="col">Sr.No</th>
+                <th scope="col">Question</th>
+                <th scope="col">Status</th>
+                <th scope="col">Date</th>
+                <th scope="col">Edit</th>
+                <th scope="col">
+                    <div class="btn btn-light">Delete</div>
+                </th>
+            </tr>
         </thead>
         <tbody>
-          <tr>
-            <th>1</th>
-            <td>How is VIT Chennai??</td>
-            <td>Answered</td>
-            <td>24/7/2020</td>
-            <td>
-                <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter">
-                    Edit
-                  </button>
-                  
-                  <!-- Modal -->
-                  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
+            <tr>
+                <% for (ques of all_ques){ %>
+                <th><%=ques._id%></th>
+                <td><%=ques.question.slice(0,20)%></td>
+                <td><%=ques.category%></td>
+                <td>24/7/2020</td>
+                <td>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal-<%=ques._id%>">
+                        Edit
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="modal-<%=ques._id%>" data-backdrop="static" data-keyboard="false"
+                        tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel"><b>Question: </b><%=ques.question%>
+                                    </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"
+                                        placeholder="Your Answer here" name="question_area"></textarea>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="modal-body">
-                          How is VIT Chennai Campus   ??
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                      </div>
                     </div>
-                  </div>
-            </td>
-          </tr>
-          <tr>
-            <th>1</th>
-            <td>How is VIT Chennai??</td>
-            <td>Answered</td>
-            <td>24/7/2020</td>
-            <td>
-                <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter">
-                    Edit
-                  </button>
-                  
-                  <!-- Modal -->
-                  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                          How is VIT Chennai Campus   ??
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                      </div>
+                    <!--  Modal ends here -->
+                </td>
+                <td>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Remove</label>
                     </div>
-                  </div>
-            </td>
-          </tr>
+                </td>
+            </tr>
+            <tr>
+                <% } %>
         </tbody>
-      </table>
-     <!-- Button trigger modal -->
-</div>
+    </table>
+    <%= all_ques.length %>
 
+</div>
 <%- include('footer') %>
