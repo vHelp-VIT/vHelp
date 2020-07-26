@@ -39,8 +39,13 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"
-                                        placeholder="Your Answer here" name="question_area"></textarea>
+                                    <textarea class="form-control" rows="8"
+                                        placeholder="Your Answer here" name="question_area">
+                                        <% if(ques.answer!="No"){ %>
+                                        <%= ques.answer %>
+                                        <% } %>                                
+                                        <!-- place or write new here -->
+                                    </textarea>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -62,7 +67,5 @@
                 <% } %>
         </tbody>
     </table>
-    <%= all_ques.length %>
-
 </div>
 <%- include('footer') %>
