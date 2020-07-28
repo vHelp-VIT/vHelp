@@ -32,8 +32,8 @@ nav{
     /* transform: scale(0.98); */
 }
 .links{
-    
     color: red;
+    font-size: 20px;
 }
 .card-body {
     /* border: 1px solid blue; */
