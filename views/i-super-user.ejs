@@ -16,7 +16,7 @@
         </thead>
         <tbody>
             <tr>
-                <% for (ques of all_ques){ %>
+                <% for (let ques of all_ques){ %>
                 <th><%=ques._id%></th>
                 <td><%=ques.question%></td>
                 <td><%=ques.category%></td>
@@ -40,7 +40,7 @@
                                 </div>
                                 <div class="modal-body">
                                     <textarea class="form-control" rows="12"
-                                        placeholder="Your Answer here" name="<%=ques._id%>"></textarea>
+                                        placeholder="Your Answer here" name="<%=ques._id%>">"Hello World"</textarea>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

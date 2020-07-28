@@ -9,10 +9,22 @@ app.use(bodyparser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
 
-mongoose.connect("mongodb://localhost:27017/vhelpblog", { useNewUrlParser: true });
+// mongoose.connect("mongodb://localhost:27017/vhelpblog", { useNewUrlParser: true });
 
+var mongo = async ()=>{
+    await mongoose.connect("mongodb+srv://shivansh-12:shivansh@cluster0.vvpfe.mongodb.net/vHelp?retryWrites=true&w=majority", { useNewUrlParser: true,useUnifiedTopology: true  });
+};
+mongo()
 
+// const MongoClient = require('mongodb').MongoClient;
+// const uri = "mongodb+srv://shivansh-12:shivansh12@cluster0.vroy2.mongodb.net/vHelp?retryWrites=true&w=majority";
+// const client = new MongoClient(uri, { useNewUrlParser: true });
+// client.connect(err => {
+// //   const collection = client.db("test").collection("devices");
+// //   // perform actions on the collection object
+// //   client.close();
 const question = mongoose.model('question', { question: String, category: Object, answer: String });
+// });
 
 
 app.get("/", (req, res) => {
@@ -127,17 +139,18 @@ app.post("/i-super-user",async(req, res) => {
         }
     });
     // console.log(reso);
-
     res.render("i-super-user", { all_ques: reso });
 
 });
 
 
+// to update answer from i-super-user in database
 app.post("/i-super-user/:id",(req,res)=>{
     console.log("In update function!!");
     let id = req.params.id;
     // console.log(s)
-    let ans = req.body.answer;
+    
+    let ans = req.body.id;
     console.log(ans);
     console.log(id);
     question.updateOne(
@@ -173,6 +186,7 @@ app.post("/blog_admin", (req, res) => {
 });
 
 
-app.listen(3000, () => {
+var PORT=process.env.PORT || 3000
+app.listen(PORT, () => {
     console.log("Server Running on Port 3000");
 });
