@@ -1,0 +1,21 @@
+.card-body:hover {
+    box-shadow: 0px 2px 4px 0px green;
+    cursor: pointer;
+}
+.list-group-item:hover {
+    box-shadow: 0px 0px 4px 0px green;
+    cursor: pointer;
+    /* transform: scale(0.98); */
+}
+.list-group-item{
+    margin-bottom: 2px;
+}
+.Rate:hover {
+    box-shadow: 0px 0px 4px 0px green;
+}
+.questionSection:hover{
+    box-shadow: 0px 2px 4px 0px green;
+}
+nav{
+    position: fixed;
+}
