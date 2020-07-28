@@ -127,9 +127,36 @@ app.post("/i-super-user",async(req, res) => {
         }
     });
     // console.log(reso);
+
     res.render("i-super-user", { all_ques: reso });
 
 });
+
+
+app.post("/i-super-user/:id",(req,res)=>{
+    console.log("In update function!!");
+    let id = req.params.id;
+    // console.log(s)
+    let ans = req.body.answer;
+    console.log(ans);
+    console.log(id);
+    question.updateOne(
+        {_id:id},
+        {
+            answer:ans
+        },
+        function(err){
+            if(err){
+                console.log(err);
+            }
+            else{
+                console.log("Successfully Updated to db!!");
+            }
+        }
+    )
+    res.redirect(307, "/i-super-user");
+});
+
 
 
 app.post("/blog_admin", (req, res) => {

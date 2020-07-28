@@ -4,9 +4,9 @@
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">Sr.No</th>
+                <th scope="col">Question id</th>
                 <th scope="col">Question</th>
-                <th scope="col">Status</th>
+                <th scope="col">Tags</th>
                 <th scope="col">Date</th>
                 <th scope="col">Edit</th>
                 <th scope="col">
@@ -18,7 +18,7 @@
             <tr>
                 <% for (ques of all_ques){ %>
                 <th><%=ques._id%></th>
-                <td><%=ques.question.slice(0,20)%></td>
+                <td><%=ques.question%></td>
                 <td><%=ques.category%></td>
                 <td>24/7/2020</td>
                 <td>
@@ -39,17 +39,14 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <textarea class="form-control" rows="8"
-                                        placeholder="Your Answer here" name="question_area">
-                                        <% if(ques.answer!="No"){ %>
-                                        <%= ques.answer %>
-                                        <% } %>                                
-                                        <!-- place or write new here -->
-                                    </textarea>
+                                    <textarea class="form-control" rows="12"
+                                        placeholder="Your Answer here" name="<%=ques._id%>"></textarea>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save</button>
+                                    <form action="/i-super-user/<%=ques._id%>" method="POST">
+                                        <button type="Submit" class="btn btn-primary">Save</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
