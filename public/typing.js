@@ -2,7 +2,7 @@
 // typed.js is a required module for this file
 // <!-- credit typed.js: https://github.com/mattboldt/typed.js/ -->
 
-let namaste='Hello Bounjour';
+let namaste='Hello Bounjour नमस्ते';
 // let namaste_french='';
 // let namaste_punjabi='ਸਤ ਸ੍ਰੀ ਅਕਾਲ';
 // let namaste_tamil='வணக்கம்';
