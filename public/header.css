@@ -7,6 +7,9 @@ html {
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
+body {
+    overflow-x: hidden;
+}
 
 .card-body:hover {
     box-shadow: 0px 2px 4px 0px red;
