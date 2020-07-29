@@ -102,11 +102,33 @@ nav {
     font-family: 'Amiri', serif;
     text-shadow: 3px 3px 3px #000000;
 }
+@media (max-width: 640px){
+    
+.tagline {
+    font-size: 30px;
+    
+    }}
+    @media (max-width: 640px){
+#typewriter_text{
+        font-size: 30px;
+        }}
 
+ @media (min-width: 640px){
+    
+.tagline {
+    font-size: 80px;
+}
+     
+    #typewriter_text{
+        font-size: 80px;
+    }
+}
 .brand {
     font-size: 30px;
 }
-
+.navText{
+    color: white;
+}
 .arrow-down {
   width: 0; 
   height: 0;

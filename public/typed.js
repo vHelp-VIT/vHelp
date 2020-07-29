@@ -671,7 +671,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	      if (self.stringsElement) {
 	        self.strings = [];
-	        self.stringsElement.style.display = 'none';
+	        self.stringsElement.style.display = initial;
 	        var strings = Array.prototype.slice.apply(self.stringsElement.children);
 	        var stringsLength = strings.length;
 	
@@ -727,7 +727,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'getCurrentElContent',
 	    value: function getCurrentElContent(self) {
-	      var elContent = '';
+	      var elContent = ' ';
 	      if (self.attr) {
 	        elContent = self.el.getAttribute(self.attr);
 	      } else if (self.isInput) {
@@ -853,7 +853,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @property {string} cursorChar character for cursor
 	   * @property {boolean} autoInsertCss insert CSS for cursor and fadeOut into HTML <head>
 	   */
-	  showCursor: true,
+	  showCursor: false,
 	  cursorChar: '|',
 	  autoInsertCss: true,
 	
