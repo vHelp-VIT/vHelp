@@ -10,7 +10,6 @@ app.set('view engine', 'ejs');
 
 
 // mongoose.connect("mongodb://localhost:27017/vhelpblog", { useNewUrlParser: true });
-
 var mongo = async ()=>{
     await mongoose.connect("mongodb+srv://shivansh-12:shivansh@cluster0.vvpfe.mongodb.net/vHelp?retryWrites=true&w=majority", { useNewUrlParser: true,useUnifiedTopology: true  });
 };

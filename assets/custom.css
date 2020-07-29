@@ -35,6 +35,9 @@ nav{
     color: red;
     font-size: 20px;
 }
+#customHead{
+    background-color: rgb(93, 188, 210,9);
+}
 .card-body {
     /* border: 1px solid blue; */
     box-shadow: 0px 1px 4px 0px black;
