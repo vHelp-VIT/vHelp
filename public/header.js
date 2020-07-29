@@ -1,7 +1,8 @@
 //variables
 let phone640p = window.matchMedia("(max-width: 640px)")
+  
 window.addEventListener("scroll", scrollNav);
-//onclicks
+  //your code here
 
 //onscroll function
 function scrollNav() {
@@ -28,3 +29,12 @@ function scrollNav() {
         //                    document.body.style.marginTop = "300px";
     }
 }
+  $('#formContent').keydown(function(){
+        var data = document.getElementById("formContent").value;
+        console.log("dub db");
+        if(data.length>10){
+            $('#postQuest').css("opacity","1");
+        }if(data.length<10){
+            $('#postQuest').css("opacity","0");
+        }
+    });
