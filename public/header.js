@@ -40,5 +40,6 @@ function scrollNav() {
     });
 //scrolltocontent
 function scrollToContent(){
-   if(!(phone640p.matches)) {document.getElementById("mainContent").scrollIntoView({ behavior: 'smooth', block: 'center' });}
+    document.getElementById("mainContent").scrollIntoView({ behavior: 'smooth', block: 'center' });
+    
 }

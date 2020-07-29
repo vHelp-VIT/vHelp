@@ -121,6 +121,7 @@ nav {
 /*    position: relative;*/
     transition: 0.2s;
     cursor:pointer;
+    transform: scale(2.0);
 }
 @keyframes growShrink{
     from{
