@@ -38,3 +38,7 @@ function scrollNav() {
             $('#postQuest').css("opacity","0");
         }
     });
+//scrolltocontent
+function scrollToContent(){
+   if(!(phone640p.matches)) {document.getElementById("mainContent").scrollIntoView({ behavior: 'smooth', block: 'center' });}
+}

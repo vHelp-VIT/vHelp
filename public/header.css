@@ -106,3 +106,27 @@ nav {
 .brand {
     font-size: 30px;
 }
+
+.arrow-down {
+  width: 0; 
+  height: 0;
+    animation: growShrink;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    margin-left: 49%;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid white;
+/*    position: relative;*/
+    transition: 0.2s;
+    cursor:pointer;
+}
+@keyframes growShrink{
+    from{
+        opacity: 0.2;
+    }
+    to{
+        opacity: 1;
+    }
+}
