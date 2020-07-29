@@ -7,7 +7,7 @@ app.use(bodyparser.urlencoded({ extended: true }));
 
 
 app.set('view engine', 'ejs');
-
+app.use(express.static("public"));
 
 // mongoose.connect("mongodb://localhost:27017/vhelpblog", { useNewUrlParser: true });
 var mongo = async ()=>{

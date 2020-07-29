@@ -10,97 +10,30 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>vHelp Freshers Blog</title>
-       <style>
-        .card-body:hover {
-    box-shadow: 0px 2px 4px 0px red;
-    cursor: pointer;
-    transform: scale(1.01);
-}
-        
-#customHead{
-    background-color: rgba(128, 80, 250,0.0);
-    position: fixed;
-    left:0;
-    top: 0;
-    width:100%;
-    height:60px;
-    z-index:6;
-    color:white;
-/*    font-size:25px;*/
-}
-        
-.list-group-item:hover {
-    box-shadow: 0px 2px 4px 0px red;
-    cursor: pointer;
-    /* transform: scale(0.98); */
-    transform: scale(1.01);
-    border: None;
-}
-.list-group-item{
-    margin-bottom: 2px;
-}
-.Rate:hover {
-    box-shadow: 0px 0px 4px 0px red;
-}
-.questionSection:hover{
-    transform: scale(1.01);
-    box-shadow: 0px 2px 4px 0px red;
-    Border: 1px solid grey;
-}
-.questionSection{
-    box-shadow: 0px 1px 4px 0px black;
-}
-        body{
-            margin-top:80px;
-        }
-nav{
-    position: fixed;
-}
-.list-group {
-    border = 1px solid gray;
-    /* border: 2px solid red; */
-    cursor: pointer;
-    /* transform: scale(0.98); */
-}
-.links{
-    color: red;
-    font-size: 20px;
-}
-.card-body {
-    /* border: 1px solid blue; */
-    border = 1px solid gray;
-    cursor: pointer;
-            transition-duration: 0.5s;
-}
-        .question{
-            transition-duration: 0.5s;
-        }
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        .question:hover {
-            color:rgb(128, 80, 250);
-        }
-        .card-body:hover {
-}
-           .bannerStyle{
-               background-color:rgba(128, 80, 250,0.8);
-               background:url('http://chennai.vit.ac.in/wp-content/uploads/2020/03/campus-banner.jpg');
-           }
-           .tagline{
-               font-size:80px;
-               color:white;
-               font-family:'Amiri',serif;
-           }
-           .brand{
-               font-size:30px;
-           }
-    </style>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">  
+    <title>vHelp Freshers Blog</title>
+
+    <!-- css from public folder -->
+    <link href="header.css" rel="stylesheet">
+
+    <!-- static javascript -->
+    <script src="header.js"></script>
+    
+    <!-- type writer effect -->
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
-    </head>
+</head>
 
 <body>
-    <nav id = "customHead"class="navbar navbar-expand-lg navbar-light">
+    <nav id="customHead" class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="/"><span class="brand">vHelp</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -110,12 +43,13 @@ nav{
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#"><i class="fa fa-home"></i> Home <span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Freshers Blog</a>
+                    <a class="nav-link" href="#"><i class="fa fa-link"></i></i> Freshers Blog</a>
                 </li>
-<!--
+                <!--
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -140,36 +74,7 @@ nav{
                 </li>
             </ul>
         </div>
-           <script>
-            //variables
-            let phone640p = window.matchMedia("(max-width: 640px)")
-          window.addEventListener("scroll", scrollNav);
-            //onclicks
-            
-            //onscroll function
-            function scrollNav(){
-                console.log($(window).scrollTop());
-                if($(window).scrollTop() > 30){
-                    document.getElementById("customHead").style.boxShadow = "0 2px 4px 0 black";
-                    $('#customHead').css("background-color","rgba(128, 80, 250,0.8)");
-                    $('.list-group').css("color","rgba(128, 80, 250,0.6)");
-                }
-                if($(window).scrollTop() > 620 && phone640p.matches ){
-                 $('.list-group').slideUp("slow","linear");
-//                    document.body.style.marginTop = "300px";
-                }
-                if($(window).scrollTop() < 30){ document.getElementById("customHead").style.boxShadow = "0 0px 0px 0 black";
-                    $('body').css("background-color","white");
-                    $('#customHead').css("background-color","rgba(128, 80, 250,0)");
-                                     $('.list-group').slideDown("slow");
-
-                }
-                
-                if($(window).scrollTop() < 620 && phone640p.matches ){
-                 $('.list-group').slideDown("slow","linear");
-//                    document.body.style.marginTop = "300px";
-                }
-            }
-        </script>
+       
+        
 
     </nav>

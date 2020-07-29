@@ -1,0 +1,96 @@
+.card-body:hover {
+    box-shadow: 0px 2px 4px 0px red;
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
+#customHead {
+    background-color: rgba(128, 80, 250, 0.0);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 6;
+    color: white;
+    /*    font-size:25px;*/
+}
+
+.list-group-item:hover {
+    box-shadow: 0px 2px 4px 0px red;
+    cursor: pointer;
+    /* transform: scale(0.98); */
+    transform: scale(1.01);
+    border: None;
+}
+
+.list-group-item {
+    margin-bottom: 2px;
+}
+
+.Rate:hover {
+    box-shadow: 0px 0px 4px 0px red;
+}
+
+.questionSection:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 2px 4px 0px red;
+    Border: 1px solid grey;
+}
+
+.questionSection {
+    box-shadow: 0px 1px 4px 0px black;
+}
+
+body {
+    margin-top: 80px;
+}
+
+nav {
+    position: fixed;
+}
+
+.list-group {
+    border=1px solid gray;
+    /* border: 2px solid red; */
+    cursor: pointer;
+    /* transform: scale(0.98); */
+}
+
+.links {
+    color: red;
+    font-size: 20px;
+}
+
+.card-body {
+    /* border: 1px solid blue; */
+    border=1px solid gray;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.question {
+    transition-duration: 0.5s;
+}
+
+.question:hover {
+    color: rgb(128, 80, 250);
+}
+
+.card-body:hover {}
+
+.bannerStyle {
+    background-color: rgba(128, 80, 250, 0.8);
+    background: url('http://chennai.vit.ac.in/wp-content/uploads/2020/03/campus-banner.jpg');
+}
+
+.tagline {
+    font-size: 80px;
+    color: white;
+    font-family: 'Amiri', serif;
+    text-shadow: 3px 3px 3px #000000;
+}
+
+.brand {
+    font-size: 30px;
+}
