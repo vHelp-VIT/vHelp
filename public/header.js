@@ -2,6 +2,7 @@
 let phone640p = window.matchMedia("(max-width: 640px)")
   
 window.addEventListener("scroll", scrollNav);
+window.addEventListener("load", parallax);
   //your code here
 
 //onscroll function
@@ -43,3 +44,8 @@ function scrollToContent(){
     document.getElementById("mainContent").scrollIntoView({ behavior: 'smooth', block: 'center' });
     
 }
+    function parallax(){
+        $(".bannerStyle").css("transition","0.5");
+        $(".bannerStyle").css("transform","scale(1.2)");
+        $(".bannerStyle").css("transition-duration","2s");
+    }
