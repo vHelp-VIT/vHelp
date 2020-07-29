@@ -19,12 +19,15 @@
 }
         
 #customHead{
-    background-color: rgba(128, 80, 250,0.8);
+    background-color: rgba(128, 80, 250,0.0);
     position: fixed;
     left:0;
     top: 0;
     width:100%;
+    height:60px;
     z-index:6;
+    color:white;
+/*    font-size:25px;*/
 }
         
 .list-group-item:hover {
@@ -81,17 +84,24 @@ nav{
 }
            .bannerStyle{
                background-color:rgba(128, 80, 250,0.8);
+               background:url('http://chennai.vit.ac.in/wp-content/uploads/2020/03/campus-banner.jpg');
+           }
+           .tagline{
+               font-size:80px;
                color:white;
-               font-family:'Robota Slab',serif;
-               background:url('http://chennai.vit.ac.in/wp-content/uploads/2020/03/campus-banner.jpg')
+               font-family:'Amiri',serif;
+           }
+           .brand{
+               font-size:30px;
            }
     </style>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
     </head>
 
 <body>
     <nav id = "customHead"class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#">vHelp</a>
+        <a class="navbar-brand" href="/"><span class="brand">vHelp</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -105,6 +115,7 @@ nav{
                 <li class="nav-item">
                     <a class="nav-link" href="#">Freshers Blog</a>
                 </li>
+<!--
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -125,6 +136,7 @@ nav{
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Faculty Review</a>
+-->
                 </li>
             </ul>
         </div>
@@ -139,17 +151,23 @@ nav{
                 console.log($(window).scrollTop());
                 if($(window).scrollTop() > 30){
                     document.getElementById("customHead").style.boxShadow = "0 2px 4px 0 black";
+                    $('#customHead').css("background-color","rgba(128, 80, 250,0.8)");
                     $('.list-group').css("color","rgba(128, 80, 250,0.6)");
                 }
-                if($(window).scrollTop() > 50 && phone640p.matches ){
+                if($(window).scrollTop() > 620 && phone640p.matches ){
                  $('.list-group').slideUp("slow","linear");
-                    document.body.style.marginTop = "100px";
+//                    document.body.style.marginTop = "300px";
                 }
                 if($(window).scrollTop() < 30){ document.getElementById("customHead").style.boxShadow = "0 0px 0px 0 black";
                     $('body').css("background-color","white");
-                    $('#customHead').css("background-color","rgba(128, 80, 250,0.8)");
+                    $('#customHead').css("background-color","rgba(128, 80, 250,0)");
                                      $('.list-group').slideDown("slow");
 
+                }
+                
+                if($(window).scrollTop() < 620 && phone640p.matches ){
+                 $('.list-group').slideDown("slow","linear");
+//                    document.body.style.marginTop = "300px";
                 }
             }
         </script>
