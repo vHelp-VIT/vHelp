@@ -30,6 +30,7 @@ html{
 .card-title{
     margin-top: -10px;
 }
+
 .page-footer{
     background-color: rgb(24, 24, 24);
     margin-top: 300px;
@@ -40,9 +41,6 @@ html{
     background-size: cover;
     background-position-y: top;
 
-}
-.footer-copyright{
-    margin-left: -15px;
 }
 .card-body:hover .card-text{
     opacity:1;
@@ -147,10 +145,15 @@ nav {
     font-family: 'Amiri', serif;
     text-shadow: 3px 3px 3px #000000;
 }
+@media (max-width:900px){
+    #footContent{
+        margin-top: 60px;
+    }
+}
 @media (max-width: 640px){
-    
 .tagline {
     font-size: 30px;
+
     
     }}
     @media (max-width: 640px){
