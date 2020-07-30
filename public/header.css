@@ -16,16 +16,38 @@ html{
 }
 
 .card-body:hover {
+    
+    height: fit-content;
+
+}
+.card-body:hover .card{
+    padding: none;
+    margin: none;
     box-shadow: 4px 2px 10px 2px grey;
     cursor: pointer;
     transform: scale(1.01);
-    /* border: none; */
-    height:auto;
+    height: fit-content;
+}
+.questContainer{
+    margin-top: 200px;
+    border: 10px solid white;
+    background-color: rgb(252,96,96);
+    background-image: radial-gradient(circle, rgba(252,96,96,1) 0%, rgba(255,0,18,1) 100%);
+    border-radius: 0%;
+    height: auto;
+    box-shadow: 4px 2px 10px 2px grey;
+    padding-bottom: 20px;
+
 }
 .card-text{
     opacity: 0;
     transition-duration: 0.2s;
     /* transition: 0.5s; */
+    /* color: aliceblue; */
+    border-radius: 0%;
+}
+#formContent{
+    
 }
 .card-title{
     margin-top: -10px;
@@ -43,10 +65,12 @@ html{
 }
 .card-body:hover .card-text{
     opacity:1;
+
 }
 
 .card{
     border: none;
+    background-color: white;
 }
 
 .card-body {
@@ -58,8 +82,8 @@ html{
     transition-duration: 1s;
     transition-property: height;
     height: 20px;
-    border-left: 5px solid grey;
     margin-top: 0px;
+    margin-bottom: 50px;
 }
 
 #customHead {
@@ -86,8 +110,8 @@ html{
 .list-group-item {
     margin-bottom: 2px;
 }
-#postQuest{
-    opacity: 0;
+#postQuest, .questTags{
+    display: none;
 }
 .Rate:hover {
     box-shadow: 0px 0px 4px 0px red;
