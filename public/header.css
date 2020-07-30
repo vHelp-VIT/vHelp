@@ -167,6 +167,7 @@ nav {
     background-color: rgba(128, 80, 250, 0.8);
     background: url('http://chennai.vit.ac.in/wp-content/uploads/2020/03/campus-banner.jpg');
     height: 100vh;
+    background-repeat: no-repeat;
 }
 
 .tagline {
