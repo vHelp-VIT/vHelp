@@ -48,6 +48,6 @@ function scrollToContent(){
 }
     function parallax(){
         $(".bannerStyle").css("transition","0.5");
-        $(".bannerStyle").css("transform","scale(1.2)");
+        // $(".bannerStyle").css("transform","scale(1.2)");
         $(".bannerStyle").css("transition-duration","2s");
     }

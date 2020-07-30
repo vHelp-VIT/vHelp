@@ -1,18 +1,23 @@
 <%- include('header') %>
+<!-- <script>
+    $(document).onload(()=>{
+        $(window).scroll(0,10);
+    });
+</script> -->
 
 <div class="container">
-    <div class="row">
+    <div class="questContainer row">
         <% for(let ans of answers){ %>
         <div class="col-sm-12">
             <div class="card w-100" style="margin-top: 14px;">
-                <div class="card-body">
-                    <h5 class="card-title"><%= ans.question %></h5>
+                <div class="card-body" style="height: 50px; margin-bottom: 20px;">
+                    <h5 class="card-title"> <%= ans.question %></h5>
                     <% for(let cat of ans.category){ %>
-                        <span class="badge badge-light">
-                            <%= cat %>
-                        </span>
+                    <span class="badge badge-light">
+                        <%= cat %>
+                    </span>
                     <% } %>
-                    
+
                     <p class="card-text">Answered by: _shivansh_12</p>
                     <p>
                         <a data-toggle="collapse" href="#v-<%= ans._id %>" role="button" aria-expanded="false"
@@ -21,14 +26,28 @@
                         </a>
                     </p>
                     <div class="collapse lapse1" id="v-<%= ans._id %>">
-                        <div class="card card-body">
+                        <!-- <div class="card "> -->
                             <%= ans.answer %>
-                        </div>
+                        <!-- </div> -->
                     </div>
                 </div>
             </div>
-            <% } %>
+            <!-- <div class="card w-100">
+                <div class="card-body">
+                    <h5 class="card-title"><b>><%= ans.question %></b></h5>
+                    <p style="margin-top:0px; margin-bottom: 0px;"><b>Posted by:</b>_shivansh_goel_</p>
+                    <p class="card-text"><%= ans.answer %>
+                    </p>
+                </div>
+            </div> -->
+
+
+
+           
         </div>
+        <% } %>
     </div>
+</div>
+</div>
 </div>
 <%- include('footer') %>

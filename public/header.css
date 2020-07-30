@@ -27,15 +27,19 @@ html{
     transform: scale(1.01);
     height: fit-content;
 }
+
 .questContainer{
-    margin-top: 200px;
+    margin-top: 35px;
+    z-index: 4;
+    position: relative;
     border: 10px solid white;
-    background-color: rgb(252,96,96);
-    background-image: radial-gradient(circle, rgba(252,96,96,1) 0%, rgba(255,0,18,1) 100%);
+    /* background-color: rgb(252,96,96); */
+    /* background-image: radial-gradient(circle, rgba(252,96,96,1) 0%, rgba(255,0,18,1) 100%); */
     border-radius: 0%;
     height: auto;
     box-shadow: 4px 2px 10px 2px grey;
     padding-bottom: 20px;
+    background-color: white;
 
 }
 .card-text{
@@ -45,6 +49,7 @@ html{
     /* color: aliceblue; */
     border-radius: 0%;
 }
+
 #formContent{
     
 }
@@ -74,7 +79,7 @@ html{
 
 .card-body {
     /* border: 1px solid blue; */
-    /* border=1px solid gray; */
+    /* border-left: = 1px solid gray; */
     cursor: pointer;
     /* box-shadow: 0px 2px 10px 0px grey; */
     transition: 0.5s;
@@ -83,6 +88,7 @@ html{
     height: 20px;
     margin-top: 0px;
     margin-bottom: 50px;
+    border-left: 4px solid grey;
 }
 
 #customHead {
@@ -159,6 +165,8 @@ nav {
 .bannerStyle {
     background-color: rgba(128, 80, 250, 0.8);
     background: url('http://chennai.vit.ac.in/wp-content/uploads/2020/03/campus-banner.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
 }
 
 .tagline {
