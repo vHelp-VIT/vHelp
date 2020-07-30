@@ -33,7 +33,7 @@ html{
     border: 10px solid white;
     background-color: rgb(252,96,96);
     background-image: radial-gradient(circle, rgba(252,96,96,1) 0%, rgba(255,0,18,1) 100%);
-    border-radius: 2%;
+    border-radius: 0%;
     height: auto;
     box-shadow: 4px 2px 10px 2px grey;
     padding-bottom: 20px;
@@ -44,7 +44,7 @@ html{
     transition-duration: 0.2s;
     /* transition: 0.5s; */
     /* color: aliceblue; */
-    border-radius: 2%;
+    border-radius: 0%;
 }
 #formContent{
     
