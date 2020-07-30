@@ -34,6 +34,12 @@ html{
     background-color: rgb(24, 24, 24);
     margin-top: 300px;
     color: aliceblue;
+    /* background: url('https://www.servicefirstusa.com/wp-content/uploads/2018/07/footer.png'); */
+    background: url('https://www.daughtersofchristministry.org/wp-content/themes/Custom-Theme/images/footer-back.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: top;
+
 }
 .footer-copyright{
     margin-left: -15px;
