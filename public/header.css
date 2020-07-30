@@ -29,7 +29,7 @@ html{
     height: fit-content;
 }
 .questContainer{
-    
+    margin-top: 200px;
     border: 10px solid white;
     background-color: rgb(252,96,96);
     background-image: radial-gradient(circle, rgba(252,96,96,1) 0%, rgba(255,0,18,1) 100%);
