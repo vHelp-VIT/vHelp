@@ -12,9 +12,29 @@ body {
 }
 
 .card-body:hover {
-    box-shadow: 0px 2px 4px 0px red;
+    box-shadow: 0px 2px 10px 0px grey;
     cursor: pointer;
     transform: scale(1.01);
+    border: none;
+    height:auto;
+}
+.card-text{
+    opacity: 0;
+    transition: 0.1s;
+}
+.card-body:hover .card-text{
+    opacity:1;
+}
+.card{
+    border: none;
+}
+
+.card-body {
+    /* border: 1px solid blue; */
+    /* border=1px solid gray; */
+    cursor: pointer;
+    transition-duration: 0.5s;
+    height: 20px;
 }
 
 #customHead {
@@ -35,7 +55,7 @@ body {
     cursor: pointer;
     /* transform: scale(0.98); */
     transform: scale(1.01);
-    border: None;
+    /* border: None; */
 }
 
 .list-group-item {
@@ -51,7 +71,7 @@ body {
 .questionSection:hover {
     transform: scale(1.01);
     box-shadow: 0px 2px 4px 0px red;
-    Border: 1px solid grey;
+    /* Border: 1px solid grey; */
 }
 
 .questionSection {
@@ -67,7 +87,7 @@ nav {
 }
 
 .list-group {
-    border=1px solid gray;
+    /* border=1px solid gray; */
     /* border: 2px solid red; */
     cursor: pointer;
     /* transform: scale(0.98); */
@@ -78,13 +98,6 @@ nav {
     font-size: 20px;
 }
 
-.card-body {
-    /* border: 1px solid blue; */
-    border=1px solid gray;
-    cursor: pointer;
-    transition-duration: 0.5s;
-}
-
 .question {
     transition-duration: 0.5s;
 }
@@ -92,8 +105,6 @@ nav {
 .question:hover {
     color: rgb(128, 80, 250);
 }
-
-.card-body:hover {}
 
 .bannerStyle {
     background-color: rgba(128, 80, 250, 0.8);
