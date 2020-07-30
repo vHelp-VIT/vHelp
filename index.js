@@ -9,8 +9,8 @@ app.use(bodyparser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 
-// mongoose.connect("mongodb://localhost:27017/vhelpblog", { useNewUrlParser: true });
 var mongo = async ()=>{
+    // mongoose.connect("mongodb://localhost:27017/vhelpblog", { useNewUrlParser: true });
     await mongoose.connect("mongodb+srv://shivansh-12:shivansh@cluster0.vvpfe.mongodb.net/vHelp?retryWrites=true&w=majority", { useNewUrlParser: true,useUnifiedTopology: true  });
 };
 mongo()
@@ -47,22 +47,22 @@ app.post("/", (req, res) => {
         let cat = []
 
         if (req.body.radio_acad == "on") {
-            cat.push("Academics")
+            cat.push("academics")
         }
         if (req.body.radio_place == "on") {
-            cat.push("Placement")
+            cat.push("placement")
         }
         if (req.body.radio_infra == "on") {
-            cat.push("Infrastructure")
+            cat.push("infrastructure")
         }
         if (req.body.radio_club == "on") {
-            cat.push("Clubs/Teams")
+            cat.push("clubs_teams")
         }
         if (req.body.radio_acti == "on") {
-            cat.push("Activities")
+            cat.push("activities")
         }
         if (req.body.radio_gen == "on") {
-            cat.push("General FAQ's")
+            cat.push("general")
         }
         return cat
     }
@@ -84,39 +84,12 @@ app.post("/", (req, res) => {
 });
 
 
-app.get("/answers/:category", async(req, res) => {
-    
-    let required_category = req.params.category;
-
-    let filter_category= (data)=>{
-        let result=[];
-        for(ques of data){
-            for (category of ques.category){
-                if(category.toLowerCase()==required_category){
-                    console.log(category)
-                    console.log(required_category)
-                    result.push(ques)
-                    break;
-                }
-            }
-        }
-        return result;
-    }
-    // render posts with particular category
-    let my_answers = await question.find((err,data)=>{
-        if(err){
-            console.log(err);
-        }
-        else{
-            console.log("Filter category")
-            console.log(data);
-            return filter_category(data);
-        }
-    });
-    console.log(required_category);
-    console.log(my_answers);
-
-    res.render("answers",{answers:my_answers});
+app.get("/:cat", async(req, res) => {
+    let required_category = req.params.cat;
+    console.log("Required Categort: ",required_category);
+    let filtered= await question.find({ category : { $in : [required_category] }})
+    console.log(filtered)
+    res.render("answers",{answers: filtered});
 
 });
 
