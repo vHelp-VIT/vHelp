@@ -192,3 +192,15 @@ nav {
         opacity: 1;
     }
 }
+#abstract1{
+    width:20%;z-index: 3;position: relative;
+    align-self: flex-end;
+    margin-top:-150px;
+    margin-left: 80%;
+}
+
+@media (max-width: 900px){
+    #abstract1{
+        display: none;
+    }
+}
