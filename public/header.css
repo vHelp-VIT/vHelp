@@ -16,10 +16,17 @@ html{
 }
 
 .card-body:hover {
+    
+    height: fit-content;
+
+}
+.card-body:hover .card{
+    padding: none;
+    margin: none;
     box-shadow: 4px 2px 10px 2px grey;
     cursor: pointer;
     transform: scale(1.01);
-    height:auto;
+    height: fit-content;
 }
 .questContainer{
     
@@ -29,6 +36,7 @@ html{
     border-radius: 2%;
     height: auto;
     box-shadow: 4px 2px 10px 2px grey;
+    padding-bottom: 20px;
 
 }
 .card-text{
