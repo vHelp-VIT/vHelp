@@ -34,11 +34,11 @@ function scrollNav() {
         var data = document.getElementById("formContent").value;
         console.log("dub db");
         if(data.length>10){
-            $('#postQuest').css("opacity","1");
             $('#postQuest').css("display","initial");
+            $('.questTags').css("display","initial");
         }if(data.length<10){
-            $('#postQuest').css("opacity","0");
             $('#postQuest').css("display","None");
+            $('.questTags').css("display","None");
         }
     });
 //scrolltocontent

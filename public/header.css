@@ -110,7 +110,7 @@ html{
 .list-group-item {
     margin-bottom: 2px;
 }
-#postQuest{
+#postQuest, .questTags{
     display: none;
 }
 .Rate:hover {
