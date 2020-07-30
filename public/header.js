@@ -35,8 +35,10 @@ function scrollNav() {
         console.log("dub db");
         if(data.length>10){
             $('#postQuest').css("opacity","1");
+            $('#postQuest').css("display","initial");
         }if(data.length<10){
             $('#postQuest').css("opacity","0");
+            $('#postQuest').css("display","None");
         }
     });
 //scrolltocontent
