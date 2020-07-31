@@ -256,7 +256,7 @@ nav {
     animation-duration: s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite; */
-    background: url('campus-banner.jpg');
+    background-image: url('campus-banner.jpg');
     height: 100vh;
     background-repeat: no-repeat;
 }
