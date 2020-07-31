@@ -59,6 +59,7 @@ function scrollToContent(){
         console.log("url('"+images[i]+"')");
         $('.bannerStyle').css("background","url('"+images[i]+"')");
             $('.bannerStyle').css("background-repeat","no-repeat");
+            $('.bannerStyle').css("background-position","center");
             // $('.bannerStyle').css("","100vh");
         i++;
         if(i==3){
