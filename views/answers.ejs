@@ -10,15 +10,14 @@
         <% for(let ans of answers){ %>
         <div class="col-sm-12">
             <div class="card w-100" style="margin-top: 14px;">
-                <div class="card-body" style="height: 50px; margin-bottom: 20px;">
+                <div class="card-body" style="height: auto; margin-bottom: 20px;">
                     <h5 class="card-title"> <%= ans.question %></h5>
                     <% for(let cat of ans.category){ %>
                     <span class="badge badge-light">
                         <%= cat %>
                     </span>
                     <% } %>
-
-                    <p class="card-text">Answered by: _shivansh_12</p>
+                    <p class="card-text">Answered by: anonymous</p>
                     <p>
                         <a data-toggle="collapse" href="#v-<%= ans._id %>" role="button" aria-expanded="false"
                             aria-controls="collapseExample">
@@ -26,9 +25,13 @@
                         </a>
                     </p>
                     <div class="collapse lapse1" id="v-<%= ans._id %>">
-                        <!-- <div class="card "> -->
-                            <%= ans.answer %>
-                        <!-- </div> -->
+                        <%= ans.answer %>
+                        <form action="/update_ans/<%= ans._id %>" method="POST">
+                            <textarea class="form-control" id="forppp" rows="8"
+                                placeholder="add your thoughts here....."
+                                name="ans_here"></textarea>
+                                <input type="submit" />
+                        </form>
                     </div>
                 </div>
             </div>
@@ -40,10 +43,6 @@
                     </p>
                 </div>
             </div> -->
-
-
-
-           
         </div>
         <% } %>
     </div>

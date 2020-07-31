@@ -86,14 +86,29 @@ app.post("/", (req, res) => {
 
 app.get("/:cat", async(req, res) => {
     let required_category = req.params.cat;
-    console.log("Required Categort: ",required_category);
+    // console.log("Required Categort: ",required_category);
     let filtered= await question.find({ category : { $in : [required_category] }})
-    console.log(filtered)
+    // console.log(filtered)
     res.render("answers",{answers: filtered});
 
 });
 
+app.post("/update_ans/:ans_id",async(req,res)=>{
+    let questionn_id=req.params.ans_id;
+    let new_ans=req.body.ans_here;
+    console.log(questionn_id);
+    console.log(new_ans);
+    await question.updateOne({_id:questionn_id},{answer:new_ans},function(err){
+        if(err) console.log(err);
+        else console.log("Updated ans successfully!!");
+    });
+    res.redirect("/");
+});
 
+
+////////////////////////////////////////////////////////////////////////////////////
+// ///////////// all the below are admin rotes: Not working yet/////////////////////
+////////////////////////////////////////////////////////////////////////////////////
 app.get("/blog_admin", (req, res) => {
     res.render("admin_login");
 });
