@@ -259,6 +259,7 @@ nav {
     background-image: url('campus-banner.jpg');
     height: 100vh;
     background-repeat: no-repeat;
+    background-position: center;
 }
 /* banner animation */
 @keyframes switch{
