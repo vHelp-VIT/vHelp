@@ -70,7 +70,7 @@ function scrollToContent(){
     //carousel Images
     var images = ['campus-banner.jpg','vellorecampus.jpg','bhopalCampus.jpg','apcampus.jpeg']
     var i =0;
-    $('body').ready(function(){window.setInterval(function(){
+    window.onload = function(){window.setInterval(function(){
         // console.log(i);
         // console.log("url('"+images[i]+"')");
         $('.bannerStyle').css("background","url('"+images[i]+"')");
@@ -84,7 +84,7 @@ function scrollToContent(){
             i=0;
         }
     },3000);
-});
+}
     // window.setInterval(function(){
     //     window.setTimeout(function(){
             // $('.bannerStyle').css("background","url('campus-banner.jpeg')");
