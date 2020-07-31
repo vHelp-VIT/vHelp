@@ -60,6 +60,7 @@ function scrollToContent(){
         $('.bannerStyle').css("background","url('"+images[i]+"')");
             $('.bannerStyle').css("background-repeat","no-repeat");
             $('.bannerStyle').css("background-position","center");
+            $('.bannerStyle').css("background-size","cover");
             // $('.bannerStyle').css("","100vh");
         i++;
         if(i==3){
