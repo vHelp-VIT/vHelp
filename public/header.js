@@ -9,13 +9,13 @@ $('#colShow').click(function(){
         
     if (phone640p.matches&& k==1) {
         $('.list-group').slideDown("slow", "linear");
-        document.getElementById("colShow").innerHTML = "Show";
+        // document.getElementById("colShow").innerHTML = "Show";
         k=0
         //                    document.body.style.marginTop = "300px";
     }
     else if (phone640p.matches && k==0) {
         $('.list-group').slideUp("slow", "linear");
-        document.getElementById("colShow").innerHTML = "Collapse";
+        // document.getElementById("colShow").innerHTML = "Collapse";
         k=1;
         //                    document.body.style.marginTop = "300px";
     }
