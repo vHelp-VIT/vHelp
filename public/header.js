@@ -55,15 +55,15 @@ function scrollToContent(){
     var images = ['campus-banner.jpg','vellorecampus.jpg','bhopalCampus.jpg','apcampus.jpeg']
     var i =0;
     window.setInterval(function(){
-        console.log(i);
-        console.log("url('"+images[i]+"')");
+        // console.log(i);
+        // console.log("url('"+images[i]+"')");
         $('.bannerStyle').css("background","url('"+images[i]+"')");
             $('.bannerStyle').css("background-repeat","no-repeat");
             $('.bannerStyle').css("background-position","center");
             $('.bannerStyle').css("background-size","cover");
             // $('.bannerStyle').css("","100vh");
         i++;
-        if(i==3){
+        if(i==4){
             i=0;
         }
     },3000);
