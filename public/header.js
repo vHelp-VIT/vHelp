@@ -1,20 +1,28 @@
 //variables
 let phone640p = window.matchMedia("(max-width: 640px)")
-  
+let phone800p = window.matchMedia("(max-width: 800px)")
 window.addEventListener("scroll", scrollNav);
-window.addEventListener("load", parallax);
+window.setInterval(function(){
+    if(!phone800p.matches){
+        document.getElementById('colShow').style.display='none';
+    }else if(phone800p.matches){
+        document.getElementById('colShow').style.display='initial';
+    }
+},100);
   //your code here
     var k = 0
 $('#colShow').click(function(){
         
     if (phone640p.matches&& k==1) {
         $('.list-group').slideDown("slow", "linear");
+        $('#colShow').css("transform", "rotateZ(0deg)");
         // document.getElementById("colShow").innerHTML = "Show";
         k=0
         //                    document.body.style.marginTop = "300px";
     }
     else if (phone640p.matches && k==0) {
         $('.list-group').slideUp("slow", "linear");
+        $('#colShow').css("transform", "rotateZ(180deg)");
         // document.getElementById("colShow").innerHTML = "Collapse";
         k=1;
         //                    document.body.style.marginTop = "300px";
