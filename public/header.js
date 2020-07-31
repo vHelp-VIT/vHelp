@@ -51,3 +51,22 @@ function scrollToContent(){
         // $(".bannerStyle").css("transform","scale(1.2)");
         $(".bannerStyle").css("transition-duration","2s");
     }
+    //carousel Images
+    // window.setInterval(function(){
+    //     window.setTimeout(function(){
+    //         $('.bannerStyle').css("background","url('campus-banner.jpeg')");
+    //         $('.bannerStyle').css("background-repeat","no-repeat");
+    //     },000);
+    //     window.setTimeout(function(){
+    //         $('.bannerStyle').css("background","url('campus-banner.jpeg')");
+    //         $('.bannerStyle').css("background-repeat","no-repeat");
+    //     },3000);
+    //     window.setTimeout(function(){
+    //         $('.bannerStyle').css("background","url('bhopalCampus.jpg')");
+    //         $('.bannerStyle').css("background-repeat","no-repeat");
+    //     },5000);
+    //     window.setTimeout(function(){
+    //         $('.bannerStyle').css("background","url('apcampus.jpeg')");
+    //         $('.bannerStyle').css("background-repeat","no-repeat");
+    //     },7000);
+    // },1000);
