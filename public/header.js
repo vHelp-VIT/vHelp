@@ -51,3 +51,35 @@ function scrollToContent(){
         // $(".bannerStyle").css("transform","scale(1.2)");
         $(".bannerStyle").css("transition-duration","2s");
     }
+    //carousel Images
+    var images = ['campus-banner.jpg','vellorecampus.jpg','bhopalCampus.jpg','apcampus.jpeg']
+    var i =0;
+    window.setInterval(function(){
+        console.log(i);
+        console.log("url('"+images[i]+"')");
+        $('.bannerStyle').css("background","url('"+images[i]+"')");
+            $('.bannerStyle').css("background-repeat","no-repeat");
+            // $('.bannerStyle').css("","100vh");
+        i++;
+        if(i==3){
+            i=0;
+        }
+    },3000);
+    // window.setInterval(function(){
+    //     window.setTimeout(function(){
+            // $('.bannerStyle').css("background","url('campus-banner.jpeg')");
+    //         $('.bannerStyle').css("background-repeat","no-repeat");
+    //     },000);
+    //     window.setTimeout(function(){
+    //         $('.bannerStyle').css("background","url('campus-banner.jpeg')");
+    //         $('.bannerStyle').css("background-repeat","no-repeat");
+    //     },3000);
+    //     window.setTimeout(function(){
+    //         $('.bannerStyle').css("background","url('bhopalCampus.jpg')");
+    //         $('.bannerStyle').css("background-repeat","no-repeat");
+    //     },5000);
+    //     window.setTimeout(function(){
+    //         $('.bannerStyle').css("background","url('apcampus.jpeg')");
+    //         $('.bannerStyle').css("background-repeat","no-repeat");
+    //     },7000);
+    // },10000);

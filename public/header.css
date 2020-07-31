@@ -151,6 +151,7 @@ nav {
     /* transform: scale(0.98); */
 }
 
+
 .links {
     color: red;
     font-size: 20px;
@@ -162,13 +163,6 @@ nav {
 
 .question:hover {
     color: rgb(128, 80, 250);
-}
-
-.bannerStyle {
-    background-color: rgba(128, 80, 250, 0.8);
-    background: url('campus-banner.jpg');
-    height: 100vh;
-    background-repeat: no-repeat;
 }
 
 .tagline {
@@ -255,4 +249,37 @@ nav {
     -moz-box-shadow: 2px 2px 2px 2px rgb(255,255,255);
     box-shadow: 2px 2px 2px 2px rgb(255,255,255);
     height: 200px;
+}
+.bannerStyle {
+    background-color: rgba(128, 80, 250, 0.8);
+    /* animation-name: switch;
+    animation-duration: s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite; */
+    background-image: url('campus-banner.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+/* banner animation */
+@keyframes switch{
+    0%{
+        background:url('campus-banner.jpeg');
+        background-repeat: no-repeat;
+    }
+    25%{
+        background: url('vellorecampus.jpg');
+        background-repeat: no-repeat;
+    }
+    50%{
+        background: url('apcampus.jpeg');
+        background-repeat: no-repeat;
+    }
+    75%{
+        background: url('bhopalCampus.jpeg');
+        background-repeat: no-repeat;
+    }
+    100%{
+        background: url('campus-banner.jpg');
+        background-repeat: no-repeat;
+    }
 }
