@@ -260,6 +260,7 @@ nav {
     height: 100vh;
     background-repeat: no-repeat;
     background-position: center;
+    transition: 3s;
 }
 /* banner animation */
 @keyframes switch{
