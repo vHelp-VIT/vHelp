@@ -300,6 +300,6 @@ nav {
 }
 
 .card:hover{
-    border: 2px dotted grey;
+    /* border: 2px dotted grey; */
     transform: translateX(10px);
 }
