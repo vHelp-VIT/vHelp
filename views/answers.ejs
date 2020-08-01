@@ -17,7 +17,6 @@
                         <%= cat %>
                     </span>
                     <% } %>
-                    <p class="card-text">Answered by: anonymous</p>
                     <span>
                         <a data-toggle="collapse" href="#v-<%= ans._id %>" role="button" aria-expanded="false"
                             aria-controls="collapseExample">
@@ -32,27 +31,31 @@
                         </a>
                     </span>
                     <% if(ans.answer.length==0){ %>
-                        Be the first one to answer this question!!
+                    Be the first one to answer this question!!
                     <% } %>
                     <% for(let sub_ans of ans.answer){ %>
                     <div class="collapse lapse1" id="v-<%= ans._id %>">
                         <div class="col-sm-12">
                             <div class="card w-100" style="margin-top: 14px;">
                                 <div class="card-body" style="height: auto; margin-bottom: 20px;">
-                                    <h5 class="card-title"> <%= sub_ans.name %> <%= sub_ans.campus %> </h5>
+                                    <h5 class="card-title"> 
+                                        <% if(sub_ans.name==undefined){ %>
+                                            Anonymous
+                                        <% } %>
+                                        <%= sub_ans.name %>
                                     <% if(sub_ans.campus=="Vellore"){  %>
-                                        <span class="badge badge-success">Vellore</span>
+                                    <span class="badge badge-success">Vellore</span>
                                     <% } %>
                                     <% if(sub_ans.campus=="Chennai"){  %>
-                                        <span class="badge badge-primary">Primary</span>
+                                    <span class="badge badge-primary">Primary</span>
                                     <% } %>
                                     <% if(sub_ans.campus=="Bhopal"){  %>
-                                        <span class="badge badge-danger">Bhopal</span>
+                                    <span class="badge badge-danger">Bhopal</span>
                                     <% } %>
                                     <% if(sub_ans.campus=="Amravati"){  %>
-                                        <span class="badge badge-warning">Amravati</span>
+                                    <span class="badge badge-warning">Amravati</span>
                                     <% } %>
-
+                                </h5>
                                     <%= sub_ans.ans %>
                                 </div>
                             </div>
@@ -62,38 +65,47 @@
 
 
                     <div class="collapse lapse1" id="v1-<%= ans._id %>">
-
                         <form action="/update_ans/<%= ans._id %>" method="POST">
                             <div class="row">
-                                <div class="col">
-                                    <input type="text" placeholder="First name" name="name_first">
+                                <div class="col-12 col-md-4">
+                                    <input type="text" placeholder="First name" class="form-control" name="name_first">
                                 </div>
-                                <div class="col">
-                                    <input type="text" placeholder="Last name" name="name_last">
+                                <div class="col-12 col-md-4">
+                                    <input type="text" placeholder="Last name" class="form-control" name="name_last">
                                 </div>
-                            </div>
+                                <!-- <div class="col-12 col-md-4">
+                                    <label for="inputState">Campus</label>
+                                    <select id="inputState" class="form-control" name="campus_name">
+                                        <option selected>Vellore</option>
+                                        <option>Chennai</option>
+                                        <option>Bhopal</option>
+                                        <option>Amravati</option>
+                                </div> -->
+                                <div class="form-group">
+                                    <select id="inputCampus" class="form-control" name="campus_name">
+                                        <option selected>Vellore</option>
+                                        <option>Chennai</option>
+                                        <option>Bhopal</option>
+                                        <option>Amravati</option>
+                                    </select>
+                                  </div>
 
-                            <div class="col-md-4">
-                                <label for="inputState">Campus</label>
-                                <select id="inputState" class="" name="campus_name">
-                                    <option selected>Vellore</option>
-                                    <option>Chennai</option>
-                                    <option>Bhopal</option>
-                                    <option>Amravati</option>
-                            </div>
-
-                            <textarea class="form-control" id="forppp" rows="8"
-                                placeholder="add your thoughts here....." name="ans_here"></textarea>
-                            <input type="submit" />
+                                <div class="col-md-12">
+                                    <textarea class="form-control" rows="8" 
+                                        placeholder="add your thoughts here....." name="ans_here"></textarea>
+                                    <input type="submit" />
+                                </div>
                         </form>
                     </div>
-
-
                 </div>
             </div>
+
+
         </div>
-        <% } %>
     </div>
+</div>
+<% } %>
+</div>
 </div>
 </div>
 </div>
