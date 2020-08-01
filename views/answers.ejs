@@ -63,33 +63,34 @@
                     </div>
                     <% } %>
 
+<style>
+.form-control-1{
+    height: 35px;
+}
+
+</style>
+
 
                     <div class="collapse lapse1" id="v1-<%= ans._id %>">
                         <form action="/update_ans/<%= ans._id %>" method="POST">
                             <div class="row">
                                 <div class="col-12 col-md-4">
-                                    <input type="text" placeholder="First name" class="form-control" name="name_first">
+                                    <input type="text" placeholder="First name" class="form-control form-control-1" name="name_first">
                                 </div>
+                               
                                 <div class="col-12 col-md-4">
-                                    <input type="text" placeholder="Last name" class="form-control" name="name_last">
+                                    <input type="text" placeholder="Last name" class="form-control form-control-1" name="name_last">
                                 </div>
-                                <!-- <div class="col-12 col-md-4">
-                                    <label for="inputState">Campus</label>
-                                    <select id="inputState" class="form-control" name="campus_name">
-                                        <option selected>Vellore</option>
-                                        <option>Chennai</option>
-                                        <option>Bhopal</option>
-                                        <option>Amravati</option>
-                                </div> -->
+                               
                                 <div class="form-group">
-                                    <select id="inputCampus" class="form-control" name="campus_name">
+                                    <select id="inputCampus" class="form-control form-control-1" name="campus_name">
                                         <option selected>Vellore</option>
                                         <option>Chennai</option>
                                         <option>Bhopal</option>
                                         <option>Amravati</option>
                                     </select>
                                   </div>
-
+                                  
                                 <div class="col-md-12">
                                     <textarea class="form-control" rows="8" 
                                         placeholder="add your thoughts here....." name="ans_here"></textarea>
