@@ -57,6 +57,9 @@ app.post("/", (req, res) => {
         if (req.body.radio_gen == "on") {
             cat.push("general")
         }
+        if(cat.length==0){
+            cat.push("general")
+        }
         return cat
     }
     let ques = req.body.question_area;
