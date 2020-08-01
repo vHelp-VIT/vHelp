@@ -126,6 +126,24 @@ html{
 #postQuest, .questTags{
     display: none;
 }
+#postQuest{
+    border: 2px solid rgb(128, 80, 250);
+}
+
+#postQuest:hover{
+    background-color:rgb(128, 80, 250);
+    color:white;
+}
+
+#submitQuest{
+    border: 2px solid rgb(128, 80, 250);
+}
+
+#submitQuest:hover{
+    background-color:rgb(128, 80, 250);
+    color:white;
+}
+
 .Rate:hover {
     box-shadow: 0px 0px 4px 0px black;
 }
