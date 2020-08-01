@@ -262,6 +262,7 @@ nav {
 }
 .navText{
     color: white;
+    text-shadow: 1px 1px rgb(128, 80, 250);
 }
 .arrow-down {
   width: 0; 
