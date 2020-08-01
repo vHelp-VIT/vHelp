@@ -47,11 +47,6 @@ html{
     margin-top: -10px;
 }
 
-.card{
-    border: none;
-    background-color: white;
-}
-
 
 .card-body:hover {
     height: fit-content;
@@ -71,6 +66,7 @@ html{
     /* border: 1px solid blue; */
     /* border-left: = 1px solid gray; */
     cursor: pointer;
+    transition-delay: 4s;
     /* box-shadow: 0px 2px 10px 0px grey; */
     transition: 2s;
     transition-duration: 2s;
@@ -83,7 +79,7 @@ html{
 
 .card-text{
     opacity: 0;
-    transition-duration: 0.2s;
+    transition-duration:ease;
     /* transition: 0.5s; */
     /* color: aliceblue; */
     border-radius: 0%;
@@ -101,10 +97,12 @@ html{
     border-left: 4px solid rgb(128, 80, 250);
     transition: 0.5s ease;
     border-radius: 0;
+    border-bottom:0 ;
+    border-top: 0;
+    border-right: 0;
 }
 
 .card:hover{
-    /* border: 2px dotted grey; */
     transform: translateX(10px);
 }
 .card a{
@@ -324,10 +322,6 @@ nav {
     background-repeat: no-repeat;
     background-position: center;
     transition: 3s;
-}
-.borderLike{
-    width: 50%;
-    /* border: 0.5px solid grey; */
 }
 .page-footer{
     background-color: rgb(24, 24, 24);
