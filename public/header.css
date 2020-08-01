@@ -105,7 +105,10 @@ html{
     transition:0.5s;
     /*    font-size:25px;*/
 }
-
+.campus-name{
+    font-size: 10px;
+    height: auto;
+}
 .list-group-item:hover {
     box-shadow: 0px 2px 4px 0px black;
     cursor: pointer;
