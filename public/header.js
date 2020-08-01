@@ -71,7 +71,7 @@ function scrollToContent(){
             $('.bannerStyle').css("background-size","cover");
             // $('.bannerStyle').css("","100vh");
         i++;
-        if(i==4){
+        if(i==3){
             i=0;
         }
     },3000);

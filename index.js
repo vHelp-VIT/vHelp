@@ -22,7 +22,7 @@ mongo()
 // //   const collection = client.db("test").collection("devices");
 // //   // perform actions on the collection object
 // //   client.close();
-const question = mongoose.model('question', { question: String, category: Object, answer: String });
+const question = mongoose.model('question', { question: String, category: Object, answer: Object });
 // });
 
 
@@ -69,7 +69,7 @@ app.post("/", (req, res) => {
     let ques = req.body.question_area;
     if (ques.length != undefined) {
         let cat = categories();
-        const newQuestion = new question({ question: ques, category: cat, answer:"No"});
+        const newQuestion = new question({ question: ques, category: cat, answer:[]});
         newQuestion.save()
     }
     question.find(function (err, fruits) {
@@ -95,10 +95,20 @@ app.get("/:cat", async(req, res) => {
 
 app.post("/update_ans/:ans_id",async(req,res)=>{
     let questionn_id=req.params.ans_id;
-    let new_ans=req.body.ans_here;
+    let my_new_ans=req.body.ans_here;
+    let campus=req.body.campus_name;
+    let name=req.body.name_first + " " + req.body.name_last; 
     console.log(questionn_id);
     console.log(new_ans);
-    await question.updateOne({_id:questionn_id},{answer:new_ans},function(err){
+    console.log(campus);
+    var new_ans={
+        campus: campus,
+        ans: my_new_ans,
+        name:name
+    };
+    await question.updateOne({_id:questionn_id},
+        { $addToSet: { answer: new_ans } },
+        function(err){
         if(err) console.log(err);
         else console.log("Updated ans successfully!!");
     });
@@ -132,7 +142,7 @@ app.post("/i-super-user",async(req, res) => {
 
 
 // to update answer from i-super-user in database
-app.post("/i-super-user/:id",(req,res)=>{
+app.post("/i-super-user/:id",async(req,res)=>{
     console.log("In update function!!");
     let id = req.params.id;
     // console.log(s)
@@ -140,7 +150,7 @@ app.post("/i-super-user/:id",(req,res)=>{
     let ans = req.body.id;
     console.log(ans);
     console.log(id);
-    question.updateOne(
+    await question.updateOne(
         {_id:id},
         {
             answer:ans
