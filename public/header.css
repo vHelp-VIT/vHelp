@@ -340,9 +340,5 @@ nav {
 .navTitles{
     text-shadow: 1px 0px rgb(128, 80, 250);
     /* color: rgb(128, 80, 250); */
-    font-size: 20px;
-}
-.navList{
-    background-color: rgba(128, 80, 250,0.8);
-    border:1px solid white;
+    font-size: 16px;
 }
