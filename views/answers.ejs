@@ -1,11 +1,15 @@
 <%- include('header') %>
 
 <div class="container">
+    <% for(let ans of answers){ %>    
     <div class="questContainer row">
-        <% for(let ans of answers){ %>
+    
         <div class="col-sm-12">
+           
             <div class="card w-100" style="margin-top: 14px;">
+               
                 <div class="card-body" style="height: auto; margin-bottom: 20px;">
+                    
                     <h5 class="card-title"> <%= ans.question %></h5>
                     <p>
                     <% for(let cat of ans.category){ %>
