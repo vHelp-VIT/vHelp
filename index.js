@@ -27,15 +27,9 @@ const question = mongoose.model('question', { question: String, category: Object
 
 
 app.get("/", (req, res) => {
-    res.render('index');
-    // question.find(function(err,fruits){
-    //     if(err){
-    //         console.log(error);
-    //     }
-    //     else{
-    //         console.log(fruits);
-    //     }
-    // });
+    // let stat=req.query.stat;
+    if(req.query.stat=="posted") res.render('index', {foo:1});
+    else res.render('index', {foo:0});   
 });
 
 
@@ -80,7 +74,8 @@ app.post("/", (req, res) => {
             console.log(fruits);
         }
     });
-    res.redirect("/");
+    // res.redirect('back',{foo:true});
+    res.redirect('/?stat=posted');
 });
 
 
