@@ -52,13 +52,17 @@ function scrollNav() {
     if ($(window).scrollTop() > 30) {
         document.getElementById("customHead").style.boxShadow = "0 2px 4px 0 black";
         $('#customHead').css("background-color", "rgba(128, 80, 250,0.8)");
+        
         $('.list-group').css("color", "rgba(128, 80, 250,0.6)");
         $('.questContainer').css("transform","translateY(-40px)");
         if(phone980p.matches){
-        $('.navList').css("background-color","rgba(128, 80, 250,0.8)");
+        $('#customHead').css("background-color", "rgba(26, 39, 228, 0.726)");
+        $('.list-group').css("color", "rgb(128, 80, 250)");
+        $('.navList').css("background-color","rgba(26, 39, 228, 0.726)");
         $('.navList').css("border","1px solid white");
         $('.navList').css("width","110%");
-        $('.navList').css("margin-left","-5%");}
+        $('.navList').css("margin-left","-5%");
+    }
     }
     else if ($(window).scrollTop() < 30) {
         document.getElementById("customHead").style.boxShadow = "0 0px 0px 0 black";
@@ -99,17 +103,13 @@ function scrollToContent(){
     var i =0;
     window.onload = function(){
         //CARD RANDOM COLOR SETTER
-            // $(".card").css("border-color", getRandomColor());
             var cards = document.getElementsByClassName('card');
             // console.log(cards[i]);
         for(let i=0; i<cards.length; i++){
           cards[i].style.borderColor = getRandomColor(); 
         }
-       
+       //--------------------------
         window.setInterval(function(){
-        // console.log(i);
-        // console.log("url('"+images[i]+"')");
-        // $('.list-group-item').addClass("listItems");
         $('.bannerStyle').css("background","url('"+images[i]+"')");
             $('.bannerStyle').css("background-repeat","no-repeat");
             $('.bannerStyle').css("transition","3s");
@@ -121,6 +121,9 @@ function scrollToContent(){
             i=0;
         }
     },3000);
+    
+    if ($(window).scrollTop() < 30) {
+        $('.questContainer').css("transform","translateY(40px)");}
 }
 //ONclick card
 $('.card').click(function(){
