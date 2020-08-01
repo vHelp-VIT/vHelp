@@ -36,12 +36,14 @@ html{
     box-shadow:0 2px 4px 0 rgb(128, 80, 250,0.8);
     
 }
+.replyAns{
+    color: blue;
+    transition-duration: 2s;
+}
 
-
-
-
-
-
+.replyAns:hover{
+    text-decoration: underline;
+}
 /* CARD CSS STARTS HERE */
 .card-title{
     margin-top: -10px;
