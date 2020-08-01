@@ -42,6 +42,7 @@ html{
     background-color: white;
     margin-left: 15px;
     margin-right: 15px;
+    transition: 1s ease;
 
 }
 .card-text{
@@ -90,7 +91,6 @@ html{
     height: 20px;
     margin-top: 0px;
     margin-bottom: 50px;
-    border-left: 4px solid grey;
 }
 
 #customHead {
@@ -100,14 +100,14 @@ html{
     top: 0;
     width: 100%;
     height: 60px;
-    z-index: 6;
+    z-index: 12;
     color: white;
     transition:0.5s;
     /*    font-size:25px;*/
 }
 
 .list-group-item:hover {
-    box-shadow: 0px 2px 4px 0px red;
+    box-shadow: 0px 2px 4px 0px black;
     cursor: pointer;
     /* transform: scale(0.98); */
     transform: scale(1.01);
@@ -121,7 +121,7 @@ html{
     display: none;
 }
 .Rate:hover {
-    box-shadow: 0px 0px 4px 0px red;
+    box-shadow: 0px 0px 4px 0px black;
 }
 .Rate{
     color: aliceblue;
@@ -185,7 +185,9 @@ nav {
     @media (max-width: 640px){
 #typewriter_text{
         font-size: 30px;
-        }}
+        }
+        
+    }
 
  @media (min-width: 640px){
     
@@ -238,6 +240,7 @@ nav {
     #abstract1{
         display: none;
     }
+
 }
 
 .form-control{
@@ -260,27 +263,18 @@ nav {
     height: 100vh;
     background-repeat: no-repeat;
     background-position: center;
+    transition: 3s;
 }
-/* banner animation */
-@keyframes switch{
-    0%{
-        background:url('campus-banner.jpeg');
-        background-repeat: no-repeat;
-    }
-    25%{
-        background: url('vellorecampus.jpg');
-        background-repeat: no-repeat;
-    }
-    50%{
-        background: url('apcampus.jpeg');
-        background-repeat: no-repeat;
-    }
-    75%{
-        background: url('bhopalCampus.jpeg');
-        background-repeat: no-repeat;
-    }
-    100%{
-        background: url('campus-banner.jpg');
-        background-repeat: no-repeat;
-    }
+.borderLike{
+    width: 50%;
+    /* border: 0.5px solid grey; */
+}
+.card{
+    border-left: 4px solid grey;
+    transition: 0.5s ease;
+}
+
+.card:hover{
+    border: 2px dotted grey;
+    transform: translateX(10px);
 }

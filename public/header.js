@@ -1,39 +1,56 @@
 //variables
 let phone640p = window.matchMedia("(max-width: 640px)")
-  
+let phone800p = window.matchMedia("(max-width: 800px)")
 window.addEventListener("scroll", scrollNav);
-window.addEventListener("load", parallax);
+window.addEventListener("scroll", scrollEnd);
+window.setInterval(function(){
+    if(!phone800p.matches){
+        document.getElementById('colShow').style.display='none';
+    }else if(phone800p.matches){
+        document.getElementById('colShow').style.display='initial';
+    }
+},100);
   //your code here
     var k = 0
 $('#colShow').click(function(){
         
     if (phone640p.matches&& k==1) {
         $('.list-group').slideDown("slow", "linear");
+        $('#colShow').css("transform", "rotateZ(0deg)");
         // document.getElementById("colShow").innerHTML = "Show";
         k=0
         //                    document.body.style.marginTop = "300px";
     }
     else if (phone640p.matches && k==0) {
         $('.list-group').slideUp("slow", "linear");
+        $('#colShow').css("transform", "rotateZ(180deg)");
         // document.getElementById("colShow").innerHTML = "Collapse";
         k=1;
         //                    document.body.style.marginTop = "300px";
     }
 
 });
+//onscroll footer
+function scrollEnd() {
+
+}
 //onscroll function
 function scrollNav() {
     console.log($(window).scrollTop());
+    $('.questContainer').css("z-index","6");
     if ($(window).scrollTop() > 30) {
         document.getElementById("customHead").style.boxShadow = "0 2px 4px 0 black";
         $('#customHead').css("background-color", "rgba(128, 80, 250,0.8)");
         $('.list-group').css("color", "rgba(128, 80, 250,0.6)");
+        $('.questContainer').css("transform","translateY(-40px)");
     }
-    if ($(window).scrollTop() < 30) {
+    else if ($(window).scrollTop() < 30) {
         document.getElementById("customHead").style.boxShadow = "0 0px 0px 0 black";
         $('body').css("background-color", "white");
-        $('#customHead').css("background-color", "rgba(128, 80, 250,0)");
+        $('.questContainer').css("transform","translateY(40px)");
+        $('#customHead').css("background-color", "rgba(128, 80, 250, 0)");
         $('.list-group').slideDown("slow");
+        $('.questContainer').css("z-index","4");
 
     }
 
@@ -62,11 +79,12 @@ function scrollToContent(){
     //carousel Images
     var images = ['campus-banner.jpg','vellorecampus.jpg','bhopalCampus.jpg','apcampus.jpeg']
     var i =0;
-    window.setInterval(function(){
+    window.onload = function(){window.setInterval(function(){
         // console.log(i);
         // console.log("url('"+images[i]+"')");
         $('.bannerStyle').css("background","url('"+images[i]+"')");
             $('.bannerStyle').css("background-repeat","no-repeat");
+            $('.bannerStyle').css("transition","3s");
             $('.bannerStyle').css("background-position","center");
             $('.bannerStyle').css("background-size","cover");
             // $('.bannerStyle').css("","100vh");
@@ -75,6 +93,7 @@ function scrollToContent(){
             i=0;
         }
     },3000);
+}
     // window.setInterval(function(){
     //     window.setTimeout(function(){
             // $('.bannerStyle').css("background","url('campus-banner.jpeg')");
