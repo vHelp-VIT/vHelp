@@ -4,27 +4,28 @@
 <!-- static javascript -->
 
 <div class="container-fluid">
-<style>
-    .form-control{
-        border-radius: 0rem;
-        font-size: 18px;
-        font-weight: 700;
-        /* border: 0px; */
-        -webkit-box-shadow: 2px 2px 2px 2px rgb(255,255,255);
-        -moz-box-shadow: 2px 2px 2px 2px rgb(255,255,255);
-        box-shadow: 2px 2px 2px 2px rgb(255,255,255);
-        height: 200px;
-    }
-</style>
+    <style>
+        .form-control {
+            border-radius: 0rem;
+            font-size: 18px;
+            font-weight: 700;
+            /* border: 0px; */
+            -webkit-box-shadow: 2px 2px 2px 2px rgb(255, 255, 255);
+            -moz-box-shadow: 2px 2px 2px 2px rgb(255, 255, 255);
+            box-shadow: 2px 2px 2px 2px rgb(255, 255, 255);
+            height: 200px;
+        }
+    </style>
     <div class="bannerStyle row" style="margin-top: -85px;">
-        <div class="col-sm-12" >
-            <div class="row fullscreen d-flex align-items-center justify-content-center" style="height: 702px;  overflow-y: hidden;">
+        <div class="col-sm-12">
+            <div class="row fullscreen d-flex align-items-center justify-content-center"
+                style="height: 702px;  overflow-y: hidden;">
                 <div class="banner-content text-center" style="max-height: 500px;">
                     <p class="tagline" style="font-size: 20px;">
                         <span id="typewriter_text"></span>
                         <span style="font-size: 30px;">|</span>
                         </span>
-                    </p> 
+                    </p>
                     <script src="typing.js"></script>
                     <br><br><br>
                     <div onclick="scrollToContent()" class="arrow-down"></div>
@@ -34,19 +35,19 @@
     </div>
 </div>
 <div id="mainContent" class="container" style="margin-top: 10px;">
-    
+
     <div class="questContainer row" style="margin-top: -45px;">
         <div class="col-md-12">
             <% if(foo==1){ %>
-                <div class="alert alert-primary alert-dismissible fade show" role="alert">
-                    <strong>yay!!</strong> your query is being posted  🙌 .....
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                <% } %>
+            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                <strong>yay!!</strong> your query is being posted 🙌 .....
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <% } %>
         </div>
-        
+
         <div class="col-md-9">
             <!--  question posting forum -->
             <form method="POST" action="/">
@@ -54,9 +55,9 @@
                     <h5 style="margin-left: 4px;">Queries Section</h5>
                     <textarea class="form-control" id="formContent" rows="8"
                         placeholder="What's on your Mind!! Ask away your doubt!!" name="question_area"></textarea>
-                        <div class="row" style="margin-left: 10px">
+                    <div class="row" style="margin-left: 10px">
                         <p id="colShow"><img src="collapse.webp" style="width: 20px; height: 20px;"></p>
-                        </div>
+                    </div>
                     <div class="row" style="margin-left: 10px;">
                         <div class="questTags col-6 col-md-4">
                             <input class="form-check-input" type="checkbox" name="radio_acad" id="radio_acad">
@@ -99,8 +100,8 @@
                     <button type="submit" id="postQuest" class=" btn btn-light float-right">Post Question</button>
                 </div>
         </div>
-    </form>
-    
+        </form>
+
         <div class="col-md-3">
             <ul class="list-group">
                 <li class="list-group-item  d-flex justify-content-between align-items-center">
@@ -124,7 +125,7 @@
                     <!-- <span class="badge badge-primary badge-pill">1</span> -->
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                    <a href="/general"<i class="fa fa-folder" aria-hidden="true"></i> General FAQ's</a>
+                    <a href="/general" <i class="fa fa-folder" aria-hidden="true"></i> General FAQ's</a>
                     <!-- <span class="badge badge-primary badge-pill">1</span> -->
                 </li>
             </ul>
@@ -141,10 +142,16 @@
                 <div class="card-body">
                     <h5 class="card-title"><b>Is VIT Vellore main Campus??</b></h5>
                     <p style="margin-top:0px; margin-bottom: 0px;"><b>Posted by:</b>_shivansh_goel_</p>
-                    <p class="card-text">In vit there is nothing like the main campus. VIT is a university. All Campuses are equally good. But Bhopal campus and Amravati campus are relatively new campuses. So if you are looking from the perspective of infrastructure and other extracurricular activities, obviously that you will get in Vellore and Chennai campus better as compared to other two. But in context to academics, all the campuses are equally good. I would say,  VIT will never be a bad choice for you. If you are ready to work hard and willing to learn new things, you will definitely come out with flying colors.
+                    <p class="card-text">In vit there is nothing like the main campus. VIT is a university. All Campuses
+                        are equally good. But Bhopal campus and Amravati campus are relatively new campuses. So if you
+                        are looking from the perspective of infrastructure and other extracurricular activities,
+                        obviously that you will get in Vellore and Chennai campus better as compared to other two. But
+                        in context to academics, all the campuses are equally good. I would say, VIT will never be a bad
+                        choice for you. If you are ready to work hard and willing to learn new things, you will
+                        definitely come out with flying colors.
 
                         Cheers!!
-                        
+
                     </p>
                 </div>
             </div>
@@ -153,12 +160,16 @@
             <div class="card w-100">
                 <div class="card-body">
                     <h5 class="card-title"><b>How to get admission in VIT in 2020??
-                    </b></h5>
+                        </b></h5>
                     <p style="margin-top:0px; margin-bottom: 0px;"><b>Posted by:</b>_shivansh_goel_</p>
-                    <p class="card-text">Due to the Pandemic situation, VITEEE will not be conducted. So for this year VIT has announced, admissions for BTech students will be based on marks of class 12 or equivalent and students who gave JEE Mains/ SAT will be considered. As of now VIT has not announced anything clearly. So if you want to get admission in VIT, you have to submit your form and upload your 12th marks sheet. 
+                    <p class="card-text">Due to the Pandemic situation, VITEEE will not be conducted. So for this year
+                        VIT has announced, admissions for BTech students will be based on marks of class 12 or
+                        equivalent and students who gave JEE Mains/ SAT will be considered. As of now VIT has not
+                        announced anything clearly. So if you want to get admission in VIT, you have to submit your form
+                        and upload your 12th marks sheet.
 
                         Cheers!!
-                        
+
                     </p>
                 </div>
             </div>
@@ -169,8 +180,11 @@
                     <h5 class="card-title"><b>Is placements of Chennai Campus Better than Vellore Campus?</b></h5>
                     <p style="margin-top:0px; margin-bottom: 0px;"><b>Posted by:</b> Admin.</p>
                     <p class="card-text">
-                        The placements of both the campuses take place in VIT vellore. Students from chennai Campus are taken to Vellore during placement session.There is no prejudices on the basis of the campus you belong to.
-                        But the from statistics, placements of chennai campus are better which is merely because of less population in chennai campus.
+                        The placements of both the campuses take place in VIT vellore. Students from chennai Campus are
+                        taken to Vellore during placement session.There is no prejudices on the basis of the campus you
+                        belong to.
+                        But the from statistics, placements of chennai campus are better which is merely because of less
+                        population in chennai campus.
                     </p>
                 </div>
             </div>
@@ -179,9 +193,12 @@
             <div class="card w-100">
                 <div class="card-body">
                     <h5 class="card-title"><b>Do i need to know Tamil before joining VIT campuses?</b></h5>
-                    <p style="margin-top:0px; margin-bottom: 0px;"><b>Posted by:</b> Admin.</p>
-                    <p class="card-text">No, nearly everyone knows Hindi and English in the campus. VIT as a whole is a diverse campus, you will find people from everyone corner of the country(and Some international students too!).
-                        Some people may prefer tamil(from hostel staffs etc.) but they do understand english. Language is not an issue(as most people think) in VIT.
+                    <p style="margin-top:0px; margin-bottom: 0px;"><b>Posted by:</b> anonymous</p>
+                    <p class="card-text">No, nearly everyone knows Hindi and English in the campus. VIT as a whole is a
+                        diverse campus, you will find people from everyone corner of the country(and Some international
+                        students too!).
+                        Some people may prefer tamil(from hostel staffs etc.) but they do understand english. Language
+                        is not an issue(as most people think) in VIT.
                     </p>
                 </div>
             </div>
@@ -189,9 +206,11 @@
         <div class="col-sm-12" style="margin-top: 10px;">
             <div class="card w-100">
                 <div class="card-body">
-                    <h5 class="card-title"><b>Will i get only south-Indian food in VIT campuses?</b></h5>
-                    <p style="margin-top:0px; margin-bottom: 0px;"><b>Posted by:</b>Admin.</p>
+                    <h5 class="card-title"><b> What are wifi Facilities at VIT? Which network is good for mobile data?
+                        </b></h5>
+                    <p style="margin-top:0px; margin-bottom: 0px;"><b>Posted by:</b>anonymous.</p>
                     <p class="card-text">
+
                     </p>
                 </div>
             </div>
@@ -214,28 +233,64 @@
         <div class="col-sm-12" style="margin-top: 10px;">
             <div class="card w-100">
                 <div class="card-body">
-                    <h5 class="card-title"><b>How is VIT Chennai Campus?</b></h5>
-                    <p style="margin-top:0px; margin-bottom: 0px;"><b>Posted by:</b>_shivansh_goel_</p>
-                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi accusamus
-                        pariatur saepe ex quibusdam debitis, ullam architecto! Suscipit, magnam quisquam ullam
-                        consequatur at, ipsam dicta illum ea ducimus dolorem ut!
-                        Pariatur expedita, perferendis modi, amet dolorum praesentium rem consequatur illo cumque
-                        quibusdam officiis unde. Neque perferendis nobis, ullam, architecto necessitatibus debitis
-                        facilis distinctio voluptatem esse natus, non cupiditate. Dolorem, hic?
+                    <h5 class="card-title"><b>How are the fests at VIT? </b></h5>
+                    <p style="margin-top:0px; margin-bottom: 0px;"><b>Posted by:</b> anonymous_friend </p>
+                    <p class="card-text">In chennai campus there are two major fests one is Technovit ,the technical fest
+                        and Vibrance ,the cultural fest both fests are 3-4 days long.
+                        Vibrance has more hype ,the atmosphere in college becomes full of joy and enthusiasmic, everybody making their memories ,enjoying the presence of celebrities especially freshies for them 
+                        it becomes a lifetime experience. 
+                        On the other hand Technovit comes before Vibrance and has a techy vibes
+                        there are competitions, activities regarding various technical topics,So if you are a tech-person then you'll definitely gonna enjoy it as well.
                     </p>
                 </div>
             </div>
-        </div>     <div class="col-sm-12" style="margin-top: 10px;">
+        </div>
+        <div class="col-sm-12" style="margin-top: 10px;">
             <div class="card w-100">
                 <div class="card-body">
-                    <h5 class="card-title"><b>How is VIT Chennai Campus?</b></h5>
-                    <p style="margin-top:0px; margin-bottom: 0px;"><b>Posted by:</b>_shivansh_goel_</p>
-                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi accusamus
-                        pariatur saepe ex quibusdam debitis, ullam architecto! Suscipit, magnam quisquam ullam
-                        consequatur at, ipsam dicta illum ea ducimus dolorem ut!
-                        Pariatur expedita, perferendis modi, amet dolorum praesentium rem consequatur illo cumque
-                        quibusdam officiis unde. Neque perferendis nobis, ullam, architecto necessitatibus debitis
-                        facilis distinctio voluptatem esse natus, non cupiditate. Dolorem, hic?
+                    <h5 class="card-title"><b>Recommended Laptops</b></h5>
+                    <p style="margin-top:0px; margin-bottom: 0px;"><b>Posted by:</b> Karan Yuvraj Singh</p>
+                    <p class="card-text">
+                        <br>
+                        <b>When will I need the laptops?</b>
+                        <br>
+                        You will need a laptop in VIT from the first day itself.
+                        <br>
+                        <b>
+                            Can I do away without laptops for a few days? 1 day at least, Please?
+                        </b>
+                        <br>
+                        Okay. But get a laptop within 2-3 weeks.
+                        <br>
+                        <b>
+                            I am a day scholar and have a desktop at home. So do I still need a laptop?
+                        </b>
+                        <br>
+                        Still get a laptop. You will need a laptop for your labs, project reviews and to do your tasks
+                        in free time during college hours.
+                        <br>
+                        <b>
+                            What are the required specification for the laptop ?
+                        </b>
+                        <br>
+                        See the Laptop Recommendation post on this blog.
+                        <br>
+                        <b>
+                            Do I need a scientific calculator?
+                        </b>
+                        <br>
+                        You must have a scientific calculator
+                        <br>
+                        <b>
+                            Can you recommend some calculator models?
+                        </b>
+                        <br>
+                        See the Calculator Recommendation post.
+                        <b>
+                            <a
+                                href="https://vitfresher.blogspot.com/2020/07/recommendation-for-calculators.html" target="_blank">Here</a>
+                        </b>
+
                     </p>
                 </div>
             </div>
