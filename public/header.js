@@ -82,6 +82,7 @@ function scrollToContent(){
     window.onload = function(){window.setInterval(function(){
         // console.log(i);
         // console.log("url('"+images[i]+"')");
+        // $('.list-group-item').addClass("listItems");
         $('.bannerStyle').css("background","url('"+images[i]+"')");
             $('.bannerStyle').css("background-repeat","no-repeat");
             $('.bannerStyle').css("transition","3s");
@@ -94,21 +95,8 @@ function scrollToContent(){
         }
     },3000);
 }
-    // window.setInterval(function(){
-    //     window.setTimeout(function(){
-            // $('.bannerStyle').css("background","url('campus-banner.jpeg')");
-    //         $('.bannerStyle').css("background-repeat","no-repeat");
-    //     },000);
-    //     window.setTimeout(function(){
-    //         $('.bannerStyle').css("background","url('campus-banner.jpeg')");
-    //         $('.bannerStyle').css("background-repeat","no-repeat");
-    //     },3000);
-    //     window.setTimeout(function(){
-    //         $('.bannerStyle').css("background","url('bhopalCampus.jpg')");
-    //         $('.bannerStyle').css("background-repeat","no-repeat");
-    //     },5000);
-    //     window.setTimeout(function(){
-    //         $('.bannerStyle').css("background","url('apcampus.jpeg')");
-    //         $('.bannerStyle').css("background-repeat","no-repeat");
-    //     },7000);
-    // },10000);
+//ONclick card
+$('.card').click(function(){
+    console.log("trigg"+this);
+    $(this).css("height","fit-content");
+});
