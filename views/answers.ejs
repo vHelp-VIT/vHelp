@@ -7,13 +7,14 @@
             <div class="card w-100" style="margin-top: 14px;">
                 <div class="card-body" style="height: auto; margin-bottom: 20px;">
                     <h5 class="card-title"> <%= ans.question %></h5>
+                    <p>
                     <% for(let cat of ans.category){ %>
                     
                         <span class="badge badge-light">
                             <%= cat %>
                         </span>
                         <% } %>
-                    
+                    </p>
 
                     <span>
                         <a data-toggle="collapse" href="#v-<%= ans._id %>" role="button" aria-expanded="false"
