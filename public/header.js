@@ -10,6 +10,16 @@ window.setInterval(function(){
         document.getElementById('colShow').style.display='initial';
     }
 },100);
+
+//Random Color gen
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
   //your code here
     var k = 0
 $('#colShow').click(function(){
@@ -79,7 +89,16 @@ function scrollToContent(){
     //carousel Images
     var images = ['campus-banner.jpg','vellorecampus.jpg','bhopalCampus.jpg','apcampus.jpeg']
     var i =0;
-    window.onload = function(){window.setInterval(function(){
+    window.onload = function(){
+        //CARD RANDOM COLOR SETTER
+            // $(".card").css("border-color", getRandomColor());
+            var cards = document.getElementsByClassName('card');
+            // console.log(cards[i]);
+        for(let i=0; i<cards.length; i++){
+          cards[i].style.borderColor = getRandomColor(); 
+        }
+       
+        window.setInterval(function(){
         // console.log(i);
         // console.log("url('"+images[i]+"')");
         // $('.list-group-item').addClass("listItems");
