@@ -49,31 +49,9 @@ html{
     margin-top: -10px;
 }
 
-
-.card-body:hover {
-    height: fit-content;
-}
-.card-body:hover .card{
-    padding: none;
-    margin: none;
-    box-shadow: 4px 2px 10px 2px grey;
-    cursor: pointer;
-    transform: scale(1.01);
-    height: fit-content;
-}
-.card-body:hover .card-text{
-    opacity:1;
-}
 .card-body {
-    /* border: 1px solid blue; */
-    /* border-left: = 1px solid gray; */
     cursor: pointer;
-    transition-delay: 4s;
-    /* box-shadow: 0px 2px 10px 0px grey; */
-    transition: 2s;
-    transition-duration: 2s;
-    /* transition-property: height; */
-    /* transition-delay: 2s; */
+    transition: 2s ease;
     height: 20px;
     margin-top: 0px;
     margin-bottom: 50px;
@@ -81,10 +59,9 @@ html{
 
 .card-text{
     opacity: 0;
-    transition-duration:ease;
-    /* transition: 0.5s; */
-    /* color: aliceblue; */
     border-radius: 0%;
+    display: none;
+    transition: 2s ease;
 }
 
 .campus-name{
@@ -97,16 +74,16 @@ html{
 }
 .card{
     border-left: 4px solid rgb(128, 80, 250);
-    transition: 0.5s ease;
+    transition: 1s ease;
     border-radius: 0;
     border-bottom:0 ;
     border-top: 0;
     border-right: 0;
 }
-
 .card:hover{
     transform: translateX(10px);
 }
+
 .card a{
     color: black;
     text-decoration: none;
@@ -174,15 +151,6 @@ html{
 }
 .Rate{
     color: aliceblue;
-}
-.questionSection:hover {
-    transform: scale(1.01);
-    box-shadow: 0px 2px 4px 0px red;
-    /* Border: 1px solid grey; */
-}
-
-.questionSection {
-    box-shadow: 0px 1px 4px 0px black;
 }
 
 body {
@@ -348,4 +316,8 @@ nav {
 #disclaimer{
     font-size: 10px;
     margin-top: 100px;
+}
+.dropDowns{
+    float: right;
+    color: rgb(128, 80, 250);
 }

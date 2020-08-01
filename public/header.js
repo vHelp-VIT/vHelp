@@ -11,7 +11,25 @@ window.setInterval(function(){
         document.getElementById('colShow').style.display='initial';
     }
 },100);
-
+var drop = 0;
+$('.dropDowns').click(function(){
+    if(drop == 0){
+    console.log("clicked");
+    cardId = $(event.target).parent().parent();
+    console.log(cardId);
+    cardId.css("height","fit-content");
+    cardId.children('.card-text').css("opacity","1");
+    cardId.children('.card-text').css("display","block");
+    $(event.target).css("transform","rotateZ(360deg)");
+    drop = 1;
+}
+    else if(drop == 1){
+    cardId.css("height","20px");
+    cardId.children('.card-text').css("display","none");
+    // $(event.target).css("transform","rotateZ(360deg)");
+        drop=0;
+    }
+});
 //Random Color gen
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
@@ -104,9 +122,12 @@ function scrollToContent(){
     window.onload = function(){
         //CARD RANDOM COLOR SETTER
             var cards = document.getElementsByClassName('card');
+            var dropDowns = document.getElementsByClassName('dropDowns');
             // console.log(cards[i]);
         for(let i=0; i<cards.length; i++){
-          cards[i].style.borderColor = getRandomColor(); 
+            let cl = getRandomColor();
+          cards[i].style.borderColor = cl; 
+          dropDowns[i].style.color = cl; 
         }
        //--------------------------
         window.setInterval(function(){
