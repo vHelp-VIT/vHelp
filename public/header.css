@@ -42,6 +42,7 @@ html{
     background-color: white;
     margin-left: 15px;
     margin-right: 15px;
+    transition: 1s ease;
 
 }
 .card-text{
@@ -99,7 +100,7 @@ html{
     top: 0;
     width: 100%;
     height: 60px;
-    z-index: 6;
+    z-index: 12;
     color: white;
     transition:0.5s;
     /*    font-size:25px;*/
