@@ -116,7 +116,18 @@ html{
     transition:0.5s;
     /*    font-size:25px;*/
 }
-
+.campus-name{
+    font-size: 10px;
+    height: auto;
+}
+.card-campus{
+    /* border-left: 1px solid grey; */
+    height: auto; 
+    margin-bottom: 20px; 
+    border-left: 3px solid grey; 
+    padding-left: 3px; 
+    border-radius: 0.27rem;
+}
 .list-group-item:hover {
     box-shadow: 0px 2px 4px 0px black;
     cursor: pointer;
@@ -323,4 +334,12 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: top;
+.card{
+    border-left: 4px solid grey;
+    transition: 0.5s ease;
+}
+
+.card:hover{
+    /* border: 2px dotted grey; */
+    transform: translateX(10px);
 }
