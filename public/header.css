@@ -36,6 +36,12 @@ html{
     box-shadow:0 2px 4px 0 rgb(128, 80, 250,0.8);
     
 }
+
+
+
+
+
+
 /* CARD CSS STARTS HERE */
 .card-title{
     margin-top: -10px;
@@ -87,14 +93,11 @@ html{
     font-size: 10px;
     height: auto;
 }
-
 .card-campus{
-    border-left: 3px solid grey;
-    border-radius: 0.5rem;
-    margin-top: 14px;
+    /* border-left: 1px solid grey; */
 }
 .card{
-    border-left: 4px solid grey;
+    border-left: 4px solid rgb(128, 80, 250);
     transition: 0.5s ease;
 }
 
@@ -107,6 +110,13 @@ html{
     text-decoration: none;
 }
 /* CARD CSS ENDS HERE */
+
+
+
+
+
+
+
 #customHead {
     background-color: rgba(128, 80, 250, 0.0);
     position: fixed;
@@ -119,28 +129,17 @@ html{
     transition:0.5s;
     /*    font-size:25px;*/
 }
-.campus-name{
-    font-size: 10px;
-    height: auto;
-}
-.card-campus{
-    /* border-left: 1px solid grey; */
-    height: auto; 
-    margin-bottom: 20px; 
-    border-left: 1px solid grey; 
-    padding-left: 3px; 
-    border-radius: 0.27rem;
-}
+
 .list-group-item:hover {
-    box-shadow: 0px 2px 4px 0px black;
+    /* box-shadow: 0px 2px 4px 0px black; */
     cursor: pointer;
-    /* transform: scale(0.98); */
-    transform: scale(1.01);
-    /* border: None; */
+    transform: translateX(10px);
+    border-left:2px solid rgb(128, 80, 250);
 }
 
 .list-group-item {
     margin-bottom: 2px;
+    transition: 1s;
 }
 #postQuest, .questTags{
     display: none;
@@ -337,12 +336,8 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: top;
-.card{
-    border-left: 4px solid grey;
-    transition: 0.5s ease;
 }
-
-.card:hover{
-    /* border: 2px dotted grey; */
-    transform: translateX(10px);
+#askedQuest{
+    background-color: rgb(128, 80, 250);
+    color: white;
 }
