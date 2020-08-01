@@ -94,11 +94,13 @@ html{
     height: auto;
 }
 .card-campus{
-    /* border-left: 1px solid grey; */
+    border-left: 1px solid grey;
+    border-radius: 0.2em;
 }
 .card{
     border-left: 4px solid rgb(128, 80, 250);
     transition: 0.5s ease;
+    border-radius: 0;
 }
 
 .card:hover{
