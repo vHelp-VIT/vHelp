@@ -29,6 +29,7 @@ $('#colShow').click(function(){
     }
 
 });
+
 //onscroll function
 function scrollNav() {
     console.log($(window).scrollTop());
