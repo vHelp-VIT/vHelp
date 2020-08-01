@@ -80,9 +80,6 @@ html{
     border-top: 0;
     border-right: 0;
 }
-.card:hover{
-    transform: translateX(10px);
-}
 
 .card a{
     color: black;
@@ -219,6 +216,10 @@ nav {
 
  @media (min-width: 640px){
     
+
+.card:hover{
+    transform: translateX(10px);
+}
 .tagline {
     font-size: 80px;
 }
@@ -319,5 +320,8 @@ nav {
 }
 .dropDowns{
     float: right;
+    color: rgb(128, 80, 250);
+}
+.blueTick{
     color: rgb(128, 80, 250);
 }
