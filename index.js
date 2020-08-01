@@ -112,7 +112,7 @@ app.post("/update_ans/:ans_id",async(req,res)=>{
         if(err) console.log(err);
         else console.log("Updated ans successfully!!");
     });
-    res.redirect("/");
+    res.redirect('back');
 });
 
 
