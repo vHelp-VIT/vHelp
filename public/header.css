@@ -53,7 +53,8 @@ html{
     border-radius: 0%;
 }
 
-#formContent{
+#formContent:hover{
+    box-shadow:0 2px 4px 0 rgb(128, 80, 250,0.8);
     
 }
 .card-title{
