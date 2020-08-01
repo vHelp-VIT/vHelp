@@ -124,7 +124,7 @@ html{
     /* border-left: 1px solid grey; */
     height: auto; 
     margin-bottom: 20px; 
-    border-left: 3px solid grey; 
+    border-left: 1px solid grey; 
     padding-left: 3px; 
     border-radius: 0.27rem;
 }
