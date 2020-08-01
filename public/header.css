@@ -15,19 +15,6 @@ html{
     /* overflow-x: hidden; */
 }
 
-.card-body:hover {
-    height: fit-content;
-
-}
-.card-body:hover .card{
-    padding: none;
-    margin: none;
-    box-shadow: 4px 2px 10px 2px grey;
-    cursor: pointer;
-    transform: scale(1.01);
-    height: fit-content;
-}
-
 .questContainer{
     margin-top: 35px;
     z-index: 4;
@@ -45,6 +32,49 @@ html{
     transition: 1s ease;
 
 }
+#formContent:hover{
+    box-shadow:0 2px 4px 0 rgb(128, 80, 250,0.8);
+    
+}
+/* CARD CSS STARTS HERE */
+.card-title{
+    margin-top: -10px;
+}
+
+.card{
+    border: none;
+    background-color: white;
+}
+
+
+.card-body:hover {
+    height: fit-content;
+}
+.card-body:hover .card{
+    padding: none;
+    margin: none;
+    box-shadow: 4px 2px 10px 2px grey;
+    cursor: pointer;
+    transform: scale(1.01);
+    height: fit-content;
+}
+.card-body:hover .card-text{
+    opacity:1;
+}
+.card-body {
+    /* border: 1px solid blue; */
+    /* border-left: = 1px solid gray; */
+    cursor: pointer;
+    /* box-shadow: 0px 2px 10px 0px grey; */
+    transition: 2s;
+    transition-duration: 2s;
+    /* transition-property: height; */
+    /* transition-delay: 2s; */
+    height: 20px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
 .card-text{
     opacity: 0;
     transition-duration: 0.2s;
@@ -53,47 +83,27 @@ html{
     border-radius: 0%;
 }
 
-#formContent:hover{
-    box-shadow:0 2px 4px 0 rgb(128, 80, 250,0.8);
-    
+.campus-name{
+    font-size: 10px;
+    height: auto;
 }
-.card-title{
-    margin-top: -10px;
+.card-campus{
+    /* border-left: 1px solid grey; */
 }
-
-.page-footer{
-    background-color: rgb(24, 24, 24);
-    margin-top: 150px;
-    color: aliceblue;
-    /* background: url('https://www.servicefirstusa.com/wp-content/uploads/2018/07/footer.png'); */
-    background: url('footer-back.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: top;
-}
-.card-body:hover .card-text{
-    opacity:1;
-
-}
-
 .card{
-    border: none;
-    background-color: white;
+    border-left: 4px solid grey;
+    transition: 0.5s ease;
 }
 
-.card-body {
-    /* border: 1px solid blue; */
-    /* border-left: = 1px solid gray; */
-    cursor: pointer;
-    /* box-shadow: 0px 2px 10px 0px grey; */
-    transition: 0.5s;
-    transition-duration: 1s;
-    transition-property: height;
-    height: 20px;
-    margin-top: 0px;
-    margin-bottom: 50px;
+.card:hover{
+    /* border: 2px dotted grey; */
+    transform: translateX(10px);
 }
-
+.card a{
+    color: black;
+    text-decoration: none;
+}
+/* CARD CSS ENDS HERE */
 #customHead {
     background-color: rgba(128, 80, 250, 0.0);
     position: fixed;
@@ -114,7 +124,7 @@ html{
     /* border-left: 1px solid grey; */
     height: auto; 
     margin-bottom: 20px; 
-    border-left: 3px solid grey; 
+    border-left: 1px solid grey; 
     padding-left: 3px; 
     border-radius: 0.27rem;
 }
@@ -141,11 +151,16 @@ html{
     color:white;
 }
 
-#submitQuest{
+.submitQuest{
     border: 2px solid rgb(128, 80, 250);
+    border-radius: 10%;
+    background-color: white;
+    margin-top: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-#submitQuest:hover{
+.submitQuest:hover{
     background-color:rgb(128, 80, 250);
     color:white;
 }
@@ -173,14 +188,25 @@ body {
 nav {
     position: fixed;
 }
+.listItems{
+    color: #FFFFFF;
+    text-decoration: none;
+}
 
+.listItems:hover{
+    background-color:rgb(128, 80, 250);
+    color:#FFFFFF;
+}
 .list-group {
     /* border=1px solid gray; */
     /* border: 2px solid red; */
     cursor: pointer;
     /* transform: scale(0.98); */
 }
-
+.list-group-item a{
+    color: rgb(128, 80, 250);
+    text-decoration: none;
+}
 
 .links {
     color: red;
@@ -299,6 +325,15 @@ nav {
     width: 50%;
     /* border: 0.5px solid grey; */
 }
+.page-footer{
+    background-color: rgb(24, 24, 24);
+    margin-top: 150px;
+    color: aliceblue;
+    /* background: url('https://www.servicefirstusa.com/wp-content/uploads/2018/07/footer.png'); */
+    background: url('footer-back.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: top;
 .card{
     border-left: 4px solid grey;
     transition: 0.5s ease;
