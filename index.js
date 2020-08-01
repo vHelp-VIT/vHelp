@@ -27,14 +27,13 @@ const question = mongoose.model('question', { question: String, category: Object
 
 
 app.get("/", (req, res) => {
-    // let stat=req.query.stat;
     if(req.query.stat=="posted") res.render('index', {foo:1});
     else res.render('index', {foo:0});   
 });
 
 
 app.post("/", (req, res) => {
-    console.log("Question posted!!");
+    // console.log("Question posted!!");
 
     categories = function () {
 
@@ -74,17 +73,14 @@ app.post("/", (req, res) => {
             console.log(fruits);
         }
     });
-    // res.redirect('back',{foo:true});
     res.redirect('/?stat=posted');
 });
 
 
 app.get("/:cat", async(req, res) => {
     let required_category = req.params.cat;
-    // console.log("Required Categort: ",required_category);
     let filtered= await question.find({ category : { $in : [required_category] }})
-    // console.log(filtered)
-    res.render("answers",{answers: filtered});
+    res.render("answers",{answers: filtered.reverse()});
 
 });
 

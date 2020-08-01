@@ -87,8 +87,11 @@ html{
     font-size: 10px;
     height: auto;
 }
+
 .card-campus{
-    /* border-left: 1px solid grey; */
+    border-left: 3px solid grey;
+    border-radius: 0.5rem;
+    margin-top: 14px;
 }
 .card{
     border-left: 4px solid grey;
