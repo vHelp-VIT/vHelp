@@ -106,7 +106,7 @@ html{
 }
 
 .list-group-item:hover {
-    box-shadow: 0px 2px 4px 0px red;
+    box-shadow: 0px 2px 4px 0px black;
     cursor: pointer;
     /* transform: scale(0.98); */
     transform: scale(1.01);
@@ -120,7 +120,7 @@ html{
     display: none;
 }
 .Rate:hover {
-    box-shadow: 0px 0px 4px 0px red;
+    box-shadow: 0px 0px 4px 0px black;
 }
 .Rate{
     color: aliceblue;
