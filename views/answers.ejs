@@ -36,29 +36,13 @@
                     <% for(let sub_ans of ans.answer){ %>
                     <div class="collapse lapse1" id="v-<%= ans._id %>">
                         <div class="col-sm-12">
-<<<<<<< HEAD
-                            <div class="card w-100" style="margin-top: 14px;">
-                                <div class="card-body" style="height: auto; margin-bottom: 20px;">
-                                    <h5 class="card-title"> 
-                                        <% if(sub_ans.name==undefined){ %>
-                                            Anonymous
-                                        <% } %>
-                                        <%= sub_ans.name %>
-                                    <% if(sub_ans.campus=="Vellore"){  %>
-                                    <span class="badge badge-success">Vellore</span>
-                                    <% } %>
-                                    <% if(sub_ans.campus=="Chennai"){  %>
-                                    <span class="badge badge-primary">Primary</span>
-                                    <% } %>
-                                    <% if(sub_ans.campus=="Bhopal"){  %>
-                                    <span class="badge badge-danger">Bhopal</span>
-                                    <% } %>
-                                    <% if(sub_ans.campus=="Amravati"){  %>
-                                    <span class="badge badge-warning">Amravati</span>
-=======
                             <div class="card-campus w-100" style="margin-top: 14px;">
                                 <div class="card-body-campus" style="height: auto; margin-bottom: 20px;">
                                     <h5 class="card-title-campus"> <%= sub_ans.name %><p class="campus-name"><%= sub_ans.campus %></p> </h5>
+                                    <% if(sub_ans.name==undefined){ %>
+                                        Anonymous
+                                    <% } %>
+                                    <%= sub_ans.name %>
                                     <% if(sub_ans.campus=="Vellore"){  %>
                                         <span class="badge badge-success"><p class="campus-badge-text">Vit Vellore</p></span>
                                     <% } %>
@@ -70,7 +54,6 @@
                                     <% } %>
                                     <% if(sub_ans.campus=="Amravati"){  %>
                                         <span class="badge badge-warning"><p class="campus-badge-text">Vit Amravati</p></span>
->>>>>>> 56a87efe9fc13611c8b62dce2ba16c6208120788
                                     <% } %>
                                 </h5>
                                     <%= sub_ans.ans %>
