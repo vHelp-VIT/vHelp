@@ -92,13 +92,12 @@ app.post("/update_ans/:ans_id",async(req,res)=>{
     let my_new_ans=req.body.ans_here;
     let campus=req.body.campus_name;
     let name=req.body.name_first + " " + req.body.name_last; 
-    console.log(questionn_id);
-    console.log(new_ans);
-    console.log(campus);
+    let link=req.body.imp_link;
     var new_ans={
         campus: campus,
         ans: my_new_ans,
-        name:name
+        name:name,
+        link: link
     };
     await question.updateOne({_id:questionn_id},
         { $addToSet: { answer: new_ans } },
