@@ -1,7 +1,7 @@
 <%- include('header') %>
 <style>
-    #customHead{
-        background-color: rgba(128, 80, 250,0.8);
+    #customHead {
+        background-color: rgba(128, 80, 250, 0.8);
         box-shadow: 0 2px 4px 0 black;
     }
 </style>
@@ -27,7 +27,8 @@
                     <span>
                         <a data-toggle="collapse" href="#v-<%= ans._id %>" role="button" aria-expanded="false"
                             aria-controls="collapseExample">
-                            <i class="fa fa-caret-down" aria-hidden="true"></i> <span class="replyAns">View Answers</span>
+                            <i class="fa fa-caret-down" aria-hidden="true"></i> <span class="replyAns">View
+                                Answers</span>
                         </a>
                     </span>
                     &nbsp;&nbsp;
@@ -38,7 +39,7 @@
                         </a>
                     </span>
                     <% if(ans.answer.length==0){ %>
-                        <br>
+                    <br>
                     Be the first one to answer this one!
                     <% } %>
                     <% for(let sub_ans of ans.answer){ %>
@@ -65,17 +66,21 @@
                                     <% } %>
                                     </h5>
                                     <p class="mx-4 my-2"><b><%= sub_ans.ans %></b></p>
+                                   
+                                    <a class="mx-4 my-2" href="<%= sub_ans.link %>" target="_blank"><u><%= sub_ans.link %></u></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <% } %>
-
+                   
                     <style>
                         .form-control-1 {
                             height: 35px;
                         }
                     </style>
+
+
 
 
                     <div class="collapse lapse1 my-2" id="v1-<%= ans._id %>">
@@ -101,6 +106,7 @@
                                 <div class="col-md-12">
                                     <textarea class="form-control" rows="8" placeholder="add your thoughts here....."
                                         name="ans_here"></textarea>
+                                        <input type="url"  class="form-control form-control-1"  name="imp_link" style="margin-top: 6px;" placeholder="you can add any url here...">
                                     <input type="submit" class="submitQuest btn btn-light my-1" />
                                 </div>
                         </form>
