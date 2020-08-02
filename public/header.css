@@ -215,8 +215,7 @@ nav {
     }
 
  @media (min-width: 640px){
-    
-
+   
 .card:hover{
     transform: translateX(10px);
 }
@@ -325,5 +324,17 @@ nav {
 .blueTick{
     color: rgb(128, 80, 250);
 }
-
+ 
+.images-main{
+    height: 100px;
+    margin-top: 10px;
+    box-shadow: 0 2px 2px 0 black;
+    border: 2px solid white;
+    transition: 1s;
+}
+   
+.images-main:active {
+    transform: scale(3.0);
+    z-index: 6;
+}
 
