@@ -151,3 +151,9 @@ $('.card').click(function(){
     console.log("trigg"+this);
     $(this).css("height","fit-content");
 });
+
+$('.images-main').oncontextmenu = function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    return false;
+};
