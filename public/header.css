@@ -200,6 +200,11 @@ nav {
     #footContent{
         margin-top: 60px;
     }
+     
+.images-main:hover {
+    transform: scale(3.0);
+    z-index: 6;
+}
 }
 @media (max-width: 640px){
 .tagline {
@@ -215,7 +220,11 @@ nav {
     }
 
  @media (min-width: 640px){
-   
+     
+.images-main:active {
+    transform: scale(3.0);
+    z-index: 6;
+}
 .card:hover{
     transform: translateX(10px);
 }
@@ -332,9 +341,5 @@ nav {
     border: 2px solid white;
     transition: 1s;
 }
-   
-.images-main:active {
-    transform: scale(3.0);
-    z-index: 6;
-}
+ 
 
