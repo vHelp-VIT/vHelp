@@ -84,6 +84,7 @@ html{
 .card a{
     color: black;
     text-decoration: none;
+    z-index: 0;
 }
 /* CARD CSS ENDS HERE */
 
@@ -203,7 +204,8 @@ nav {
      
 .images-main:hover {
     transform: scale(3.0);
-    z-index: 6;
+    z-index: 12;
+    box-shadow: 0 1px 500px 0 white;
 }
 }
 @media (max-width: 640px){
@@ -222,8 +224,10 @@ nav {
  @media (min-width: 640px){
      
 .images-main:active {
-    transform: scale(3.0);
+    transform: scale(4.0);
     z-index: 6;
+    box-shadow: 0 1px 500px 0 white;
+    position: relative;
 }
 .card:hover{
     transform: translateX(10px);
