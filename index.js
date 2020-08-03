@@ -86,7 +86,7 @@ app.post("/", (req, res) => {
 });
 
 
-app.get("/:cat", async (req, res) => {
+app.get("/explore/:cat", async (req, res) => {
     let required_category = req.params.cat;
     let filtered = await question.find({ category: { $in: [required_category] } })
     res.render("answers", { answers: filtered.reverse() });
@@ -128,7 +128,8 @@ app.post("/update_ans/:ans_id", async (req, res) => {
             from: 'vhelp55@gmail.com',
             to: mail_to,
             subject: 'Your query has been Answered!!',
-            text: 'Check out on questionn_id ' + questionn_id,
+            text: 'Someone answered your query!!. Click on the below link to view ' + questionn_id,
+            html: `<p>Hey,<br>Someone answered your query on vHelp. Check it immediately by <a href=https://vhelp.herokuapp.com/see/${questionn_id}>Clicking Here</a>!!</p>`
         };
         transporter.sendMail(mailOptions, function (error, info) {
             if (error) {
