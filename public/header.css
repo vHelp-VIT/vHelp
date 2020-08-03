@@ -84,6 +84,7 @@ html{
 .card a{
     color: black;
     text-decoration: none;
+    z-index: 0;
 }
 /* CARD CSS ENDS HERE */
 
@@ -200,6 +201,12 @@ nav {
     #footContent{
         margin-top: 60px;
     }
+     
+.images-main:hover {
+    transform: scale(3.0);
+    z-index: 12;
+    box-shadow: 0 1px 500px 0 white;
+}
 }
 @media (max-width: 640px){
 .tagline {
@@ -215,8 +222,13 @@ nav {
     }
 
  @media (min-width: 640px){
-    
-
+     
+.images-main:active {
+    transform: scale(4.0);
+    z-index: 6;
+    box-shadow: 0 1px 500px 0 white;
+    position: relative;
+}
 .card:hover{
     transform: translateX(10px);
 }
@@ -291,9 +303,10 @@ nav {
     animation-iteration-count: infinite; */
     background-image: url('campus-banner.jpg');
     height: 100vh;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    transition: 3s;
+    transition: 2s;
 }
 .page-footer{
     background-color: rgb(24, 24, 24);
@@ -325,5 +338,13 @@ nav {
 .blueTick{
     color: rgb(128, 80, 250);
 }
-
+ 
+.images-main{
+    height: 100px;
+    margin-top: 10px;
+    box-shadow: 0 2px 2px 0 black;
+    border: 2px solid white;
+    transition: 1s;
+}
+ 
 

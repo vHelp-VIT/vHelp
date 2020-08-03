@@ -117,7 +117,8 @@ function scrollToContent(){
         $(".bannerStyle").css("transition-duration","2s");
     }
     //carousel Images
-    var images = ['campus-banner.jpg','vellorecampus.jpg','bhopalCampus.jpg','apcampus.jpeg']
+    var images = ['vellorecampus.jpg','bhopalCampus.jpg','campus-banner.jpg','apcampus.jpeg']
+    var images_phone = ['phone-campus-banner.jpg','vellorecampus.jpg','bhopalCampus.jpg','apcampus.jpeg']
     var i =0;
     window.onload = function(){
         //CARD RANDOM COLOR SETTER
@@ -130,18 +131,14 @@ function scrollToContent(){
           dropDowns[i].style.color = cl; 
         }
        //--------------------------
-        window.setInterval(function(){
-        $('.bannerStyle').css("background","url('"+images[i]+"')");
-            $('.bannerStyle').css("background-repeat","no-repeat");
-            $('.bannerStyle').css("transition","3s");
-            $('.bannerStyle').css("background-position","center");
-            $('.bannerStyle').css("background-size","cover");
-            // $('.bannerStyle').css("","100vh");
-        i++;
-        if(i==3){
-            i=0;
-        }
-    },3000);
+       //banner animation
+       bannerAnimate();
+       if(phone800p){
+            preload(images_phone);
+       }else{
+            preload(images);
+       }
+       //----------------
     
     if ($(window).scrollTop() < 30) {
         $('.questContainer').css("transform","translateY(40px)");}
@@ -151,3 +148,34 @@ $('.card').click(function(){
     console.log("trigg"+this);
     $(this).css("height","fit-content");
 });
+
+$('.images-main').oncontextmenu = function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    return false;
+};
+ //Banner Animation
+ function bannerAnimate(){
+ window.setInterval(function(){
+    if(phone800p.matches){
+        $('.bannerStyle').css("background","url('"+images_phone[i]+"')");
+      }else{
+        $('.bannerStyle').css("background","url('"+images[i]+"')");
+      }
+    $('.bannerStyle').css("background-repeat","no-repeat");
+    $('.bannerStyle').css("transition","2s");
+    $('.bannerStyle').css("background-position","center");
+    $('.bannerStyle').css("background-size","cover");
+    // $('.bannerStyle').css("","100vh");
+i++;
+if(i==4){
+    i=0;
+        }
+    },3000);
+}
+//preload banner images
+function preload(arrayOfImages) {
+    $(arrayOfImages).each(function () {
+        $('<img />').attr('src',this).appendTo('body').css('display','none');
+    });
+}

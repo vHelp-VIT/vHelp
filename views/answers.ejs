@@ -5,6 +5,12 @@
         box-shadow: 0 2px 4px 0 black;
     }
 </style>
+<script>
+    window.setInterval(function(){
+        $('#customHead').css("background-color","rgba(26, 39, 228, 0.726)");
+        $('#customHead').css("box-shadow","0 2px 4px 0 black");
+    },10);
+</script>
 <div class="container">
     <% for(let ans of answers){ %>
     <div class="questContainer row">
