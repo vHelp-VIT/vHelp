@@ -118,6 +118,7 @@ function scrollToContent(){
     }
     //carousel Images
     var images = ['campus-banner.jpg','vellorecampus.jpg','bhopalCampus.jpg','apcampus.jpeg']
+    var images_phone = ['phone-campus-banner.jpg','vellorecampus.jpg','bhopalCampus.jpg','apcampus.jpeg']
     var i =0;
     window.onload = function(){
         //CARD RANDOM COLOR SETTER
@@ -131,7 +132,11 @@ function scrollToContent(){
         }
        //--------------------------
         window.setInterval(function(){
-        $('.bannerStyle').css("background","url('"+images[i]+"')");
+            if(phone800p.matches){
+                $('.bannerStyle').css("background","url('"+images_phone[i]+"')");
+              }else{
+                $('.bannerStyle').css("background","url('"+images[i]+"')");
+              }
             $('.bannerStyle').css("background-repeat","no-repeat");
             $('.bannerStyle').css("transition","3s");
             $('.bannerStyle').css("background-position","center");
