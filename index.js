@@ -2,33 +2,36 @@ const express = require('express')
 const bodyparser = require('body-parser')
 const request = require('request')
 const mongoose = require("mongoose")
+var nodemailer = require('nodemailer');
 const app = express()
 app.use(bodyparser.urlencoded({ extended: true }));
+
+
+var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: 'vhelp55@gmail.com',
+        pass: 'shivansh12'
+    }
+});
 
 
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 
-var mongo = async ()=>{
+var mongo = async () => {
     // mongoose.connect("mongodb://localhost:27017/vhelpblog", { useNewUrlParser: true });
-    await mongoose.connect("mongodb+srv://shivansh-12:shivansh@cluster0.vvpfe.mongodb.net/vHelp?retryWrites=true&w=majority", { useNewUrlParser: true,useUnifiedTopology: true  });
+    await mongoose.connect("mongodb+srv://shivansh-12:shivansh@cluster0.vvpfe.mongodb.net/vHelp?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
 };
 mongo()
 
-// const MongoClient = require('mongodb').MongoClient;
-// const uri = "mongodb+srv://shivansh-12:shivansh12@cluster0.vroy2.mongodb.net/vHelp?retryWrites=true&w=majority";
-// const client = new MongoClient(uri, { useNewUrlParser: true });
-// client.connect(err => {
-// //   const collection = client.db("test").collection("devices");
-// //   // perform actions on the collection object
-// //   client.close();
-const question = mongoose.model('question', { question: String, category: Object, answer: Object });
-// });
+const question = mongoose.model('question', { question: String, category: Object, answer: Object, email: String });
+
 
 
 app.get("/", (req, res) => {
-    if(req.query.stat=="posted") res.render('index', {foo:1});
-    else res.render('index', {foo:0});   
+    if (req.query.stat == "posted") res.render('index', { foo: 1 });
+    else res.render('index', { foo: 0 });
 });
 
 
@@ -57,54 +60,79 @@ app.post("/", (req, res) => {
         if (req.body.radio_gen == "on") {
             cat.push("general")
         }
-        if(cat.length==0){
+        if (cat.length == 0) {
             cat.push("general")
         }
         return cat
     }
     let ques = req.body.question_area;
+    let query_email = req.body.query_email;
+
     if (ques.length != undefined) {
         let cat = categories();
-        const newQuestion = new question({ question: ques, category: cat, answer:[]});
+        const newQuestion = new question({ question: ques, category: cat, answer: [], email: query_email });
         newQuestion.save()
     }
-    question.find(function (err, fruits) {
+    question.find(function (err, data) {
         if (err) {
             console.log(error);
         }
         else {
-            console.log(fruits);
+            console.log(data);
         }
     });
     res.redirect('/?stat=posted');
 });
 
 
-app.get("/:cat", async(req, res) => {
+app.get("/:cat", async (req, res) => {
     let required_category = req.params.cat;
-    let filtered= await question.find({ category : { $in : [required_category] }})
-    res.render("answers",{answers: filtered.reverse()});
+    let filtered = await question.find({ category: { $in: [required_category] } })
+    res.render("answers", { answers: filtered.reverse() });
 
 });
 
-app.post("/update_ans/:ans_id",async(req,res)=>{
-    let questionn_id=req.params.ans_id;
-    let my_new_ans=req.body.ans_here;
-    let campus=req.body.campus_name;
-    let name=req.body.name_first + " " + req.body.name_last; 
-    let link=req.body.imp_link;
-    var new_ans={
+app.post("/update_ans/:ans_id", async (req, res) => {
+    let questionn_id = req.params.ans_id;
+    let my_new_ans = req.body.ans_here;
+    let campus = req.body.campus_name;
+    let name = req.body.name_first + " " + req.body.name_last;
+    let link = req.body.imp_link;
+    let new_ans = {
         campus: campus,
         ans: my_new_ans,
-        name:name,
+        name: name,
         link: link
     };
-    await question.updateOne({_id:questionn_id},
+    let querer_info = await question.findOneAndUpdate({ _id: questionn_id },
         { $addToSet: { answer: new_ans } },
-        function(err){
-        if(err) console.log(err);
-        else console.log("Updated ans successfully!!");
-    });
+        function (err) {
+            if (err) console.log(err);
+            else console.log("Updated ans successfully!!");
+        });
+    let mail_to = querer_info.email;
+    console.log("Mail to: " + mail_to);
+    if (mail_to != undefined) {
+        /////////// mailing option //////////////////
+        let mailOptions = {
+            from: 'vhelp55@gmail.com',
+            to: mail_to,
+            subject: 'Your query has been Answered!!',
+            text: 'Check out on questionn_id ' + questionn_id,
+        };
+        transporter.sendMail(mailOptions, function (error, info) {
+            if (error) {
+                console.log(error);
+            } else {
+                console.log('Email sent: ' + info.response);
+            }
+        });
+        ///////////////// mailing option ends /////////////////
+    }
+    else{
+        console.log("No mail id was found in database!!");
+    }
+
     res.redirect('back');
 });
 
@@ -117,14 +145,14 @@ app.get("/blog_admin", (req, res) => {
 });
 
 
-app.post("/i-super-user",async(req, res) => {
+app.post("/i-super-user", async (req, res) => {
     var reso;
-    await question.find((err,data)=>{
-        if(err){
+    await question.find((err, data) => {
+        if (err) {
             console.log(err);
         }
-        else{
-            reso=data;
+        else {
+            reso = data;
             console.log(5);
         }
     });
@@ -135,24 +163,24 @@ app.post("/i-super-user",async(req, res) => {
 
 
 // to update answer from i-super-user in database
-app.post("/i-super-user/:id",async(req,res)=>{
+app.post("/i-super-user/:id", async (req, res) => {
     console.log("In update function!!");
     let id = req.params.id;
     // console.log(s)
-    
+
     let ans = req.body.id;
     console.log(ans);
     console.log(id);
     await question.updateOne(
-        {_id:id},
+        { _id: id },
         {
-            answer:ans
+            answer: ans
         },
-        function(err){
-            if(err){
+        function (err) {
+            if (err) {
                 console.log(err);
             }
-            else{
+            else {
                 console.log("Successfully Updated to db!!");
             }
         }
@@ -176,7 +204,7 @@ app.post("/blog_admin", (req, res) => {
 });
 
 
-var PORT=process.env.PORT || 3000
+var PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
     console.log("Server Running on Port 3000");
 });
