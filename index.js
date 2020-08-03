@@ -7,6 +7,7 @@ const app = express()
 app.use(bodyparser.urlencoded({ extended: true }));
 
 
+
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -17,7 +18,8 @@ var transporter = nodemailer.createTransport({
 
 
 app.set('view engine', 'ejs');
-app.use(express.static("public"));
+app.use(express.static(__dirname + '/public'));
+
 
 var mongo = async () => {
     // mongoose.connect("mongodb://localhost:27017/vhelpblog", { useNewUrlParser: true });
@@ -26,7 +28,6 @@ var mongo = async () => {
 mongo()
 
 const question = mongoose.model('question', { question: String, category: Object, answer: Object, email: String });
-
 
 
 app.get("/", (req, res) => {
@@ -91,6 +92,15 @@ app.get("/:cat", async (req, res) => {
     res.render("answers", { answers: filtered.reverse() });
 
 });
+
+app.get("/see/:id",async(req,res)=>{
+    let questionn_id=req.params.id;
+    console.log(questionn_id);
+    let send_show_me = await question.find({ _id: questionn_id });
+    // console.log("Show me is:", show_me);
+    res.render("seequestion",{show_me: send_show_me});
+});
+
 
 app.post("/update_ans/:ans_id", async (req, res) => {
     let questionn_id = req.params.ans_id;

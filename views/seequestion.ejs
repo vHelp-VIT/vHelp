@@ -1,0 +1,34 @@
+<%- include('header') %>
+<style>
+    #customHead {
+        background-color: rgba(128, 80, 250, 0.8);
+        box-shadow: 0 2px 4px 0 black;
+    }
+</style>
+<script>
+    window.setInterval(function(){
+        $('#customHead').css("background-color","rgba(26, 39, 228, 0.726)");
+        $('#customHead').css("box-shadow","0 2px 4px 0 black");
+    },10);
+</script>
+
+
+<div class="container">
+    <div class="questContainer row">
+       <% for(let ans of show_me){ %>
+        <%= ans.question %> 
+        <% for(let cat of ans.category){ %>
+        <%= cat %>
+        <% } %>
+        <% for(let sub_ans of ans.answer){ %>
+           <%= sub_ans.name %>
+            <%= sub_ans.ans %>
+            <%= sub_ans.campus %> 
+        <% }} %>
+        
+        </div>
+</div>
+
+
+
+<%- include('footer') %>
