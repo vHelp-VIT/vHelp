@@ -200,9 +200,10 @@ function darkMode(){
         card = document.getElementsByClassName("card");
         cardBody = document.getElementsByClassName("card-body");
         cardText = document.getElementsByClassName("card-text");
-        questCard = document.getElementsByClassName("questContainer");
-        for(let j = 0; j<questCard.length; i++){
-        questCard[0].style.backgroundColor ="rgb(25, 24, 32)";}
+        // questCard = document.getElementsByClassName("questContainer");
+        // for(let j = 0; j<questCard.length; i++){
+        // questCard[0].style.backgroundColor ="rgb(25, 24, 32)";
+        // }
         for(let i =0;i<card.length;i++){
         $('.card-body').css("backgroud-color","rgb(25, 24, 32)");
         $('.card').css("backgroud-color","rgb(25, 24, 32)");
