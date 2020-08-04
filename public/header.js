@@ -155,6 +155,7 @@ $(function() {
     console.log( "ready!" );
         setTimeout(() => {
     document.getElementById("overlay").style.display = "none";
+    window.scrollTo(0, 0);
        }, 3000);
 
 });
