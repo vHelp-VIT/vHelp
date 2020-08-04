@@ -203,12 +203,12 @@ function preload(arrayOfImages) {
 $('#darkMode').click(darkMode);
 function darkMode(){
     
-
 card = document.getElementsByClassName("card");
 cardBody = document.getElementsByClassName("card-body");
 cardText = document.getElementsByClassName("card-text");
 questCard = document.getElementsByClassName("questContainer");
 listColor = document.getElementsByClassName("list-group-item");
+forms = document.getElementsByClassName("form-control");
 if(dark == 0){
     document.body.style.backgroundColor="rgb(25, 24, 32)";
     document.getElementById("customHead").style.backgroundColor="rgb(25, 24, 32)";
@@ -248,8 +248,17 @@ if(dark == 0){
     catch(e){
         console.log(e);
     }
+    try{
+        for(let j=0;j<forms.length;j++){
+            forms[j].style.backgroundColor = "rgb(25, 24, 32)";
+            forms[j].style.color = "white";
+        }
+    }catch(e){
+
+    }
     document.body.style.color = "white";
     dark =1;
+    document.getElementById("darkMode").style.backgroundColor="white";
     }
 else{
     dark =0;
@@ -259,6 +268,15 @@ else{
     $('.card').css("backgroud-color","rgb(25, 24, 32)");
     $('textarea').css("background-color","white");
     $('textarea').css("border-color","white");
+    
+    try{
+        for(let j=0;j<forms.length;j++){
+            forms[j].style.backgroundColor = "white";
+            forms[j].style.color = "black";
+        }
+    }catch(e){
+        
+    }
     for(let m=0;m<listColor.length;m++){
         listColor[m].style.backgroundColor = "white";
     }
@@ -281,5 +299,6 @@ else{
     }
     $('.card-body').css("color","black");
     document.body.style.color = "black";
+    document.getElementById("darkMode").style.backgroundColor="rgb(25,24,32)";
 }
 }
