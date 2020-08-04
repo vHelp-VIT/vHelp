@@ -166,7 +166,7 @@ $(function() {
         setTimeout(() => {
     document.getElementById("overlay").style.display = "none";
     window.scrollTo(0, 0);
-       }, 3000);
+       }, 1000);
 
 });
 $('.images-main').oncontextmenu = function(event) {
