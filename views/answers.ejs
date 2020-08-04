@@ -44,10 +44,11 @@
                             <i class="fa fa-reply" aria-hidden="true"></i> <span class="replyAns">Reply</span>
                         </a>
                     </span>
-                    <% if(ans.answer.length==0){ %>
+                    <% if(ans.answer && ans.answer.length==0){ %>
                     <br>
                     Be the first one to answer this one!
                     <% } %>
+                    <% if(ans.answer){ %>
                     <% for(let sub_ans of ans.answer){ %>
                     <div class="collapse lapse1" id="v-<%= ans._id %>">
                         <div class="col-sm-12">
@@ -78,7 +79,7 @@
                             </div>
                         </div>
                     </div>
-                    <% } %>
+                    <% }} %>
                    
                     <style>
                         .form-control-1 {
