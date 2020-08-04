@@ -192,7 +192,7 @@ function preload(arrayOfImages) {
         $('<img />').attr('src',this).appendTo('body').css('display','none');
     });
 }
-$('#askedQuest').click(darkMode);
+$('#darkMode').click(darkMode);
 function darkMode(){
     
 
