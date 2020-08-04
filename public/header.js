@@ -1,7 +1,8 @@
 
 preload(['loading.gif']);
 document.getElementById("overlay").style.display = "block";
-
+var dark = 0;
+console.log(dark);
 let phone640p = window.matchMedia("(max-width: 640px)")
 let phone800p = window.matchMedia("(max-width: 800px)")
 let phone980p = window.matchMedia("(max-width: 980px)")
@@ -69,6 +70,7 @@ function scrollEnd() {
 //onscroll function
 function scrollNav() {
     console.log($(window).scrollTop());
+    if(dark == 0){
     $('.questContainer').css("z-index","6");
     if ($(window).scrollTop() > 30) {
         document.getElementById("customHead").style.boxShadow = "0 2px 4px 0 black";
@@ -95,7 +97,7 @@ function scrollNav() {
         if(phone980p.matches){
         $('.navList').css("background-color","rgba(128, 80, 250,0.0)");
         $('.navList').css("border","none");}
-    }
+    }}
 
 }
   $('#formContent').keydown(function(){
@@ -190,3 +192,36 @@ function preload(arrayOfImages) {
         $('<img />').attr('src',this).appendTo('body').css('display','none');
     });
 }
+$('#askedQuest').click(
+function darkMode(){
+    if(dark == 0){
+        document.body.style.backgroundColor="rgb(25, 24, 32)";
+        document.getElementById("customHead").style.backgroundColor="rgb(25, 24, 32)";
+        card = document.getElementsByClassName("card");
+        cardBody = document.getElementsByClassName("card-body");
+        cardText = document.getElementsByClassName("card-text");
+        questCard = document.getElementsByClassName("questContainer");
+        for(let j = 0; j<questCard.length; i++){
+        questCard[0].style.backgroundColor ="rgb(25, 24, 32)";}
+        for(let i =0;i<card.length;i++){
+        $('.card-body').css("backgroud-color","rgb(25, 24, 32)");
+        $('.card').css("backgroud-color","rgb(25, 24, 32)");
+        $('.card-body').css("color","white");
+        $('.card-text').css("backgroud-color","rgb(25, 24, 32)");
+        card[i].style.backgroundColor = "rgb(25, 24, 32)"
+        cardBody[i].style.backgroundColor = "rgb(25, 24, 32)"
+        cardText[i].style.backgroundColor = "rgb(25, 24, 32)"
+    }
+        document.body.style.color = "white";
+        dark =1;
+    }
+    else{
+        dark =0;
+        document.body.style.backgroundColor="white";
+        document.getElementById("customHead").style.backgroundColor="initial";
+        $('.card-body').css("backgroud-color","white");
+        $('.card').css("backgroud-color","rgb(25, 24, 32)");
+        $('.card-body').css("color","black");
+        document.body.style.color = "black";
+    }
+});
