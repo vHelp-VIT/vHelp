@@ -214,6 +214,7 @@ if(dark == 0){
     // }
     $('textarea').css("background-color","rgb(25,24,32");
     $('textarea').css("color","white");
+    $('textarea').css("border-color","rgb(25,24,32)");
     for(let m=0;m<listColor.length;m++){
         listColor[m].style.backgroundColor = "rgb(25, 24, 32)";
     }
@@ -228,6 +229,8 @@ if(dark == 0){
     cardBody[i].style.backgroundColor = "rgb(25, 24, 32)";
     cardText[i].style.backgroundColor = "rgb(25, 24, 32)";
     }
+    document.getElementById("mailArea").style.backgroundColor = "rgb(25, 24, 32)";
+    document.getElementById("mailArea").style.color = "white";
     document.body.style.color = "white";
     dark =1;
     }
@@ -238,6 +241,7 @@ else{
     $('.card-body').css("backgroud-color","white");
     $('.card').css("backgroud-color","rgb(25, 24, 32)");
     $('textarea').css("background-color","white");
+    $('textarea').css("border-color","white");
     for(let m=0;m<listColor.length;m++){
         listColor[m].style.backgroundColor = "white";
     }
