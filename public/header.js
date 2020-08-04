@@ -9,10 +9,14 @@ let phone980p = window.matchMedia("(max-width: 980px)")
 window.addEventListener("scroll", scrollNav);
 window.addEventListener("scroll", scrollEnd);
 window.setInterval(function(){
+    try{
     if(!phone800p.matches){
         document.getElementById('colShow').style.display='none';
     }else if(phone800p.matches){
         document.getElementById('colShow').style.display='initial';
+    }}
+    catch(e){
+        // console.log(e);
     }
 },100);
 var drop = 0;
@@ -138,7 +142,11 @@ function scrollToContent(){
         for(let i=0; i<cards.length; i++){
             let cl = getRandomColor();
           cards[i].style.borderColor = cl; 
-          dropDowns[i].style.color = cl; 
+          try{
+          dropDowns[i].style.color = cl; }
+          catch(e){
+              console.log(e);
+          }
         }
        //--------------------------
        //banner animation
@@ -227,10 +235,19 @@ if(dark == 0){
     $('.list-group-item').css("color","white");
     card[i].style.backgroundColor = "rgb(25, 24, 32)";
     cardBody[i].style.backgroundColor = "rgb(25, 24, 32)";
+    try{
     cardText[i].style.backgroundColor = "rgb(25, 24, 32)";
+}
+    catch(e){
+        console.log(e);
     }
+    }
+    try{
     document.getElementById("mailArea").style.backgroundColor = "rgb(25, 24, 32)";
-    document.getElementById("mailArea").style.color = "white";
+    document.getElementById("mailArea").style.color = "white";}
+    catch(e){
+        console.log(e);
+    }
     document.body.style.color = "white";
     dark =1;
     }
@@ -256,7 +273,11 @@ else{
         $('.card-text').css("backgroud-color","white");
         card[i].style.backgroundColor = "white";
         cardBody[i].style.backgroundColor = "white";
-        cardText[i].style.backgroundColor = "white";
+        try{
+        cardText[i].style.backgroundColor = "white";}
+        catch(e){
+            console.log(e);
+        }
     }
     $('.card-body').css("color","black");
     document.body.style.color = "black";
