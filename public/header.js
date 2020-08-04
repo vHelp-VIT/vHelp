@@ -215,6 +215,7 @@ if(dark == 0){
     for(let j = 0; j<questCard.length; j++){
     questCard[j].style.backgroundColor ="rgb(25, 24, 32)";
     questCard[j].style.borderColor ="rgb(25, 24, 32)";
+    questCard[j].style.boxShadow ="0 2px 4px 0 rgb(255, 193, 7)";
 }
     // containers = document.getElementsByClassName('container');
     // for(let k=0;k<containers.length;k++){
@@ -243,8 +244,10 @@ if(dark == 0){
     }
     }
     try{
-    document.getElementById("mailArea").style.backgroundColor = "rgb(25, 24, 32)";
-    document.getElementById("mailArea").style.color = "white";}
+    document.getElementById("mailArea").style.backgroundColor = "rgb(255, 193, 7)";
+    document.getElementById("mailArea").style.color = "white";
+    document.getElementById("mailArea").style.borderColor = "";
+}
     catch(e){
         console.log(e);
     }
