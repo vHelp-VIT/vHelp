@@ -1,4 +1,7 @@
-//variables
+
+preload(['loading.gif']);
+document.getElementById("overlay").style.display = "block";
+
 let phone640p = window.matchMedia("(max-width: 640px)")
 let phone800p = window.matchMedia("(max-width: 800px)")
 let phone980p = window.matchMedia("(max-width: 980px)")
@@ -121,6 +124,11 @@ function scrollToContent(){
     var images_phone = ['phone-campus-banner.jpg','vellorecampus.jpg','bhopalCampus.jpg','apcampus.jpeg']
     var i =0;
     window.onload = function(){
+        if(phone800p){
+            preload(images_phone);
+       }else{
+            preload(images);
+       }
         //CARD RANDOM COLOR SETTER
             var cards = document.getElementsByClassName('card');
             var dropDowns = document.getElementsByClassName('dropDowns');
@@ -133,11 +141,6 @@ function scrollToContent(){
        //--------------------------
        //banner animation
        bannerAnimate();
-       if(phone800p){
-            preload(images_phone);
-       }else{
-            preload(images);
-       }
        //----------------
     
     if ($(window).scrollTop() < 30) {
@@ -148,7 +151,13 @@ $('.card').click(function(){
     console.log("trigg"+this);
     $(this).css("height","fit-content");
 });
+$(function() {
+    console.log( "ready!" );
+        setTimeout(() => {
+    document.getElementById("overlay").style.display = "none";
+       }, 3000);
 
+});
 $('.images-main').oncontextmenu = function(event) {
     event.preventDefault();
     event.stopPropagation();
@@ -176,6 +185,7 @@ if(i==4){
 //preload banner images
 function preload(arrayOfImages) {
     $(arrayOfImages).each(function () {
+        console.log('preloading images');
         $('<img />').attr('src',this).appendTo('body').css('display','none');
     });
 }
