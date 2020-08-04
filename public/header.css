@@ -366,6 +366,9 @@ nav {
     transition: ease-out;
   }
   #navLogo{
+      width: 120px;
+  }
+  #logo{
     width:120px;
     animation: swivel;
     animation-iteration-count: infinite;
