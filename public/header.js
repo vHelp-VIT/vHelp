@@ -200,6 +200,7 @@ card = document.getElementsByClassName("card");
 cardBody = document.getElementsByClassName("card-body");
 cardText = document.getElementsByClassName("card-text");
 questCard = document.getElementsByClassName("questContainer");
+listColor = document.getElementsByClassName("list-group-item");
 if(dark == 0){
     document.body.style.backgroundColor="rgb(25, 24, 32)";
     document.getElementById("customHead").style.backgroundColor="rgb(25, 24, 32)";
@@ -213,14 +214,19 @@ if(dark == 0){
     // }
     $('textarea').css("background-color","rgb(25,24,32");
     $('textarea').css("color","white");
+    for(let m=0;m<listColor.length;m++){
+        listColor[m].style.backgroundColor = "rgb(25, 24, 32)";
+    }
     for(let i =0;i<card.length;i++){
     $('.card-body').css("backgroud-color","rgb(25, 24, 32)");
     $('.card').css("backgroud-color","rgb(25, 24, 32)");
     $('.card-body').css("color","white");
     $('.card-text').css("backgroud-color","rgb(25, 24, 32)");
-    card[i].style.backgroundColor = "rgb(25, 24, 32)"
-    cardBody[i].style.backgroundColor = "rgb(25, 24, 32)"
-    cardText[i].style.backgroundColor = "rgb(25, 24, 32)"
+    $('.list-group-item').css("backgroud-color","rgb(25, 24, 32)");
+    $('.list-group-item').css("color","white");
+    card[i].style.backgroundColor = "rgb(25, 24, 32)";
+    cardBody[i].style.backgroundColor = "rgb(25, 24, 32)";
+    cardText[i].style.backgroundColor = "rgb(25, 24, 32)";
     }
     document.body.style.color = "white";
     dark =1;
@@ -232,6 +238,9 @@ else{
     $('.card-body').css("backgroud-color","white");
     $('.card').css("backgroud-color","rgb(25, 24, 32)");
     $('textarea').css("background-color","white");
+    for(let m=0;m<listColor.length;m++){
+        listColor[m].style.backgroundColor = "white";
+    }
     for(let j = 0; j<questCard.length; j++){
     questCard[j].style.backgroundColor ="white";
     questCard[j].style.borderColor ="white";
