@@ -132,7 +132,7 @@ html{
 
 .submitQuest{
     border: 2px solid rgb(128, 80, 250);
-    border-radius: 10%;
+    border-radius: 2rem;
     background-color: white;
     margin-top: 4px;
     padding-left: 10px;
@@ -140,6 +140,7 @@ html{
 }
 
 .submitQuest:hover{
+    border: 2px solid rgb(128, 80, 250);
     background-color:rgb(128, 80, 250);
     color:white;
 }
