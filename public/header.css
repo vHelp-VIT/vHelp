@@ -380,12 +380,13 @@ nav {
   }
   #loadLogo{
       width: 300px;
+      margin-top: 20%;
   }
   
  /* overlay */
  #overlay {
     background: url('loading.gif');
-    /* opacity: 0.9; */
+    opacity: 0.9;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
