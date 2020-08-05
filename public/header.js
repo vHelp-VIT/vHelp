@@ -1,6 +1,10 @@
 
 preload(['loading.gif']);
-document.getElementById("overlayId").style.display = "block";
+try{
+document.getElementById("overlayId").style.display = "block";}
+catch(e){
+    
+}
 var dark = 0;
 console.log(dark);
 let phone640p = window.matchMedia("(max-width: 640px)")
@@ -189,7 +193,11 @@ $('.card').click(function(){
 $(function() {
     console.log( "ready!" );
         setTimeout(() => {
-    document.getElementById("overlayId").style.display = "none";
+            try{
+    document.getElementById("overlayId").style.display = "none";}
+    catch(e){
+
+    }
     window.scrollTo(0, 0);
        }, 3000);
 

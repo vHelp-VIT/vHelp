@@ -389,7 +389,7 @@ nav {
     opacity: 0.9;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top;
+    background-position: center;
     height: 100%;
     transition: ease-out;
   }
