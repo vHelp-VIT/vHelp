@@ -1,6 +1,10 @@
 
 preload(['loading.gif']);
-document.getElementById("overlayId").style.display = "block";
+try{
+document.getElementById("overlayId").style.display = "block";}
+catch(e){
+    
+}
 var dark = 0;
 console.log(dark);
 let phone640p = window.matchMedia("(max-width: 640px)")
@@ -79,7 +83,10 @@ function scrollNav() {
     if ($(window).scrollTop() > 30) {
         document.getElementById("customHead").style.boxShadow = "0 2px 4px 0 black";
         $('#customHead').css("background-color", "rgba(128, 80, 250,0.8)");
-        
+        $('.side').css("width","initial");
+        setTimeout(()=>{
+            $('.side').css("width","0px");
+        },2000);
         $('.list-group').css("color", "rgba(128, 80, 250,0.6)");
         $('.questContainer').css("transform","translateY(-40px)");
         if(phone980p.matches){
@@ -94,6 +101,8 @@ function scrollNav() {
     else if ($(window).scrollTop() < 30) {
         document.getElementById("customHead").style.boxShadow = "0 0px 0px 0 black";
         $('body').css("background-color", "white");
+        $('.side').css("width","0px");
+        
         $('.questContainer').css("transform","translateY(40px)");
         $('#customHead').css("background-color", "rgba(128, 80, 250, 0)");
         $('.list-group').slideDown("slow");
@@ -106,6 +115,10 @@ function scrollNav() {
     if ($(window).scrollTop() > 30) {
         document.getElementById("customHead").style.boxShadow = "0 2px 4px 0 black";
         $('.list-group').css("color", "rgba(128, 80, 250,0.6)");
+        $('.side').css("width","initial");
+        setTimeout(()=>{
+            $('.side').css("width","0px");
+        },2000);
         $('.questContainer').css("transform","translateY(-40px)");
         $('#customHead').css("background-color", "rgb(25,24,32)");
         if(phone980p.matches){
@@ -119,6 +132,7 @@ function scrollNav() {
     else if ($(window).scrollTop() < 30) {
         document.getElementById("customHead").style.boxShadow = "0 0px 0px 0 black";
         $('.questContainer').css("transform","translateY(40px)");
+        $('.side').css("width","0px");
         $('#customHead').css("background-color", "rgba(128, 80, 250, 0)");
         $('.list-group').slideDown("slow");
         $('.questContainer').css("z-index","4");
@@ -189,9 +203,13 @@ $('.card').click(function(){
 $(function() {
     console.log( "ready!" );
         setTimeout(() => {
-    document.getElementById("overlayId").style.display = "none";
+            try{
+    document.getElementById("overlayId").style.display = "none";}
+    catch(e){
+
+    }
     window.scrollTo(0, 0);
-       }, 3000);
+       }, 1000);
 
 });
 $('.images-main').oncontextmenu = function(event) {

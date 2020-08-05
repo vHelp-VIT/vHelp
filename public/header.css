@@ -389,9 +389,13 @@ nav {
     opacity: 0.9;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top;
+    background-position: center;
     height: 100%;
     transition: ease-out;
+  }
+  .side{
+      width: 0px;
+      transition: ease;
   }
   #overlayId{
     position: fixed; /* Sit on top of the page content */
