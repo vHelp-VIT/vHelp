@@ -35,13 +35,12 @@ app.get("/", (req, res) => {
     else res.render('index', { foo: 0 });
 });
 
+let cat = []
+
 
 app.post("/", (req, res) => {
-    // console.log("Question posted!!");
 
     categories = function () {
-
-        let cat = []
 
         if (req.body.radio_acad == "on") {
             cat.push("academics")
@@ -68,12 +67,30 @@ app.post("/", (req, res) => {
     }
     let ques = req.body.question_area;
     let query_email = req.body.query_email;
-
+    let question_id;
     if (ques.length != undefined) {
         let cat = categories();
         const newQuestion = new question({ question: ques, category: cat, answer: [], email: query_email });
+        question_id=newQuestion._id;
         newQuestion.save()
     }
+    /////////// mailing option //////////////////
+    let mailOptions = {
+        from: 'vhelp55@gmail.com',
+        to:  'vhelp55@gmail.com' ,
+        subject: 'Got a new query!!',
+        text: `Hey, we got a new query: ${ques}`,
+        html: `<p><br> Answer a new question <a href=https://vhelp.herokuapp.com/see/${question_id}>Click Here</a>!!</p>`
+    };
+    transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+            console.log(error);
+        } else {
+            console.log('Email sent: ' + info.response);
+        }
+    });
+    ///////////////// mailing option ends /////////////////
+
     question.find(function (err, data) {
         if (err) {
             console.log(error);
@@ -98,7 +115,7 @@ app.get("/see/:id",async(req,res)=>{
     console.log(questionn_id);
     let send_show_me = await question.find({ _id: questionn_id });
     // console.log("Show me is:", show_me);
-    res.render("seequestion",{show_me: send_show_me});
+    res.render("seequestion",{showme: send_show_me});
 });
 
 
