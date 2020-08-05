@@ -6,28 +6,49 @@
     }
 </style>
 <script>
-    window.setInterval(function(){
-        $('#customHead').css("background-color","rgba(26, 39, 228, 0.726)");
-        $('#customHead').css("box-shadow","0 2px 4px 0 black");
-    },10);
+    window.setInterval(function () {
+        $('#customHead').css("background-color", "rgba(26, 39, 228, 0.726)");
+        $('#customHead').css("box-shadow", "0 2px 4px 0 black");
+    }, 10);
 </script>
 
 
 <div class="container">
     <div class="questContainer row">
-       <% for(let ans of show_me){ %>
-        <%= ans.question %> 
-        <% for(let cat of ans.category){ %>
-        <%= cat %>
-        <% } %>
-        <% for(let sub_ans of ans.answer){ %>
-           <%= sub_ans.name %>
-            <%= sub_ans.ans %>
-            <%= sub_ans.campus %> 
-        <% }} %>
-        
+        <% for(let ans of show_me){ %>
+        <div class="col-sm-12">
+
+            <div class="card w-100" style="margin-top: 14px;">
+
+                <div class="card-body" style="height: auto; margin-bottom: 20px;">
+                    <span>
+                        <h5 class="card-title"><%= ans.question %> </h5>
+                    </span>
+
+                    <p>
+                        <% for(let cat of ans.category){ %>
+                        <span class="badge badge-light">
+                            <%= cat %>
+                        </span>
+                        <% } %>
+                    </p>
+
+
+
+                    <% for(let sub_ans of ans.answer){ %>
+                    <%= sub_ans.name %>
+                    <%= sub_ans.campus %>
+
+                    <%= sub_ans.ans %>
+
+                    <% }} %>
+
+                </div>
+            </div>
         </div>
+    </div>
 </div>
+
 
 
 

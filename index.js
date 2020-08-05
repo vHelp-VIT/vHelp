@@ -151,68 +151,68 @@ app.post("/update_ans/:ans_id", async (req, res) => {
 ////////////////////////////////////////////////////////////////////////////////////
 // ///////////// all the below are admin rotes: Not working yet/////////////////////
 ////////////////////////////////////////////////////////////////////////////////////
-app.get("/blog_admin", (req, res) => {
-    res.render("admin_login");
-});
+// app.get("/blog_admin", (req, res) => {
+//     res.render("admin_login");
+// });
 
 
-app.post("/i-super-user", async (req, res) => {
-    var reso;
-    await question.find((err, data) => {
-        if (err) {
-            console.log(err);
-        }
-        else {
-            reso = data;
-            console.log(5);
-        }
-    });
-    // console.log(reso);
-    res.render("i-super-user", { all_ques: reso });
+// app.post("/i-super-user", async (req, res) => {
+//     var reso;
+//     await question.find((err, data) => {
+//         if (err) {
+//             console.log(err);
+//         }
+//         else {
+//             reso = data;
+//             console.log(5);
+//         }
+//     });
+//     // console.log(reso);
+//     res.render("i-super-user", { all_ques: reso });
 
-});
-
-
-// to update answer from i-super-user in database
-app.post("/i-super-user/:id", async (req, res) => {
-    console.log("In update function!!");
-    let id = req.params.id;
-    // console.log(s)
-
-    let ans = req.body.id;
-    console.log(ans);
-    console.log(id);
-    await question.updateOne(
-        { _id: id },
-        {
-            answer: ans
-        },
-        function (err) {
-            if (err) {
-                console.log(err);
-            }
-            else {
-                console.log("Successfully Updated to db!!");
-            }
-        }
-    )
-    res.redirect(307, "/i-super-user");
-});
+// });
 
 
+// // to update answer from i-super-user in database
+// app.post("/i-super-user/:id", async (req, res) => {
+//     console.log("In update function!!");
+//     let id = req.params.id;
+//     // console.log(s)
 
-app.post("/blog_admin", (req, res) => {
-    console.log("User-Name:", req.body.email);
-    console.log("Password:", req.body.password);
-    let user_name = req.body.email;
-    let password = req.body.password;
-    if (user_name == "shivanshgoel21@gmail.com" && password == "shivansh") {
-        res.redirect(307, "/i-super-user");
-    }
-    else {
-        console.log("Invalid Entry!!");
-    }
-});
+//     let ans = req.body.id;
+//     console.log(ans);
+//     console.log(id);
+//     await question.updateOne(
+//         { _id: id },
+//         {
+//             answer: ans
+//         },
+//         function (err) {
+//             if (err) {
+//                 console.log(err);
+//             }
+//             else {
+//                 console.log("Successfully Updated to db!!");
+//             }
+//         }
+//     )
+//     res.redirect(307, "/i-super-user");
+// });
+
+
+
+// app.post("/blog_admin", (req, res) => {
+//     console.log("User-Name:", req.body.email);
+//     console.log("Password:", req.body.password);
+//     let user_name = req.body.email;
+//     let password = req.body.password;
+//     if (user_name == "shivanshgoel21@gmail.com" && password == "shivansh") {
+//         res.redirect(307, "/i-super-user");
+//     }
+//     else {
+//         console.log("Invalid Entry!!");
+//     }
+// });
 
 
 var PORT = process.env.PORT || 3000
