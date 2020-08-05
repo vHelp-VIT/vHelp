@@ -393,6 +393,10 @@ nav {
     height: 100%;
     transition: ease-out;
   }
+  .side{
+      width: 0px;
+      transition: ease;
+  }
   #overlayId{
     position: fixed; /* Sit on top of the page content */
     display: none; /* Hidden by default */
