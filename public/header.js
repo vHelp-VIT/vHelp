@@ -86,7 +86,7 @@ function scrollNav() {
         $('.side').css("width","initial");
         setTimeout(()=>{
             $('.side').css("width","0px");
-        },2000);
+        },4000);
         $('.list-group').css("color", "rgba(128, 80, 250,0.6)");
         $('.questContainer').css("transform","translateY(-40px)");
         if(phone980p.matches){
@@ -118,7 +118,7 @@ function scrollNav() {
         $('.side').css("width","initial");
         setTimeout(()=>{
             $('.side').css("width","0px");
-        },2000);
+        },4000);
         $('.questContainer').css("transform","translateY(-40px)");
         $('#customHead').css("background-color", "rgb(25,24,32)");
         if(phone980p.matches){
