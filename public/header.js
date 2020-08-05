@@ -101,7 +101,32 @@ function scrollNav() {
         if(phone980p.matches){
         $('.navList').css("background-color","rgba(128, 80, 250,0.0)");
         $('.navList').css("border","none");}
-    }}
+    }
+}else {
+    if ($(window).scrollTop() > 30) {
+        document.getElementById("customHead").style.boxShadow = "0 2px 4px 0 black";
+        $('.list-group').css("color", "rgba(128, 80, 250,0.6)");
+        $('.questContainer').css("transform","translateY(-40px)");
+        $('#customHead').css("background-color", "rgb(25,24,32)");
+        if(phone980p.matches){
+        $('.list-group').css("color", "rgb(128, 80, 250)");
+        $('.navList').css("background-color","rgb(25, 24, 32)");
+        $('.navList').css("border","1px solid white");
+        $('.navList').css("width","110%");
+        $('.navList').css("margin-left","-5%");
+    }
+    }
+    else if ($(window).scrollTop() < 30) {
+        document.getElementById("customHead").style.boxShadow = "0 0px 0px 0 black";
+        $('.questContainer').css("transform","translateY(40px)");
+        $('#customHead').css("background-color", "rgba(128, 80, 250, 0)");
+        $('.list-group').slideDown("slow");
+        $('.questContainer').css("z-index","4");
+        if(phone980p.matches){
+        $('.navList').css("background-color","rgba(128, 80, 250,0.0)");
+        $('.navList').css("border","none");}
+    }
+}
 
 }
   $('#formContent').keydown(function(){
@@ -209,18 +234,21 @@ cardText = document.getElementsByClassName("card-text");
 questCard = document.getElementsByClassName("questContainer");
 listColor = document.getElementsByClassName("list-group-item");
 forms = document.getElementsByClassName("form-control");
+askedQuest = document.getElementById("askedQuest");
 if(dark == 0){
     document.body.style.backgroundColor="rgb(25, 24, 32)";
-    document.getElementById("customHead").style.backgroundColor="rgb(25, 24, 32)";
+    document.getElementById("customHead").style.backgroundColor="rgba(128, 80, 250, 0)";
+    askedQuest.style.backgroundColor = "rgb(128, 80, 250)";
     for(let j = 0; j<questCard.length; j++){
     questCard[j].style.backgroundColor ="rgb(25, 24, 32)";
     questCard[j].style.borderColor ="rgb(25, 24, 32)";
+    questCard[j].style.boxShadow ="0 2px 4px 0 rgb(255, 193, 7)";
 }
     // containers = document.getElementsByClassName('container');
     // for(let k=0;k<containers.length;k++){
     // containers[i].style.backgroundColor = "rgb(25, 24, 32)";
     // }
-    $('textarea').css("background-color","rgb(25,24,32");
+    $('textarea').css("background-color","rgb(25,24,32)");
     $('textarea').css("color","white");
     $('textarea').css("border-color","rgb(25,24,32)");
     for(let m=0;m<listColor.length;m++){
@@ -243,8 +271,10 @@ if(dark == 0){
     }
     }
     try{
-    document.getElementById("mailArea").style.backgroundColor = "rgb(25, 24, 32)";
-    document.getElementById("mailArea").style.color = "white";}
+    document.getElementById("mailArea").style.backgroundColor = "rgb(255, 193, 7)";
+    document.getElementById("mailArea").style.color = "white";
+    document.getElementById("mailArea").style.borderColor = "";
+}
     catch(e){
         console.log(e);
     }
@@ -263,6 +293,8 @@ if(dark == 0){
 else{
     dark =0;
     document.body.style.backgroundColor="white";
+    askedQuest.style.backgroundColor = "rgb(128, 80, 250)";
+    askedQuest.style.color = "white";
     document.getElementById("customHead").style.backgroundColor="rgba(128, 80, 250,0.8)";
     $('.card-body').css("backgroud-color","white");
     $('.card').css("backgroud-color","rgb(25, 24, 32)");
@@ -283,6 +315,7 @@ else{
     for(let j = 0; j<questCard.length; j++){
     questCard[j].style.backgroundColor ="white";
     questCard[j].style.borderColor ="white";
+    questCard[j].style.boxShadow ="0 2px 4px 0 black";
 }
     for(let i =0;i<card.length;i++){
         $('.card-body').css("backgroud-color","white");

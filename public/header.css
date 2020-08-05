@@ -174,7 +174,7 @@ nav {
     /* transform: scale(0.98); */
 }
 .list-group-item a{
-    color: rgb(128, 80, 250);
+    /* color: rgb(128, 80, 250);s */
     text-decoration: none;
 }
 
@@ -246,6 +246,7 @@ nav {
 .navText{
     color: white;
     text-shadow: 1px 1px rgb(128, 80, 250);
+    font-family: 'itc',sans-serif;
 }
 .arrow-down {
   width: 0; 
@@ -386,4 +387,12 @@ nav {
         100%{
             transform: rotateY(360deg);
         }
+  }
+  @font-face{
+      font-family: "itc";
+      src: 
+        local("/bauhausb.ttf"),
+        url('/bauhausb.ttf'),
+        format('truetype');
+    
   }
