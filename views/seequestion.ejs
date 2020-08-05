@@ -33,14 +33,32 @@
                         <% } %>
                     </p>
 
-
-
                     <% for(let sub_ans of ans.answer){ %>
-                    <%= sub_ans.name %>
-                    <%= sub_ans.campus %>
 
-                    <%= sub_ans.ans %>
+                    <h5 class="card-title"></h5>
+                    <% if(sub_ans.name==" "){ %>
+                    <b class="mx-2">anonymous</b>
+                    <% } %>
+                    <b class="mx-2"><%= sub_ans.name %></b>
+                    <% if(sub_ans.campus=="Vellore"){  %>
+                    <span class="badge badge-success">Vellore</span>
+                    <% } %>
+                    <% if(sub_ans.campus=="Chennai"){  %>
+                    <span class="badge badge-primary">Chennai</span>
+                    <% } %>
+                    <% if(sub_ans.campus=="Bhopal"){  %>
+                    <span class="badge badge-danger">Bhopal</span>
+                    <% } %>
+                    <% if(sub_ans.campus=="Amravati"){  %>
+                    <span class="badge badge-warning">Amravati</span>
+                    <% } %>
+                    </h5>
 
+                    <p class="mx-4 my-2"><b><%= sub_ans.ans %></b></p>
+
+                    <a class="mx-4 my-2" href="<%= sub_ans.link %>" target="_blank"><u><%= sub_ans.link %></u></a>
+
+                    <hr>
                     <% }} %>
 
                 </div>
