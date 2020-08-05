@@ -1,6 +1,6 @@
 
 preload(['loading.gif']);
-document.getElementById("overlay").style.display = "block";
+document.getElementById("overlayId").style.display = "block";
 var dark = 0;
 console.log(dark);
 let phone640p = window.matchMedia("(max-width: 640px)")
@@ -189,9 +189,9 @@ $('.card').click(function(){
 $(function() {
     console.log( "ready!" );
         setTimeout(() => {
-    document.getElementById("overlay").style.display = "none";
+    document.getElementById("overlayId").style.display = "none";
     window.scrollTo(0, 0);
-       }, 1000);
+       }, 3000);
 
 });
 $('.images-main').oncontextmenu = function(event) {
@@ -234,11 +234,17 @@ cardText = document.getElementsByClassName("card-text");
 questCard = document.getElementsByClassName("questContainer");
 listColor = document.getElementsByClassName("list-group-item");
 forms = document.getElementsByClassName("form-control");
-askedQuest = document.getElementById("askedQuest");
+try{
+askedQuest = document.getElementById("askedQuest");}
+catch(e){
+
+}
 if(dark == 0){
     document.body.style.backgroundColor="rgb(25, 24, 32)";
     document.getElementById("customHead").style.backgroundColor="rgba(128, 80, 250, 0)";
-    askedQuest.style.backgroundColor = "rgb(128, 80, 250)";
+    try{
+    askedQuest.style.backgroundColor = "rgb(128, 80, 250)";}
+    catch(e){}
     for(let j = 0; j<questCard.length; j++){
     questCard[j].style.backgroundColor ="rgb(25, 24, 32)";
     questCard[j].style.borderColor ="rgb(25, 24, 32)";
@@ -293,8 +299,12 @@ if(dark == 0){
 else{
     dark =0;
     document.body.style.backgroundColor="white";
+    try{
     askedQuest.style.backgroundColor = "rgb(128, 80, 250)";
-    askedQuest.style.color = "white";
+    askedQuest.style.color = "white";}
+    catch(e){
+
+    }
     document.getElementById("customHead").style.backgroundColor="rgba(128, 80, 250,0.8)";
     $('.card-body').css("backgroud-color","white");
     $('.card').css("backgroud-color","rgb(25, 24, 32)");

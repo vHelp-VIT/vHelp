@@ -6,10 +6,15 @@
     }
 </style>
 <script>
-    window.setInterval(function () {
-        $('#customHead').css("background-color", "rgba(26, 39, 228, 0.726)");
-        $('#customHead').css("box-shadow", "0 2px 4px 0 black");
-    }, 10);
+     window.setInterval(function(){
+        if(dark == 0){
+        $('#customHead').css("background-color","rgba(128, 80, 250, 0.8)");
+        $('#customHead').css("box-shadow","0 2px 4px 0 black");
+    }
+        else if(dark == 1){
+        $('#customHead').css("background-color","rgb(25, 24, 32)");
+        }
+    },10);
 </script>
 <div class="container">
     <% for(let ans of answers){ %>

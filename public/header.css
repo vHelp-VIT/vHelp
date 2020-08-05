@@ -347,25 +347,6 @@ nav {
     border: 2px solid white;
     transition: 1s;
 }
- /* overlay */
- #overlay {
-    position: fixed; /* Sit on top of the page content */
-    display: none; /* Hidden by default */
-    width: 100%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-    z-index: 9999; /* Specify a stack order in case you're using a different order for other elements */
-    cursor: pointer; /* Add a pointer on hover */
-    background: url('loading.gif');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
-    transition: ease-out;
-  }
   #navLogo{
       width: 120px;
   }
@@ -395,4 +376,35 @@ nav {
         url('/bauhausb.ttf'),
         format('truetype');
     
+  }
+  #loadLogo{
+      width: 300px;
+  }
+  
+ /* overlay */
+ #overlay {
+    background: url('loading.gif');
+    /* opacity: 0.9; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 100%;
+    transition: ease-out;
+  }
+  #overlayId{
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    /* padding: 1%; */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 9999; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+    justify-content: center;
+    align-items: center;
   }
