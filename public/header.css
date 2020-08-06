@@ -414,3 +414,10 @@ nav {
     justify-content: center;
     align-items: center;
   }
+  .tables ,th ,td{
+    border: 2px solid grey;
+  }
+  .tables{
+      box-shadow: 0 4px 6px 0 grey;
+      padding: 4px;
+  }
