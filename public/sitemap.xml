@@ -1,277 +1,330 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://vhelp.herokuapp.com/</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/explore/academics</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/explore/placement</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/explore/infrastructure</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/explore/clubs_teams</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/explore/activities</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/explore/general</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f2b883b6eb2260017cf072e</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f2b0ee74f1f6c0ed4cc622c</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f2b03638d120e0017df4db5</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f2ade8c67de4d001780b21e</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f2ade7167de4d001780b21d</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f2ade3c67de4d001780b21c</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f26de1f1fd47d0017276178</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f26d6526a9e092390b87bd9</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f26d63e6a9e092390b87bd8</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f25bf29cf430d00175b2024</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f25bccccf430d00175b201a</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f25a7dbfe4be500174017f2</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f26d67b6a9e092390b87bda</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f259df5d60939046418ce95</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f258fe6d5d1990017f60b15</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f268d72480b01001706d3ee</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f25bf43cf430d00175b2025</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f25bee0cf430d00175b2023</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f25becacf430d00175b2022</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f25beb5cf430d00175b2021</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f25a56efe4be500174017f1</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f2a2e4b6b9204001739227c</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f2a2e3b6b9204001739227b</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f2a2e276b9204001739227a</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f2a2e0f6b92040017392279</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f25be18cf430d00175b201e</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f25aa26fe4be500174017f4</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f25a9a9fe4be500174017f3</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f2b83696eb2260017cf072d</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f25bfa3cf430d00175b2027</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f25bf6fcf430d00175b2026</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f25be8ecf430d00175b2020</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f25bd71cf430d00175b201d</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f25bd43cf430d00175b201c</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f25bd2ccf430d00175b201b</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f2b066e8292e615e097ad29</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f2a523336ba6132f82fa00d</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f28ffae67aee91b4c84f847</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f28ee7a4c40e10017f9e2ab</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f26df0d1fd47d0017276179</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f2650c1f30bd50017f80d1c</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f26504bf30bd50017f80d1b</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f26500ef30bd50017f80d1a</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f25c01acf430d00175b2028</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f25be42cf430d00175b201f</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://vhelp.herokuapp.com/see/5f25ba67cf430d00175b2019</loc>
-  <lastmod>2020-08-06T06:01:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
+<?xml version="1.0" encoding="utf-8"?>
+<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url>
+    <loc>https://vhelp.herokuapp.com</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/explore/activities</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/explore/general</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/explore/clubs_teams</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/explore/academics</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/explore/infrastructure</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/explore/placement</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f25a9a9fe4be500174017f3</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f25be18cf430d00175b201e</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f25aa26fe4be500174017f4</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f2a2e276b9204001739227a</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f2a2e3b6b9204001739227b</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f2a2e0f6b92040017392279</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f25a56efe4be500174017f1</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f25ba67cf430d00175b2019</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f2a2e4b6b9204001739227c</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f25c01acf430d00175b2028</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f26500ef30bd50017f80d1a</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f25be42cf430d00175b201f</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f2650c1f30bd50017f80d1c</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f268d72480b01001706d3ee</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f26504bf30bd50017f80d1b</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f28ffae67aee91b4c84f847</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f28ee7a4c40e10017f9e2ab</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f26df0d1fd47d0017276179</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f2b066e8292e615e097ad29</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f2ade7167de4d001780b21d</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f2a523336ba6132f82fa00d</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f25bd71cf430d00175b201d</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f25bd43cf430d00175b201c</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f25bd2ccf430d00175b201b</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f25bfa3cf430d00175b2027</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f25bf6fcf430d00175b2026</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f25be8ecf430d00175b2020</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f2b83696eb2260017cf072d</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f2ade8c67de4d001780b21e</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f2ade3c67de4d001780b21c</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f2b03638d120e0017df4db5</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f2b0ee74f1f6c0ed4cc622c</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f2b883b6eb2260017cf072e</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f26d6526a9e092390b87bd9</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f26de1f1fd47d0017276178</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f25bccccf430d00175b201a</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f25bf29cf430d00175b2024</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f26d63e6a9e092390b87bd8</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f25bee0cf430d00175b2023</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f25bf43cf430d00175b2025</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f25a7dbfe4be500174017f2</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f26d67b6a9e092390b87bda</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f25beb5cf430d00175b2021</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f25becacf430d00175b2022</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f258fe6d5d1990017f60b15</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vhelp.herokuapp.com/see/5f259df5d60939046418ce95</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
 </urlset>
+<!--<guid value="22ac47cd-9816-4cdc-91ca-d96f838df364" />-->
+<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
