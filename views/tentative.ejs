@@ -1,5 +1,21 @@
 <%- include('header') %>
-
+<style>
+    #customHead {
+        background-color: rgba(128, 80, 250, 0.8);
+        box-shadow: 0 2px 4px 0 black;
+    }
+</style>
+<script>
+     window.setInterval(function(){
+        if(dark == 0){
+        $('#customHead').css("background-color","rgba(128, 80, 250, 0.8)");
+        $('#customHead').css("box-shadow","0 2px 4px 0 black");
+    }
+        else if(dark == 1){
+        $('#customHead').css("background-color","rgb(25, 24, 32)");
+        }
+    },10);
+</script>
 <div class="container">
     <div class="questContainer row">
         <div class="col-sm-12">
