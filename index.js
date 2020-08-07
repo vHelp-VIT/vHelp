@@ -164,6 +164,10 @@ app.post("/update_ans/:ans_id", async (req, res) => {
     res.redirect('back');
 });
 
+app.get("/tentative",(req,res)=>{
+    res.render("tentative");
+});
+
 
 ////////////////////////////////////////////////////////////////////////////////////
 // ///////////// all the below are admin rotes: Not working yet/////////////////////
