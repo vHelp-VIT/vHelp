@@ -71,10 +71,6 @@ $('#colShow').click(function(){
     }
 
 });
-//video
-function resizeIframe(obj) {
-    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
-  }
 //onscroll footer
 function scrollEnd() {
 
