@@ -210,12 +210,20 @@ nav {
 }
 }
 @media (max-width: 640px){
+    .questContainer{
+
+        zoom: 0.8;
+    }
 .tagline {
     font-size: 30px;
 
     
     }}
     @media (max-width: 640px){
+        .video-main{
+            width: 100%;
+            height: auto;
+          }
 #typewriter_text{
         font-size: 30px;
         }
@@ -224,6 +232,7 @@ nav {
 
  @media (min-width: 640px){
      
+
 .images-main:active {
     transform: scale(4.0);
     z-index: 6;
@@ -421,5 +430,8 @@ nav {
       box-shadow: 0 4px 6px 0 grey;
       padding: 4px;
   }
+  
   .video-main{
+    width: 100%;
+    height: 400px;
   }
