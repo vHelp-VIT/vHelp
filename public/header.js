@@ -75,6 +75,20 @@ $('#colShow').click(function(){
 function scrollEnd() {
 
 }
+//sidebar 
+
+var hidesignal = 0;
+
+function sidebarHide(){
+    $('.side').css("width","initial");
+    if(hidesignal == 0){
+        hidesignal = 1;
+    setTimeout(()=>{
+        $('.side').css("width","0px");
+        console.log("hiding");
+        hidesignal =0;
+    },4000);}
+}
 //onscroll function
 function scrollNav() {
     console.log($(window).scrollTop());
@@ -83,11 +97,7 @@ function scrollNav() {
     if ($(window).scrollTop() > 30) {
         document.getElementById("customHead").style.boxShadow = "0 2px 4px 0 black";
         $('#customHead').css("background-color", "rgba(128, 80, 250,0.8)");
-        $('.side').css("width","initial");
-        setTimeout(()=>{
-            $('.side').css("width","0px");
-            console.log("hiding");
-        },4000);
+        sidebarHide();
         $('.list-group').css("color", "rgba(128, 80, 250,0.6)");
         $('.questContainer').css("transform","translateY(-40px)");
         if(phone980p.matches){
