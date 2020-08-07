@@ -86,6 +86,7 @@ function scrollNav() {
         $('.side').css("width","initial");
         setTimeout(()=>{
             $('.side').css("width","0px");
+            console.log("hiding");
         },4000);
         $('.list-group').css("color", "rgba(128, 80, 250,0.6)");
         $('.questContainer').css("transform","translateY(-40px)");
@@ -118,6 +119,7 @@ function scrollNav() {
         $('.side').css("width","initial");
         setTimeout(()=>{
             $('.side').css("width","0px");
+            console.log("hiding");
         },4000);
         $('.questContainer').css("transform","translateY(-40px)");
         $('#customHead').css("background-color", "rgb(25,24,32)");
