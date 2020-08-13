@@ -306,6 +306,10 @@ nav {
     box-shadow: 2px 2px 2px 2px rgb(255,255,255);
     height: 200px;
 }
+.fees.tr, .fees.td, .feesData{
+    border: 0px solid grey;
+    text-align: center;
+}
 .bannerStyle {
     background-color: rgba(128, 80, 250, 0.8);
     /* animation-name: switch;

@@ -12,6 +12,21 @@ let phone800p = window.matchMedia("(max-width: 800px)")
 let phone980p = window.matchMedia("(max-width: 980px)")
 window.addEventListener("scroll", scrollNav);
 window.addEventListener("scroll", scrollEnd);
+var isFee = 0;
+$('.fee').click(()=>{
+    if(isFee){
+    $(event.target).css("border","2px solid rgb(128, 80, 250)");
+    $(event.target).css("background-color","white");
+    $(event.target).css("color","black");
+    isFee = 0;
+}
+    else if(isFee==0){
+    $(event.target).css("border","2px solid rgb(128, 80, 250)");
+    $(event.target).css("background-color","rgb(128, 80, 250)");
+    $(event.target).css("color","white");
+    isFee = 1;
+    }
+});
 window.setInterval(function(){
     try{
     if(!phone800p.matches){
