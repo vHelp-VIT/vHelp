@@ -224,13 +224,14 @@ nav {
         }
         
     }
-     /* for desktops */
- @media (min-width: 900px){
-    .submitQuest:hover{
+    .submitQuest:hover,.headgrp,#totalFee{
         border: 2px solid rgb(128, 80, 250);
         background-color:rgb(128, 80, 250);
         color:white;
     }
+     /* for desktops */
+ @media (min-width: 900px){
+
     
     .fee{
         padding: 2%;
@@ -294,15 +295,14 @@ nav {
     margin-top:-150px;
     margin-left: 80%;
 }
-/* for phones */
+/* for mobile phones */
 @media (max-width: 900px){
     #abstract1{
         display: none;
     }
     
-
-    .fee{
-        width: 80px;
+    .fees{
+        zoom: 0.9;
     }
 
 }
@@ -464,16 +464,22 @@ nav {
 .cat{
     border-color: rgb(238, 234, 19);
     } 
-    .mess:hover{
+    .mess:hover,.headmess{
         border: 2px solid rgb(201, 118, 24);
         background-color:rgb(201, 118, 24);
         color:white;
-    }.room:hover{
+    }.room:hover,.headroom{
         border: 2px solid rgb(170, 86, 30);
         background-color:rgb(170, 86, 30);
         color:white;
-    }.cat:hover{
+    }.cat:hover,.headcat{
         border: 2px solid rgb(238, 234, 19);
         background-color:rgb(238, 234, 19);
         color:white;
+    }
+    .headFee{
+        background-color: rgb(25,24,32);
+        color: white;
+        border-radius: 2%;
+        border: none;
     }
