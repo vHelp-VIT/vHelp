@@ -199,7 +199,7 @@ nav {
     }
      
 .images-main:hover {
-    transform: scale(3.0);
+    /* transform: scale(3.0); */
     z-index: 12;
     box-shadow: 0 1px 500px 0 white;
 }

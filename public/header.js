@@ -765,4 +765,32 @@ var totalFee = 0;
 var vtotalFee = 0;
 var btotalFee = 0;
 var atotalFee = 0;
-//Calculate Fee
+//Calculate Fee Ends here--------
+$(".images-main").click(()=>{
+    var src = $(event.target).attr("src"); 
+    var overlay = document.getElementById("overlayId");
+    var overlayId = document.getElementById("overlay");
+    var overlaybanner = document.getElementById("loadLogo");
+    console.log(src);
+    if(phone800p){
+        console.log("max 800px");
+    $("#loadLogo").attr("src","https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX5697381.jpg");
+    overlaybanner.style.width="30px";
+    // overlaybanner.style.marginRight = "-1000px";
+    // overlaybanner.style.marginTop = "-0px";
+    overlaybanner.style.top = "0";
+    overlaybanner.style.right ="0";
+    overlaybanner.style.position = "fixed";
+    overlayId.style.background ="url('"+src+"')";
+    overlayId.style.backgroundSize = "contain";
+    overlayId.style.backgroundRepeat = "no-repeat";
+    overlayId.style.backgroundPosition = "center";
+    overlay.style.display = "block";
+    setTimeout(()=>{
+    overlay.style.display = "none";
+    },15000);}
+
+});
+$("#loadLogo").click(()=>{
+    document.getElementById("overlayId").style.display = "none";
+});
