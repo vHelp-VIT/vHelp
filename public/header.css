@@ -139,11 +139,6 @@ html{
     padding-right: 10px;
 }
 
-.submitQuest:hover{
-    border: 2px solid rgb(128, 80, 250);
-    background-color:rgb(128, 80, 250);
-    color:white;
-}
 
 .Rate:hover {
     box-shadow: 0px 0px 4px 0px black;
@@ -229,9 +224,20 @@ nav {
         }
         
     }
-
+     /* for desktops */
+ @media (min-width: 900px){
+    .submitQuest:hover{
+        border: 2px solid rgb(128, 80, 250);
+        background-color:rgb(128, 80, 250);
+        color:white;
+    }
+    
+    .fee{
+        padding: 2%;
+        border-radius: 1em;
+    }
+}
  @media (min-width: 640px){
-     
 
 .images-main:active {
     transform: scale(4.0);
@@ -288,10 +294,15 @@ nav {
     margin-top:-150px;
     margin-left: 80%;
 }
-
+/* for phones */
 @media (max-width: 900px){
     #abstract1{
         display: none;
+    }
+    
+
+    .fee{
+        width: 80px;
     }
 
 }
@@ -323,6 +334,11 @@ nav {
     background-position: center;
     transition: 2s;
 }
+.starImp{
+    color: red;
+    display: inline;
+}
+
 .page-footer{
     background-color: rgb(24, 24, 24);
     margin-top: 150px;
@@ -439,3 +455,25 @@ nav {
     width: 100%;
     height: 400px;
   }
+  .mess{
+      border-color: rgb(201, 118, 24);
+    }
+  .room{
+      border-color: rgb(170, 86, 30);
+    }
+.cat{
+    border-color: rgb(238, 234, 19);
+    } 
+    .mess:hover{
+        border: 2px solid rgb(201, 118, 24);
+        background-color:rgb(201, 118, 24);
+        color:white;
+    }.room:hover{
+        border: 2px solid rgb(170, 86, 30);
+        background-color:rgb(170, 86, 30);
+        color:white;
+    }.cat:hover{
+        border: 2px solid rgb(238, 234, 19);
+        background-color:rgb(238, 234, 19);
+        color:white;
+    }

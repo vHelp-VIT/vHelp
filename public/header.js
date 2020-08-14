@@ -12,21 +12,151 @@ let phone800p = window.matchMedia("(max-width: 800px)")
 let phone980p = window.matchMedia("(max-width: 980px)")
 window.addEventListener("scroll", scrollNav);
 window.addEventListener("scroll", scrollEnd);
-var isFee = 0;
-$('.fee').click(()=>{
-    if(isFee){
+//Fee Buttons
+$('.cat').click(()=>{
+    console.log(event.target.getAttribute("data-type"));
+    // console.log(isFee);
+    if(event.target.getAttribute("isOn")==1){
+    $(event.target).css("border","2px solid rgb(238, 234, 19)");
+    $(event.target).css("background-color","white");
+    $(event.target).css("color","black");
+    event.target.setAttribute("isOn",0);
+    }
+    else if(event.target.getAttribute("isOn")==0){
+    $(event.target).css("border","2px solid rgb(238, 234, 19)");
+    $(event.target).css("background-color","rgb(238, 234, 19)");
+    $(event.target).css("color","white");
+    event.target.setAttribute("isOn",1);
+    }
+    calculateFee();
+});
+$('.room').click(()=>{
+    console.log(event.target.getAttribute("data-type"));
+    // console.log(isFee);
+    if(event.target.getAttribute("isOn")==1){
+    $(event.target).css("border","2px solid rgb(170, 86, 30)");
+    $(event.target).css("background-color","white");
+    $(event.target).css("color","black");
+    event.target.setAttribute("isOn",0);
+    }
+    else if(event.target.getAttribute("isOn")==0){
+    $(event.target).css("border","2px solid rgb(170, 86, 30)");
+    $(event.target).css("background-color","rgb(170, 86, 30)");
+    $(event.target).css("color","white");
+    event.target.setAttribute("isOn",1);
+    }
+    calculateFee();
+});
+$('.mess').click(()=>{
+    console.log(event.target.getAttribute("data-type"));
+    // console.log(isFee);
+    if(event.target.getAttribute("isOn")==1){
+    $(event.target).css("border","2px solid rgb(201, 118, 24)");
+    $(event.target).css("background-color","white");
+    $(event.target).css("color","black");
+    event.target.setAttribute("isOn",0);
+    }
+    else if(event.target.getAttribute("isOn")==0){
+    $(event.target).css("border","2px solid rgb(201, 118, 24)");
+    $(event.target).css("background-color","rgb(201, 118, 24)");
+    $(event.target).css("color","white");
+    event.target.setAttribute("isOn",1);
+    }
+    calculateFee();
+});
+$('.grp').click(()=>{
+    console.log(event.target.getAttribute("data-type"));
+    // console.log(isFee);
+    if(event.target.getAttribute("isOn")==1){
     $(event.target).css("border","2px solid rgb(128, 80, 250)");
     $(event.target).css("background-color","white");
     $(event.target).css("color","black");
-    isFee = 0;
-}
-    else if(isFee==0){
+    event.target.setAttribute("isOn",0);
+    }
+    else if(event.target.getAttribute("isOn")==0){
     $(event.target).css("border","2px solid rgb(128, 80, 250)");
     $(event.target).css("background-color","rgb(128, 80, 250)");
     $(event.target).css("color","white");
-    isFee = 1;
+    event.target.setAttribute("isOn",1);
     }
+    calculateFee();
 });
+$("#totalFee").click(()=>{ 
+    // calculateFee();
+});
+//---------
+var totalFee = 0;
+//Calculate Fee
+function calculateFee(){
+    totalFee = 0;
+    if($("[data-type=grpA]").attr("isOn")==1){
+        if($("[data-type=cat1]").attr("isOn")==1){
+            totalFee = totalFee + 176000
+        }
+        else if($("[data-type=cat2]").attr("isOn")==1){
+            totalFee = totalFee + 276000
+        }
+        else if($("[data-type=cat3]").attr("isOn")==1){
+            totalFee = totalFee + 376000
+        }
+        else if($("[data-type=cat4]").attr("isOn")==1){
+            totalFee = totalFee + 476000
+        }
+        else if($("[data-type=cat5]").attr("isOn")==1){
+            totalFee = totalFee + 576000
+        }
+    }else if($("[data-type=grpB]").attr("isOn")==1){
+        if($("[data-type=cat1]").attr("isOn")==1){
+            totalFee = totalFee + 198000
+        }
+        else if($("[data-type=cat2]").attr("isOn")==1){
+            totalFee = totalFee + 298000
+        }
+        else if($("[data-type=cat3]").attr("isOn")==1){
+            totalFee = totalFee + 398000
+        }
+        else if($("[data-type=cat4]").attr("isOn")==1){
+            totalFee = totalFee + 498000
+        }
+        else if($("[data-type=cat5]").getAttribute("isOn")==1){
+            totalFee = totalFee + 598000
+        }
+    }
+    if($("[data-type=two]").attr("isOn")==1){
+        totalFee = totalFee + 129600
+    }
+    else if($("[data-type=three]").attr("isOn")==1){
+        totalFee = totalFee + 121000
+    }
+    else if($("[data-type=four]").attr("isOn")==1){
+        totalFee = totalFee + 116500
+    }
+    else if($("[data-type=twonac]").attr("isOn")==1){
+        totalFee = totalFee + 82800
+    }
+    else if($("[data-type=threenac]").attr("isOn")==1){
+        totalFee = totalFee + 76900
+    }
+    else if($("[data-type=fournac]").attr("isOn")==1){
+        totalFee = totalFee + 70500
+    }
+    if($("[data-type=veg]").attr("isOn")==1){
+        totalFee = totalFee + 59950
+    }
+    else if($("[data-type=nonveg]").attr("isOn")==1){
+        totalFee = totalFee + 66850
+    }
+    else if($("[data-type=special]").attr("isOn")==1){
+        totalFee = totalFee + 76500
+    }
+    else if($("[data-type=foodpark]").attr("isOn")==1){
+        totalFee = totalFee + 76500
+    }
+    document.getElementById("totalFee").innerHTML = '<i style="color: blue;"class="fa fa-inr" aria-hidden="true"></i> ' + totalFee.toLocaleString();
+    totalFee = 0;
+}
+
+//---------
 window.setInterval(function(){
     try{
     if(!phone800p.matches){

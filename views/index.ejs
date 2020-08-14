@@ -252,39 +252,39 @@
                         <div class="row">
                             <div class="col-md-9">
                                 <table class="fees">
-                                    <tr><th class="feesData">Branch Group</th><th class="feesData">Category</th><th class="feesData">Mess Type</th><th class="feesData">Room Type</th><th class="feesData">AC</th></tr>
+                                    <tr><th class="feesData">Branch Group<p class="starImp">*</p></th><th class="feesData">Category<p class="starImp">*</p></th><th class="feesData">Mess Type</th><th class="feesData">Room Type</th></tr>
                                 <tr>
                                         <td class="feesData">
-                                            <div class="fee submitQuest">Group A</div>
-                                            <div class="fee submitQuest">Group B</div>
+                                            <div data-type="grpA" isOn="0" class="fee grp submitQuest">Group A</div>
+                                            <div data-type="grpB" isOn="0" class="fee grp submitQuest">Group B</div>
                                         </td>
                                         <td class="feesData">
-                                            <div class="fee submitQuest">Category 1</div>
-                                            <div class="fee submitQuest">Category 2</div>
-                                            <div class="fee submitQuest">Category 3</div>
-                                            <div class="fee submitQuest">Category 4</div>
-                                            <div class="fee submitQuest">Category 5</div>
+                                            <div data-type="cat1"  isOn="0" class="fee cat submitQuest">Category 1</div>
+                                            <div data-type="cat2"  isOn="0" class="fee cat submitQuest">Category 2</div>
+                                            <div data-type="cat3"  isOn="0" class="fee cat submitQuest">Category 3</div>
+                                            <div data-type="cat4"  isOn="0" class="fee cat submitQuest">Category 4</div>
+                                            <div data-type="cat5"  isOn="0" class="fee cat submitQuest">Category 5</div>
                                         </td>
                                         <td class="feesData">
-                                            <div class="fee submitQuest">Veg</div>
-                                            <div class="fee submitQuest">Non Veg</div>
-                                            <div class="fee submitQuest">Special</div>
-                                            <div class="fee submitQuest">Food Park</div>
+                                            <div data-type="veg" isOn="0" class="fee mess submitQuest">Veg</div>
+                                            <div data-type="nonveg" isOn="0" class="fee mess submitQuest">Non Veg</div>
+                                            <div data-type="special" isOn="0" class="fee mess submitQuest">Special</div>
+                                            <div data-type="foodpark" isOn="0" class="fee mess submitQuest">Food Park</div>
                                         </td>
                                         <td class="feesData">
-                                            <div class="fee submitQuest">2 Bed Room</div>
-                                            <div class="fee submitQuest">3 Bed Room</div>
-                                            <div class="fee submitQuest">4 Bed Room</div>
+                                            <div data-type="two" isOn="0" class="fee room submitQuest">2 Bed AC</div>
+                                            <div data-type="three" isOn="0" class="fee room submitQuest">3 Bed AC</div>
+                                            <div data-type="four" isOn="0" class="fee room submitQuest">4 Bed AC</div>
+                                            <div data-type="twonac" isOn="0" class="fee room submitQuest">2 Bed non-AC</div>
+                                            <div data-type="threenac" isOn="0" class="fee room submitQuest">3 Bed non-AC</div>
+                                            <div data-type="fournac" isOn="0" class="fee room submitQuest">4 Bed non-AC</div>
                                         </td>
                                         
-                                        <td class="feesData">
-                                            <div class="fee submitQuest">AC</div>
-                                            <div class="fee submitQuest">Non AC</div>
-                                        </td>
-                                        <td class="feesData">
-                                            <div class="fee submitQuest">TOTAL</div>
-                                        </td>
                                 </tr>
+                                <tr>
+                                    <td colspan="4" class="feesData">
+                                        <center><div id="totalFee" class="fee submitQuest">TOTAL</div></center>
+                                    </td></tr>
                                 </table>
                             </div>
                           </div>
