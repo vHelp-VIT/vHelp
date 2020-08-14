@@ -82,24 +82,29 @@ function scrollEnd() {
 var hidesignal = 0;
 
 function sidebarHide(){
-    $('.side').css("width","initial");
+    // console.log("trig");
     if(hidesignal == 0){
         hidesignal = 1;
-    setTimeout(()=>{
-        $('.side').css("width","0px");
-        // console.log("hiding");
-        hidesignal =0;
-    },4000);}
+        $('.side').css("width","initial");
+    }else{
+        // hidesignal = 0;
+    }
 }
+$(".hideSidebar").click(()=>{
+    $('.side').css("width","0px");
+    $('.hideSidebar').css("width","initial");
+    hidesignal = 1;
+});
 //onscroll function
 function scrollNav() {
     // console.log($(window).scrollTop());
     if(dark == 0){
     $('.questContainer').css("z-index","6");
     if ($(window).scrollTop() > 30) {
+        sidebarHide();
         document.getElementById("customHead").style.boxShadow = "0 2px 4px 0 black";
         $('#customHead').css("background-color", "rgba(128, 80, 250,0.8)");
-        sidebarHide();
+        // sidebarHide();
         $('.list-group').css("color", "rgba(128, 80, 250,0.6)");
         $('.questContainer').css("transform","translateY(-40px)");
         if(phone980p.matches){
@@ -115,7 +120,7 @@ function scrollNav() {
         document.getElementById("customHead").style.boxShadow = "0 0px 0px 0 black";
         $('body').css("background-color", "white");
         $('.side').css("width","0px");
-        
+        hidesignal = 0;
         $('.questContainer').css("transform","translateY(40px)");
         $('#customHead').css("background-color", "rgba(128, 80, 250, 0)");
         $('.list-group').slideDown("slow");
@@ -128,11 +133,7 @@ function scrollNav() {
     if ($(window).scrollTop() > 30) {
         document.getElementById("customHead").style.boxShadow = "0 2px 4px 0 black";
         $('.list-group').css("color", "rgba(128, 80, 250,0.6)");
-        $('.side').css("width","initial");
-        setTimeout(()=>{
-            $('.side').css("width","0px");
-            // console.log("hiding");
-        },4000);
+        sidebarHide();
         $('.questContainer').css("transform","translateY(-40px)");
         $('#customHead').css("background-color", "rgb(25,24,32)");
         if(phone980p.matches){
@@ -147,6 +148,7 @@ function scrollNav() {
         document.getElementById("customHead").style.boxShadow = "0 0px 0px 0 black";
         $('.questContainer').css("transform","translateY(40px)");
         $('.side').css("width","0px");
+        hidesignal = 0;
         $('#customHead').css("background-color", "rgba(128, 80, 250, 0)");
         $('.list-group').slideDown("slow");
         $('.questContainer').css("z-index","4");
@@ -253,7 +255,7 @@ if(i==4){
 //preload banner images
 function preload(arrayOfImages) {
     $(arrayOfImages).each(function () {
-        console.log('preloading images');
+        // console.log('preloading images');
         $('<img />').attr('src',this).appendTo('body').css('display','none');
     });
 }
@@ -342,6 +344,7 @@ else{
     $('.card').css("backgroud-color","rgb(25, 24, 32)");
     $('textarea').css("background-color","white");
     $('textarea').css("border-color","white");
+    $('.list-group-item').css("color","blue");
     
     try{
         for(let j=0;j<forms.length;j++){
@@ -527,7 +530,7 @@ function calculateFeeVel(){
 //Calculate bhopal fees
 function calculateFeeBho(){
     btotalFee = 0;
-    console.log("Fee");
+    // console.log("Fee");
     if($("[data-type=bgrpA]").attr("isOn")==1){
         if($("[data-type=bcat1]").attr("isOn")==1){
             btotalFee = btotalFee + 176000;
@@ -607,7 +610,7 @@ function calculateFeeBho(){
 //Calculate bhopal fees
 function calculateFeeAmr(){
     atotalFee = 0;
-    console.log("Fee");
+    // console.log("Fee");
     if($("[data-type=agrpA]").attr("isOn")==1){
         if($("[data-type=acat1]").attr("isOn")==1){
             atotalFee = atotalFee + 176000;
@@ -771,7 +774,7 @@ $(".images-main").click(()=>{
     var overlay = document.getElementById("overlayId");
     var overlayId = document.getElementById("overlay");
     var overlaybanner = document.getElementById("loadLogo");
-    console.log(src);
+    // console.log(src);
     if(phone800p){
         console.log("max 800px");
     $("#loadLogo").attr("src","https://img.icons8.com/cotton/128/000000/cancel--v1.png");
@@ -781,6 +784,7 @@ $(".images-main").click(()=>{
     overlaybanner.style.top = "0";
     overlaybanner.style.right ="0";
     overlaybanner.style.position = "fixed";
+    overlay.style.boxShadow = "0 1px 500px 0 white";
     overlaybanner.style.boxShadow = "0 2px 4px 0 black";
     overlaybanner.style.backgroundColor = "white";
     overlaybanner.style.borderRadius = "5em";
