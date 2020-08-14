@@ -12,149 +12,6 @@ let phone800p = window.matchMedia("(max-width: 800px)")
 let phone980p = window.matchMedia("(max-width: 980px)")
 window.addEventListener("scroll", scrollNav);
 window.addEventListener("scroll", scrollEnd);
-//Fee Buttons
-$('.cat').click(()=>{
-    console.log(event.target.getAttribute("data-type"));
-    // console.log(isFee);
-    if(event.target.getAttribute("isOn")==1){
-    $(event.target).css("border","2px solid rgb(238, 234, 19)");
-    $(event.target).css("background-color","white");
-    $(event.target).css("color","black");
-    event.target.setAttribute("isOn",0);
-    }
-    else if(event.target.getAttribute("isOn")==0){
-    $(event.target).css("border","2px solid rgb(238, 234, 19)");
-    $(event.target).css("background-color","rgb(238, 234, 19)");
-    $(event.target).css("color","white");
-    event.target.setAttribute("isOn",1);
-    }
-    calculateFee();
-});
-$('.room').click(()=>{
-    console.log(event.target.getAttribute("data-type"));
-    // console.log(isFee);
-    if(event.target.getAttribute("isOn")==1){
-    $(event.target).css("border","2px solid rgb(170, 86, 30)");
-    $(event.target).css("background-color","white");
-    $(event.target).css("color","black");
-    event.target.setAttribute("isOn",0);
-    }
-    else if(event.target.getAttribute("isOn")==0){
-    $(event.target).css("border","2px solid rgb(170, 86, 30)");
-    $(event.target).css("background-color","rgb(170, 86, 30)");
-    $(event.target).css("color","white");
-    event.target.setAttribute("isOn",1);
-    }
-    calculateFee();
-});
-$('.mess').click(()=>{
-    console.log(event.target.getAttribute("data-type"));
-    // console.log(isFee);
-    if(event.target.getAttribute("isOn")==1){
-    $(event.target).css("border","2px solid rgb(201, 118, 24)");
-    $(event.target).css("background-color","white");
-    $(event.target).css("color","black");
-    event.target.setAttribute("isOn",0);
-    }
-    else if(event.target.getAttribute("isOn")==0){
-    $(event.target).css("border","2px solid rgb(201, 118, 24)");
-    $(event.target).css("background-color","rgb(201, 118, 24)");
-    $(event.target).css("color","white");
-    event.target.setAttribute("isOn",1);
-    }
-    calculateFee();
-});
-$('.grp').click(()=>{
-    console.log(event.target.getAttribute("data-type"));
-    // console.log(isFee);
-    if(event.target.getAttribute("isOn")==1){
-    $(event.target).css("border","2px solid rgb(128, 80, 250)");
-    $(event.target).css("background-color","white");
-    $(event.target).css("color","black");
-    event.target.setAttribute("isOn",0);
-    }
-    else if(event.target.getAttribute("isOn")==0){
-    $(event.target).css("border","2px solid rgb(128, 80, 250)");
-    $(event.target).css("background-color","rgb(128, 80, 250)");
-    $(event.target).css("color","white");
-    event.target.setAttribute("isOn",1);
-    }
-    calculateFee();
-});
-$("#totalFee").click(()=>{ 
-    // calculateFee();
-});
-//---------
-var totalFee = 0;
-//Calculate Fee
-function calculateFee(){
-    totalFee = 0;
-    if($("[data-type=grpA]").attr("isOn")==1){
-        if($("[data-type=cat1]").attr("isOn")==1){
-            totalFee = totalFee + 176000
-        }
-        else if($("[data-type=cat2]").attr("isOn")==1){
-            totalFee = totalFee + 276000
-        }
-        else if($("[data-type=cat3]").attr("isOn")==1){
-            totalFee = totalFee + 376000
-        }
-        else if($("[data-type=cat4]").attr("isOn")==1){
-            totalFee = totalFee + 476000
-        }
-        else if($("[data-type=cat5]").attr("isOn")==1){
-            totalFee = totalFee + 576000
-        }
-    }else if($("[data-type=grpB]").attr("isOn")==1){
-        if($("[data-type=cat1]").attr("isOn")==1){
-            totalFee = totalFee + 198000
-        }
-        else if($("[data-type=cat2]").attr("isOn")==1){
-            totalFee = totalFee + 298000
-        }
-        else if($("[data-type=cat3]").attr("isOn")==1){
-            totalFee = totalFee + 398000
-        }
-        else if($("[data-type=cat4]").attr("isOn")==1){
-            totalFee = totalFee + 498000
-        }
-        else if($("[data-type=cat5]").getAttribute("isOn")==1){
-            totalFee = totalFee + 598000
-        }
-    }
-    if($("[data-type=two]").attr("isOn")==1){
-        totalFee = totalFee + 129600
-    }
-    else if($("[data-type=three]").attr("isOn")==1){
-        totalFee = totalFee + 121000
-    }
-    else if($("[data-type=four]").attr("isOn")==1){
-        totalFee = totalFee + 116500
-    }
-    else if($("[data-type=twonac]").attr("isOn")==1){
-        totalFee = totalFee + 82800
-    }
-    else if($("[data-type=threenac]").attr("isOn")==1){
-        totalFee = totalFee + 76900
-    }
-    else if($("[data-type=fournac]").attr("isOn")==1){
-        totalFee = totalFee + 70500
-    }
-    if($("[data-type=veg]").attr("isOn")==1){
-        totalFee = totalFee + 59950
-    }
-    else if($("[data-type=nonveg]").attr("isOn")==1){
-        totalFee = totalFee + 66850
-    }
-    else if($("[data-type=special]").attr("isOn")==1){
-        totalFee = totalFee + 76500
-    }
-    else if($("[data-type=foodpark]").attr("isOn")==1){
-        totalFee = totalFee + 76500
-    }
-    document.getElementById("totalFee").innerHTML = '<i style="color: blue;"class="fa fa-inr" aria-hidden="true"></i> ' + totalFee.toLocaleString();
-    totalFee = 0;
-}
 
 //---------
 window.setInterval(function(){
@@ -520,3 +377,223 @@ else{
     document.getElementById("darkMode").style.backgroundColor="rgb(25,24,32)";
 }
 }
+// Calculate chennai fees
+function calculateFee(){
+    totalFee = 0;
+    if($("[data-type=grpA]").attr("isOn")==1){
+        if($("[data-type=cat1]").attr("isOn")==1){
+            totalFee = totalFee + 176000;
+        }
+        else if($("[data-type=cat2]").attr("isOn")==1){
+            totalFee = totalFee + 276000;
+        }
+        else if($("[data-type=cat3]").attr("isOn")==1){
+            totalFee = totalFee + 376000;
+        }
+        else if($("[data-type=cat4]").attr("isOn")==1){
+            totalFee = totalFee + 476000;
+        }
+        else if($("[data-type=cat5]").attr("isOn")==1){
+            totalFee = totalFee + 576000;
+        }
+    }else if($("[data-type=grpB]").attr("isOn")==1){
+        if($("[data-type=cat1]").attr("isOn")==1){
+            totalFee = totalFee + 198000;
+        }
+        else if($("[data-type=cat2]").attr("isOn")==1){
+            totalFee = totalFee + 298000;
+        }
+        else if($("[data-type=cat3]").attr("isOn")==1){
+            totalFee = totalFee + 398000;
+        }
+        else if($("[data-type=cat4]").attr("isOn")==1){
+            totalFee = totalFee + 498000;
+        }
+        else if($("[data-type=cat5]").getAttribute("isOn")==1){
+            totalFee = totalFee + 598000;
+        }
+    }
+    if($("[data-type=two]").attr("isOn")==1){
+        totalFee = totalFee + 129600;
+    }
+    else if($("[data-type=three]").attr("isOn")==1){
+        totalFee = totalFee + 121000;
+    }
+    else if($("[data-type=four]").attr("isOn")==1){
+        totalFee = totalFee + 116500;
+    }
+    else if($("[data-type=twonac]").attr("isOn")==1){
+        totalFee = totalFee + 82800;
+    }
+    else if($("[data-type=threenac]").attr("isOn")==1){
+        totalFee = totalFee + 76900;
+    }
+    else if($("[data-type=fournac]").attr("isOn")==1){
+        totalFee = totalFee + 70500;
+    }
+    if($("[data-type=veg]").attr("isOn")==1){
+        totalFee = totalFee + 59950;
+    }
+    else if($("[data-type=nonveg]").attr("isOn")==1){
+        totalFee = totalFee + 66850;
+    }
+    else if($("[data-type=special]").attr("isOn")==1){
+        totalFee = totalFee + 76500;
+    }
+    else if($("[data-type=foodpark]").attr("isOn")==1){
+        totalFee = totalFee + 76500;
+    }
+    document.getElementById("totalFee").innerHTML = '<i style="color: blue;"class="fa fa-inr" aria-hidden="true"></i> ' + totalFee.toLocaleString();
+    totalFee = 0;
+}
+//Calculate vellore fees
+function calculateFeeVel(){
+    vtotalFee = 0;
+    if($("[data-type=vgrpA]").attr("isOn")==1){
+        if($("[data-type=vcat1]").attr("isOn")==1){
+            vtotalFee = vtotalFee + 176000;
+        }
+        else if($("[data-type=vcat2]").attr("isOn")==1){
+            vtotalFee = vtotalFee + 276000;
+        }
+        else if($("[data-type=vcat3]").attr("isOn")==1){
+            vtotalFee = vtotalFee + 376000;
+        }
+        else if($("[data-type=vcat4]").attr("isOn")==1){
+            vtotalFee = vtotalFee + 476000;
+        }
+        else if($("[data-type=vcat5]").attr("isOn")==1){
+            vtotalFee = vtotalFee + 576000;
+        }
+    }else if($("[data-type=vgrpB]").attr("isOn")==1){
+        if($("[data-type=vcat1]").attr("isOn")==1){
+            vtotalFee = vtotalFee + 198000;
+        }
+        else if($("[data-type=vcat2]").attr("isOn")==1){
+            vtotalFee = vtotalFee + 298000;
+        }
+        else if($("[data-type=vcat3]").attr("isOn")==1){
+            vtotalFee = vtotalFee + 398000;
+        }
+        else if($("[data-type=vcat4]").attr("isOn")==1){
+            vtotalFee = vtotalFee + 498000;
+        }
+        else if($("[data-type=vcat5]").getAttribute("isOn")==1){
+            vtotalFee = vtotalFee + 598000;
+        }
+    }
+    if($("[data-type=vone]").attr("isOn")==1){
+        vtotalFee = vtotalFee + 122840;
+    }
+    else if($("[data-type=vtwo]").attr("isOn")==1){
+        vtotalFee = vtotalFee + 97240;
+    }
+    else if($("[data-type=vthree]").attr("isOn")==1){
+        vtotalFee = vtotalFee + 90840;
+    }
+    else if($("[data-type=vfour]").attr("isOn")==1){
+        vtotalFee = vtotalFee + 81140;
+    }
+    else if($("[data-type=vsix]").attr("isOn")==1){
+        vtotalFee = vtotalFee + 74640;
+    }
+    else if($("[data-type=vonenac]").attr("isOn")==1){
+        vtotalFee = vtotalFee + 85740;
+    }
+    else if($("[data-type=vtwonac]").attr("isOn")==1){
+        vtotalFee = vtotalFee + 72040;
+    }
+    else if($("[data-type=vthreenac]").attr("isOn")==1){
+        vtotalFee = vtotalFee + 65940;
+    }
+    else if($("[data-type=vfournac]").attr("isOn")==1){
+        vtotalFee = vtotalFee + 60940;
+    }
+    else if($("[data-type=vsixnac]").attr("isOn")==1){
+        vtotalFee = vtotalFee + 57240;
+    }
+    if($("[data-type=vveg]").attr("isOn")==1){
+        vtotalFee = vtotalFee + 50500;
+    }
+    else if($("[data-type=vnonveg]").attr("isOn")==1){
+        vtotalFee = vtotalFee + 57000;
+    }
+    else if($("[data-type=vspecial]").attr("isOn")==1){
+        vtotalFee = vtotalFee + 65000;
+    }
+    document.getElementById("vtotalFee").innerHTML = '<i style="color: blue;"class="fa fa-inr" aria-hidden="true"></i> ' + vtotalFee.toLocaleString();
+    vtotalFee = 0;
+}
+//Fee Buttons
+$('.cat').click(()=>{
+    // console.log(event.target.getAttribute("data-type"));
+    // console.log(isFee);
+    if(event.target.getAttribute("isOn")==1){
+    $(event.target).css("border","2px solid rgb(238, 234, 19)");
+    $(event.target).css("background-color","white");
+    $(event.target).css("color","black");
+    event.target.setAttribute("isOn",0);
+    }
+    else if(event.target.getAttribute("isOn")==0){
+    $(event.target).css("border","2px solid rgb(238, 234, 19)");
+    $(event.target).css("background-color","rgb(238, 234, 19)");
+    $(event.target).css("color","white");
+    event.target.setAttribute("isOn",1);
+    }
+});
+$('.room').click(()=>{
+    // console.log(event.target.getAttribute("data-type"));
+    // console.log(isFee);
+    if(event.target.getAttribute("isOn")==1){
+    $(event.target).css("border","2px solid rgb(170, 86, 30)");
+    $(event.target).css("background-color","white");
+    $(event.target).css("color","black");
+    event.target.setAttribute("isOn",0);
+    }
+    else if(event.target.getAttribute("isOn")==0){
+    $(event.target).css("border","2px solid rgb(170, 86, 30)");
+    $(event.target).css("background-color","rgb(170, 86, 30)");
+    $(event.target).css("color","white");
+    event.target.setAttribute("isOn",1);
+    }
+});
+$('.mess').click(()=>{
+    // console.log(event.target.getAttribute("data-type"));
+    // console.log(isFee);
+    if(event.target.getAttribute("isOn")==1){
+    $(event.target).css("border","2px solid rgb(201, 118, 24)");
+    $(event.target).css("background-color","white");
+    $(event.target).css("color","black");
+    event.target.setAttribute("isOn",0);
+    }
+    else if(event.target.getAttribute("isOn")==0){
+    $(event.target).css("border","2px solid rgb(201, 118, 24)");
+    $(event.target).css("background-color","rgb(201, 118, 24)");
+    $(event.target).css("color","white");
+    event.target.setAttribute("isOn",1);
+    }
+});
+$('.grp').click(()=>{
+    // console.log(event.target.getAttribute("data-type"));
+    // console.log(isFee);
+    if(event.target.getAttribute("isOn")==1){
+    $(event.target).css("border","2px solid rgb(128, 80, 250)");
+    $(event.target).css("background-color","white");
+    $(event.target).css("color","black");
+    event.target.setAttribute("isOn",0);
+    }
+    else if(event.target.getAttribute("isOn")==0){
+    $(event.target).css("border","2px solid rgb(128, 80, 250)");
+    $(event.target).css("background-color","rgb(128, 80, 250)");
+    $(event.target).css("color","white");
+    event.target.setAttribute("isOn",1);
+    }
+});
+$(".vel").click(()=>{ 
+    console.log("Velloe Clicked");
+    calculateFeeVel();
+});
+//---------
+var totalFee = 0;
+var vtotalFee = 0;
+//Calculate Fee

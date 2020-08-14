@@ -224,7 +224,7 @@ nav {
         }
         
     }
-    .submitQuest:hover,.headgrp,#totalFee{
+    .submitQuest:hover,.headgrp,.sums{
         border: 2px solid rgb(128, 80, 250);
         background-color:rgb(128, 80, 250);
         color:white;
