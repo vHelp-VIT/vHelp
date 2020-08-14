@@ -774,13 +774,16 @@ $(".images-main").click(()=>{
     console.log(src);
     if(phone800p){
         console.log("max 800px");
-    $("#loadLogo").attr("src","https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX5697381.jpg");
-    overlaybanner.style.width="30px";
+    $("#loadLogo").attr("src","https://img.icons8.com/cotton/128/000000/cancel--v1.png");
+    overlaybanner.style.width="70px";
     // overlaybanner.style.marginRight = "-1000px";
     // overlaybanner.style.marginTop = "-0px";
     overlaybanner.style.top = "0";
     overlaybanner.style.right ="0";
     overlaybanner.style.position = "fixed";
+    overlaybanner.style.boxShadow = "0 2px 4px 0 black";
+    overlaybanner.style.backgroundColor = "white";
+    overlaybanner.style.borderRadius = "5em";
     overlayId.style.background ="url('"+src+"')";
     overlayId.style.backgroundSize = "contain";
     overlayId.style.backgroundRepeat = "no-repeat";
