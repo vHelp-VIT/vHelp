@@ -365,6 +365,10 @@ nav {
 .dropDowns{
     float: right;
     color: rgb(128, 80, 250);
+    font-size: 30px;
+}
+.dropDowns:hover{
+    transform: scale(1.5);
 }
 .blueTick{
     color: rgb(128, 80, 250);
