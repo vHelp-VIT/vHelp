@@ -168,6 +168,10 @@ app.get("/tentative",(req,res)=>{
     res.render("tentative");
 });
 
+app.get("/feeCalc",(req,res)=>{
+    res.render("feeCalc");
+});
+
 
 ////////////////////////////////////////////////////////////////////////////////////
 // ///////////// all the below are admin rotes: Not working yet/////////////////////
