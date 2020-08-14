@@ -6,7 +6,7 @@ catch(e){
     
 }
 var dark = 0;
-console.log(dark);
+// console.log(dark);
 let phone640p = window.matchMedia("(max-width: 640px)")
 let phone800p = window.matchMedia("(max-width: 800px)")
 let phone980p = window.matchMedia("(max-width: 980px)")
@@ -28,9 +28,9 @@ window.setInterval(function(){
 var drop = 0;
 $('.dropDowns').click(function(){
     if(drop == 0){
-    console.log("clicked");
+    // console.log("clicked");
     cardId = $(event.target).parent().parent();
-    console.log(cardId);
+    // console.log(cardId);
     cardId.css("height","fit-content");
     cardId.children('.card-text').css("opacity","1");
     cardId.children('.card-text').css("display","block");
@@ -87,13 +87,13 @@ function sidebarHide(){
         hidesignal = 1;
     setTimeout(()=>{
         $('.side').css("width","0px");
-        console.log("hiding");
+        // console.log("hiding");
         hidesignal =0;
     },4000);}
 }
 //onscroll function
 function scrollNav() {
-    console.log($(window).scrollTop());
+    // console.log($(window).scrollTop());
     if(dark == 0){
     $('.questContainer').css("z-index","6");
     if ($(window).scrollTop() > 30) {
@@ -131,7 +131,7 @@ function scrollNav() {
         $('.side').css("width","initial");
         setTimeout(()=>{
             $('.side').css("width","0px");
-            console.log("hiding");
+            // console.log("hiding");
         },4000);
         $('.questContainer').css("transform","translateY(-40px)");
         $('#customHead').css("background-color", "rgb(25,24,32)");
@@ -159,7 +159,7 @@ function scrollNav() {
 }
   $('#formContent').keydown(function(){
         var data = document.getElementById("formContent").value;
-        console.log("dub db");
+        // console.log("dub db");
         if(data.length>10){
             $('#postQuest').css("display","initial");
             $('.questTags').css("display","initial");
@@ -211,7 +211,7 @@ function scrollToContent(){
 }
 //ONclick card
 $('.card').click(function(){
-    console.log("trigg"+this);
+    // console.log("trigg"+this);
     $(this).css("height","fit-content");
 });
 $(function() {
@@ -590,7 +590,7 @@ $('.grp').click(()=>{
     }
 });
 $(".vel").click(()=>{ 
-    console.log("Velloe Clicked");
+    // console.log("Velloe Clicked");
     calculateFeeVel();
 });
 //---------
