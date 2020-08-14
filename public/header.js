@@ -478,7 +478,7 @@ function calculateFeeVel(){
         else if($("[data-type=vcat4]").attr("isOn")==1){
             vtotalFee = vtotalFee + 498000;
         }
-        else if($("[data-type=vcat5]").getAttribute("isOn")==1){
+        else if($("[data-type=vcat5]").attr("isOn")==1){
             vtotalFee = vtotalFee + 598000;
         }
     }
