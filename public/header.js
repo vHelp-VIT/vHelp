@@ -786,9 +786,7 @@ $(".images-main").click(()=>{
     overlayId.style.backgroundRepeat = "no-repeat";
     overlayId.style.backgroundPosition = "center";
     overlay.style.display = "block";
-    setTimeout(()=>{
-    overlay.style.display = "none";
-    },15000);}
+    }
 
 });
 $("#loadLogo").click(()=>{
