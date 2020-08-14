@@ -781,8 +781,6 @@ $(".images-main").click(()=>{
     overlaybanner.style.width="70px";
     // overlaybanner.style.marginRight = "-1000px";
     // overlaybanner.style.marginTop = "-0px";
-    overlaybanner.style.top = "0";
-    overlaybanner.style.right ="0";
     overlaybanner.style.position = "fixed";
     overlay.style.boxShadow = "0 1px 500px 0 white";
     overlaybanner.style.boxShadow = "0 2px 4px 0 black";
@@ -794,6 +792,17 @@ $(".images-main").click(()=>{
     overlayId.style.backgroundRepeat = "no-repeat";
     overlayId.style.backgroundPosition = "center";
     overlay.style.display = "block";
+    }
+    if(phone800p.matches){
+        
+    overlaybanner.style.bottom = "10%";
+    overlayId.style.opacity = "1";
+    overlaybanner.style.right ="40%";
+    }else{
+        overlaybanner.style.marginTop="70px";
+        overlayId.style.opacity = "1";
+    overlaybanner.style.right = "0";
+    overlaybanner.style.top ="0";
     }
 
 });
