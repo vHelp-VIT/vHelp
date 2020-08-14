@@ -784,6 +784,7 @@ $(".images-main").click(()=>{
     overlaybanner.style.boxShadow = "0 2px 4px 0 black";
     overlaybanner.style.backgroundColor = "white";
     overlaybanner.style.borderRadius = "5em";
+    overlay.style.zIndex = "7";
     overlayId.style.background ="url('"+src+"')";
     overlayId.style.backgroundSize = "contain";
     overlayId.style.backgroundRepeat = "no-repeat";
