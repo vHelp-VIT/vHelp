@@ -524,6 +524,159 @@ function calculateFeeVel(){
     document.getElementById("vtotalFee").innerHTML = '<i style="color: blue;"class="fa fa-inr" aria-hidden="true"></i> ' + vtotalFee.toLocaleString();
     vtotalFee = 0;
 }
+//Calculate bhopal fees
+function calculateFeeBho(){
+    btotalFee = 0;
+    console.log("Fee");
+    if($("[data-type=bgrpA]").attr("isOn")==1){
+        if($("[data-type=bcat1]").attr("isOn")==1){
+            btotalFee = btotalFee + 176000;
+        }
+        else if($("[data-type=bcat2]").attr("isOn")==1){
+            btotalFee = btotalFee + 276000;
+        }
+        else if($("[data-type=bcat3]").attr("isOn")==1){
+            btotalFee = btotalFee + 376000;
+        }
+        else if($("[data-type=bcat4]").attr("isOn")==1){
+            btotalFee = btotalFee + 476000;
+        }
+        else if($("[data-type=bcat5]").attr("isOn")==1){
+            btotalFee = btotalFee + 576000;
+        }
+    }else if($("[data-type=bgrpB]").attr("isOn")==1){
+        if($("[data-type=bcat1]").attr("isOn")==1){
+            btotalFee = btotalFee + 198000;
+        }
+        else if($("[data-type=bcat2]").attr("isOn")==1){
+            btotalFee = btotalFee + 298000;
+        }
+        else if($("[data-type=bcat3]").attr("isOn")==1){
+            btotalFee = btotalFee + 398000;
+        }
+        else if($("[data-type=bcat4]").attr("isOn")==1){
+            btotalFee = btotalFee + 498000;
+        }
+        else if($("[data-type=bcat5]").attr("isOn")==1){
+            btotalFee = btotalFee + 598000;
+        }
+    }
+    if($("[data-type=bone]").attr("isOn")==1){
+        btotalFee = btotalFee + 193925;
+    }
+    else if($("[data-type=btwo]").attr("isOn")==1){
+        btotalFee = btotalFee + 175050;
+    }
+    else if($("[data-type=bthree]").attr("isOn")==1){
+        btotalFee = btotalFee + 159775;
+    }
+    else if($("[data-type=bfour]").attr("isOn")==1){
+        btotalFee = btotalFee + 139950;
+    }
+    else if($("[data-type=bsix]").attr("isOn")==1){
+        btotalFee = btotalFee + 134925;
+    }
+    else if($("[data-type=bonenac]").attr("isOn")==1){
+        btotalFee = btotalFee + 172075;
+    }
+    else if($("[data-type=btwonac]").attr("isOn")==1){
+        btotalFee = btotalFee + 156850;
+    }
+    else if($("[data-type=bthreenac]").attr("isOn")==1){
+        btotalFee = btotalFee + 142425;
+    }
+    else if($("[data-type=bfournac]").attr("isOn")==1){
+        btotalFee = btotalFee + 127975;
+    }
+    else if($("[data-type=bsixnac]").attr("isOn")==1){
+        btotalFee = btotalFee + 123800;
+    }
+    if($("[data-type=bveg]").attr("isOn")==1){
+        btotalFee = btotalFee + 0;
+    }
+    else if($("[data-type=bnonveg]").attr("isOn")==1){
+        btotalFee = btotalFee + 0;
+    }
+    else if($("[data-type=bspecial]").attr("isOn")==1){
+        btotalFee = btotalFee + 0;
+    }
+    document.getElementById("btotalFee").innerHTML = '<i style="color: blue;"class="fa fa-inr" aria-hidden="true"></i> ' + btotalFee.toLocaleString();
+    btotalFee = 0;
+}
+
+//Calculate bhopal fees
+function calculateFeeAmr(){
+    atotalFee = 0;
+    console.log("Fee");
+    if($("[data-type=agrpA]").attr("isOn")==1){
+        if($("[data-type=acat1]").attr("isOn")==1){
+            atotalFee = atotalFee + 176000;
+        }
+        else if($("[data-type=acat2]").attr("isOn")==1){
+            atotalFee = atotalFee + 276000;
+        }
+        else if($("[data-type=acat3]").attr("isOn")==1){
+            atotalFee = atotalFee + 376000;
+        }
+        else if($("[data-type=acat4]").attr("isOn")==1){
+            atotalFee = atotalFee + 476000;
+        }
+        else if($("[data-type=acat5]").attr("isOn")==1){
+            atotalFee = atotalFee + 576000;
+        }
+    }else if($("[data-type=agrpB]").attr("isOn")==1){
+        if($("[data-type=acat1]").attr("isOn")==1){
+            atotalFee = atotalFee + 198000;
+        }
+        else if($("[data-type=acat2]").attr("isOn")==1){
+            atotalFee = atotalFee + 298000;
+        }
+        else if($("[data-type=acat3]").attr("isOn")==1){
+            atotalFee = atotalFee + 398000;
+        }
+        else if($("[data-type=acat4]").attr("isOn")==1){
+            atotalFee = atotalFee + 498000;
+        }
+        else if($("[data-type=acat5]").attr("isOn")==1){
+            atotalFee = atotalFee + 598000;
+        }
+    }
+    if($("[data-type=atwo]").attr("isOn")==1){
+        atotalFee = atotalFee + 113000;
+    }
+    else if($("[data-type=a2baptac]").attr("isOn")==1){
+        atotalFee = atotalFee + 125000;
+    }
+    else if($("[data-type=afour]").attr("isOn")==1){
+        atotalFee = atotalFee + 102000;
+    }
+    else if($("[data-type=a2baptnac]").attr("isOn")==1){
+        atotalFee = atotalFee + 85000;
+    }
+    else if($("[data-type=a4baptac]").attr("isOn")==1){
+        atotalFee = atotalFee + 115000;
+    }
+    else if($("[data-type=atwonac]").attr("isOn")==1){
+        atotalFee = atotalFee + 73000;
+    }
+    else if($("[data-type=a2baptnac]").attr("isOn")==1){
+        atotalFee = atotalFee + 85000;
+    }
+    else if($("[data-type=afournac]").attr("isOn")==1){
+        atotalFee = atotalFee + 62000;
+    }
+    if($("[data-type=aveg]").attr("isOn")==1){
+        atotalFee = atotalFee + 59000;
+    }
+    else if($("[data-type=anonveg]").attr("isOn")==1){
+        atotalFee = atotalFee + 66000;
+    }
+    else if($("[data-type=aspecial]").attr("isOn")==1){
+        atotalFee = atotalFee + 72500;
+    }
+    document.getElementById("atotalFee").innerHTML = '<i style="color: blue;"class="fa fa-inr" aria-hidden="true"></i> ' + atotalFee.toLocaleString();
+    atotalFee = 0;
+}
 //Fee Buttons
 $('.cat').click(()=>{
     // console.log(event.target.getAttribute("data-type"));
@@ -593,7 +746,23 @@ $(".vel").click(()=>{
     // console.log("Velloe Clicked");
     calculateFeeVel();
 });
+
+$(".che").click(()=>{ 
+    // console.log("Velloe Clicked");
+    calculateFee();
+});
+
+$(".bho").click(()=>{ 
+    // console.log("Velloe Clicked");
+    calculateFeeBho();
+});
+$(".amr").click(()=>{ 
+    // console.log("Velloe Clicked");
+    calculateFeeAmr();
+});
 //---------
 var totalFee = 0;
 var vtotalFee = 0;
+var btotalFee = 0;
+var atotalFee = 0;
 //Calculate Fee
