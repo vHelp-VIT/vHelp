@@ -218,9 +218,14 @@ $('.card').click(function(){
 });
 $(function() {
     console.log( "ready!" );
-    //     setTimeout(() => {
+        setTimeout(() => {
+            try{
+    document.getElementById("overlayId").style.display = "none";}
+    catch(e){
 
-    //    }, 1000);
+    }
+    window.scrollTo(0, 0);
+       }, 3000);
 
 });
 $('.images-main').oncontextmenu = function(event) {
@@ -246,12 +251,6 @@ if(i==4){
     i=0;
         }
     },3000);
-    try{
-        document.getElementById("overlayId").style.display = "none";}
-        catch(e){
-    
-        }
-        window.scrollTo(0, 0);
 }
 //preload banner images
 function preload(arrayOfImages) {
