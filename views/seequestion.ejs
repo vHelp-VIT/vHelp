@@ -22,7 +22,8 @@
 
                 <div class="card-body" style="height: auto; margin-bottom: 20px;">
                     <span>
-                    <h5 class="card-title"><%= ans.question %>  <a class="btn btn-primary submitQuest" style="float:right;"href="/">Ask a Question</a></h5>
+                        <h5 class="card-title"><%= ans.question %> <a class="btn btn-primary submitQuest"
+                                style="float:right;" href="/">Ask a Question</a></h5>
                     </span>
 
                     <p>
@@ -46,6 +47,15 @@
                     <% if(sub_ans.name==" "){ %>
                     <b class="mx-2">anonymous</b>
                     <% } %>
+
+                    <% if(sub_ans.insta!=" "){ %>
+                    <span>
+                        <a class="mx-4 my-2" href="<%= sub_ans.insta %>" target="_blank"><i class="fa fa-instagram"
+                                aria-hidden="true"></i><u>Reach Me</u></a>
+                    </span>
+                    <% } %>
+
+
                     <b class="mx-2"><%= sub_ans.name %></b>
                     <% if(sub_ans.campus=="Vellore"){  %>
                     <span class="badge badge-success">Vellore</span>
@@ -62,8 +72,6 @@
                     </h5>
 
                     <p class="mx-4 my-2"><b><%= sub_ans.ans %></b></p>
-
-                    <a class="mx-4 my-2" href="<%= sub_ans.insta %>" target="_blank"><u>My Instagram Handle</u></a>
 
                     <a class="mx-4 my-2" href="<%= sub_ans.link %>" target="_blank"><u><%= sub_ans.link %></u></a>
 
@@ -92,8 +100,8 @@
                             </div> -->
 
                             <div class="col-12 col-md-4 my-1">
-                                <input type="text" placeholder="instagram link(optional)" class="form-control form-control-1"
-                                    name="insta_handle">
+                                <input type="text" placeholder="instagram link(optional)"
+                                    class="form-control form-control-1" name="insta_handle">
                             </div>
 
                             <div class="form-group mx-3 my-1">
