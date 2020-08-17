@@ -82,6 +82,9 @@
                                     </h5>
                                     <p class="mx-4 my-2"><b><%= sub_ans.ans %></b></p>
 
+                                    <a class="mx-4 my-2" href="<%= sub_ans.insta %>"
+                                        target="_blank"><u>My Instagram Handle</u></a>
+
                                     <a class="mx-4 my-2" href="<%= sub_ans.link %>"
                                         target="_blank"><u><%= sub_ans.link %></u></a>
                                 </div>
@@ -103,14 +106,20 @@
                         <form action="/update_ans/<%= ans._id %>" method="POST">
                             <div class="row">
                                 <div class="col-12 col-md-4 my-1">
-                                    <input type="text" placeholder="First name" class="form-control form-control-1"
+                                    <input type="text" placeholder="Name(optional)" class="form-control form-control-1"
                                         name="name_first">
                                 </div>
 
-                                <div class="col-12 col-md-4 my-1">
+                                <!-- <div class="col-12 col-md-4 my-1">
                                     <input type="text" placeholder="Last name" class="form-control form-control-1"
                                         name="name_last">
+                                </div> -->
+
+                                <div class="col-12 col-md-4 my-1">
+                                    <input type="text" placeholder="instagram link(optional)" class="form-control form-control-1"
+                                        name="insta_handle">
                                 </div>
+
                                 <div class="form-group mx-3 my-1">
                                     <select id="inputCampus" class="form-control form-control-1" name="campus_name">
                                         <option selected>Vellore</option>

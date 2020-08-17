@@ -123,13 +123,15 @@ app.post("/update_ans/:ans_id", async (req, res) => {
     let questionn_id = req.params.ans_id;
     let my_new_ans = req.body.ans_here;
     let campus = req.body.campus_name;
-    let name = req.body.name_first + " " + req.body.name_last;
+    let insta = req.body.insta_handle;
+    let name = req.body.name_first;
     let link = req.body.imp_link;
     let new_ans = {
         campus: campus,
         ans: my_new_ans,
         name: name,
-        link: link
+        link: link,
+        insta: insta
     };
     let querer_info = await question.findOneAndUpdate({ _id: questionn_id },
         { $addToSet: { answer: new_ans } },
