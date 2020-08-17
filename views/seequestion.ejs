@@ -48,15 +48,18 @@
                     <b class="mx-2">anonymous</b>
                     <% } %>
 
+
+                    <b class="mx-2"><%= sub_ans.name %></b>
+
+
                     <% if(sub_ans.insta!=" "){ %>
                     <span>
                         <a class="mx-4 my-2" href="<%= sub_ans.insta %>" target="_blank"><i class="fa fa-instagram"
-                                aria-hidden="true"></i><u>Reach Me</u></a>
+                                aria-hidden="true"></i><u> Reach Me</u></a>
                     </span>
                     <% } %>
 
 
-                    <b class="mx-2"><%= sub_ans.name %></b>
                     <% if(sub_ans.campus=="Vellore"){  %>
                     <span class="badge badge-success">Vellore</span>
                     <% } %>
