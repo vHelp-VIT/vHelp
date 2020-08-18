@@ -181,8 +181,8 @@ function scrollToContent(){
         $(".bannerStyle").css("transition-duration","2s");
     }
     //carousel Images
-    var images = ['vellorecampus.jpg','bhopalCampus.jpg','campus-banner.jpg','apcampus.jpeg']
-    var images_phone = ['phone-campus-banner.jpg','vellorecampus.jpg','bhopalCampus.jpg','apcampus.jpeg']
+    var images = ['vellorecampus.jpg','bhopalCampus.jpg','campus-banner.jpg','apcampus.jpeg','footer-back.png']
+    var images_phone = ['phone-campus-banner.jpg','vellorecampus.jpg','bhopalCampus.jpg','apcampus.jpeg','footer-back.png']
     var i =0;
     window.onload = function(){
         if(phone800p){
@@ -216,21 +216,7 @@ $('.card').click(function(){
     // console.log("trigg"+this);
     $(this).css("height","fit-content");
 });
-$(function() {
-    console.log( "ready!" );
-        setTimeout(() => {
-            try{
-    document.getElementById("overlayId").style.display = "none";}
-    catch(e){
 
-    }
-    window.scrollTo(0, 0);
-       }, 3000);
-
-});
-$('.hackclub').click(()=>{
-    window.open("https://organize.mlh.io/participants/events/3835-get-to-know-git","_blank");
-});
 $('.images-main').oncontextmenu = function(event) {
     event.preventDefault();
     event.stopPropagation();
@@ -260,6 +246,16 @@ function preload(arrayOfImages) {
     $(arrayOfImages).each(function () {
         // console.log('preloading images');
         $('<img />').attr('src',this).appendTo('body').css('display','none');
+            console.log( "ready!" );
+                setTimeout(() => {
+                    try{
+            document.getElementById("overlayId").style.display = "none";}
+            catch(e){
+        
+            }
+            window.scrollTo(0, 0);
+               }, 2000);
+        
     });
 }
 $('#darkMode').click(darkMode);
