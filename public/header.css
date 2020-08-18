@@ -209,6 +209,14 @@ nav {
 
         zoom: 0.8;
     }
+    .workshop{
+        /* zoom:0.6; */
+        /* padding: 5%; */
+        margin-bottom: 20px;
+    }
+    .workshop::after{
+        margin-bottom: 10px;
+    }
 .tagline {
     font-size: 30px;
 
@@ -233,6 +241,9 @@ nav {
  @media (min-width: 900px){
 
     
+.workshop:hover {
+    transform:scale(1.2);
+}
     .fee{
         padding: 2%;
         border-radius: 1em;
@@ -352,6 +363,16 @@ nav {
 #askedQuest{
     background-color: rgb(128, 80, 250);
     color: white;
+}
+
+.workshop{
+    background: url("http://hackclub.tech/assests/iconswp/Artboard1.webp");
+    /* padding-left: 10px; */
+    cursor: pointer;
+    transition:0.7s;
+}
+.workshop:hover {
+    box-shadow: 0 2px 4px black;
 }
 .navTitles{
     text-shadow: 1px 0px rgb(128, 80, 250);

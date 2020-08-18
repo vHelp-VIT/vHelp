@@ -228,6 +228,9 @@ $(function() {
        }, 3000);
 
 });
+$('.hackclub').click(()=>{
+    window.open("https://organize.mlh.io/participants/events/3835-get-to-know-git","_blank");
+});
 $('.images-main').oncontextmenu = function(event) {
     event.preventDefault();
     event.stopPropagation();
