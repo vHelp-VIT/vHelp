@@ -6,15 +6,15 @@
     }
 </style>
 <script>
-     window.setInterval(function(){
-        if(dark == 0){
-        $('#customHead').css("background-color","rgba(128, 80, 250, 0.8)");
-        $('#customHead').css("box-shadow","0 2px 4px 0 black");
-    }
-        else if(dark == 1){
-        $('#customHead').css("background-color","rgb(25, 24, 32)");
+    window.setInterval(function () {
+        if (dark == 0) {
+            $('#customHead').css("background-color", "rgba(128, 80, 250, 0.8)");
+            $('#customHead').css("box-shadow", "0 2px 4px 0 black");
         }
-    },10);
+        else if (dark == 1) {
+            $('#customHead').css("background-color", "rgb(25, 24, 32)");
+        }
+    }, 10);
 </script>
 <div class="container">
     <% for(let ans of answers){ %>
@@ -66,7 +66,10 @@
                                     <% if(sub_ans.name==" "){ %>
                                     <b class="mx-2">anonymous</b>
                                     <% } %>
+
                                     <b class="mx-2"><%= sub_ans.name %></b>
+
+                                    
                                     <% if(sub_ans.campus=="Vellore"){  %>
                                     <span class="badge badge-success">Vellore</span>
                                     <% } %>
@@ -79,8 +82,19 @@
                                     <% if(sub_ans.campus=="Amravati"){  %>
                                     <span class="badge badge-warning">Amravati</span>
                                     <% } %>
+                                    <% if(sub_ans.insta){ %>
+                                        <span>
+                                            <a class="mx-4 my-2" href="<%= sub_ans.insta %>" target="_blank"><i
+                                                    class="fa fa-instagram" aria-hidden="true"></i><u> Insta Handle</u></a>
+                                        </span>
+                                        <% } %>
                                     </h5>
+                                    
+    
+
                                     <p class="mx-4 my-2"><b><%= sub_ans.ans %></b></p>
+
+
 
                                     <a class="mx-4 my-2" href="<%= sub_ans.link %>"
                                         target="_blank"><u><%= sub_ans.link %></u></a>
@@ -103,14 +117,20 @@
                         <form action="/update_ans/<%= ans._id %>" method="POST">
                             <div class="row">
                                 <div class="col-12 col-md-4 my-1">
-                                    <input type="text" placeholder="First name" class="form-control form-control-1"
+                                    <input type="text" placeholder="Name (optional)" class="form-control form-control-1"
                                         name="name_first">
                                 </div>
 
-                                <div class="col-12 col-md-4 my-1">
+                                <!-- <div class="col-12 col-md-4 my-1">
                                     <input type="text" placeholder="Last name" class="form-control form-control-1"
                                         name="name_last">
+                                </div> -->
+
+                                <div class="col-12 col-md-4 my-1">
+                                    <input type="text" placeholder="Instagram Profile URL (optional)"
+                                        class="form-control form-control-1" name="insta_handle">
                                 </div>
+
                                 <div class="form-group mx-3 my-1">
                                     <select id="inputCampus" class="form-control form-control-1" name="campus_name">
                                         <option selected>Vellore</option>
