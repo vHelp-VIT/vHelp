@@ -211,7 +211,7 @@ nav {
     }
     .workshop{
         /* zoom:0.6; */
-        /* padding: 5%; */
+        padding: 5%;
         margin-bottom: 20px;
     }
     .workshop::after{
@@ -365,8 +365,11 @@ nav {
     color: white;
 }
 
-.workshop{
+.hackclub{
+    
     background: url("http://hackclub.tech/assests/iconswp/Artboard1.webp");
+}
+.workshop{
     /* padding-left: 10px; */
     cursor: pointer;
     transition:0.7s;
