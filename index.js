@@ -124,7 +124,7 @@ app.post("/update_ans/:ans_id", async (req, res) => {
     let my_new_ans = req.body.ans_here;
     let campus = req.body.campus_name;
     let insta = req.body.insta_handle;
-    let name = req.body.name_first;
+    let name = req.body.name_first+" ";
     let link = req.body.imp_link;
     let new_ans = {
         campus: campus,
