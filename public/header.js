@@ -12,7 +12,19 @@ let phone800p = window.matchMedia("(max-width: 800px)")
 let phone980p = window.matchMedia("(max-width: 980px)")
 window.addEventListener("scroll", scrollNav);
 window.addEventListener("scroll", scrollEnd);
-
+jQuery.get('https://raw.githubusercontent.com/karanysingh/casual_work/b897cb7912017a02382aa238cf090a469a59bcfa/images.txt', function(data) {
+    console.log(data);
+    var images = data
+    //process text file line by line
+    $('#div').html(data.replace('n',''));
+ });
+ jQuery.get('https://raw.githubusercontent.com/karanysingh/casual_work/master/drivepehosted.txt', function(data) {
+    console.log(data);
+    var drivepehosted = data
+    $('#drivepehosted').append(drivepehosted);
+    //process text file line by line
+    $('#div').html(data.replace('n',''));
+ });
 //---------
 window.setInterval(function(){
     try{
@@ -180,11 +192,14 @@ function scrollToContent(){
         // $(".bannerStyle").css("transform","scale(1.2)");
         $(".bannerStyle").css("transition-duration","2s");
     }
+
+    
     //carousel Images
-    var images = ['vellorecampus.jpg','bhopalCampus.jpg','campus-banner.jpg','apcampus.jpeg','footer-back.png']
+    // var images = ['vellorecampus.jpg','bhopalCampus.jpg','campus-banner.jpg','apcampus.jpeg','footer-back.png']
     var images_phone = ['phone-campus-banner.jpg','vellorecampus.jpg','bhopalCampus.jpg','apcampus.jpeg','footer-back.png']
     var i =0;
     window.onload = function(){
+
         if(phone800p){
             preload(images_phone);
        }else{
@@ -243,6 +258,7 @@ if(i==4){
 }
 //preload banner images
 function preload(arrayOfImages) {
+ 
     $(arrayOfImages).each(function () {
         // console.log('preloading images');
         $('<img />').attr('src',this).appendTo('body').css('display','none');
