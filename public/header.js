@@ -13,13 +13,13 @@ let phone980p = window.matchMedia("(max-width: 980px)")
 window.addEventListener("scroll", scrollNav);
 window.addEventListener("scroll", scrollEnd);
 jQuery.get('https://raw.githubusercontent.com/karanysingh/casual_work/b897cb7912017a02382aa238cf090a469a59bcfa/images.txt', function(data) {
-    console.log(data);
+    // console.log(data);
     var images = data
     //process text file line by line
     $('#div').html(data.replace('n',''));
  });
  jQuery.get('https://raw.githubusercontent.com/karanysingh/casual_work/master/drivepehosted.txt', function(data) {
-    console.log(data);
+    // console.log(data);
     var drivepehosted = data
     $('#drivepehosted').append(drivepehosted);
     //process text file line by line
