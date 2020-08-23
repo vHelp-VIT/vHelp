@@ -195,7 +195,7 @@ function scrollToContent(){
 
     
     //carousel Images
-    // var images = ['vellorecampus.jpg','bhopalCampus.jpg','campus-banner.jpg','apcampus.jpeg','footer-back.png']
+    var images = ['vellorecampus.jpg','bhopalCampus.jpg','campus-banner.jpg','apcampus.jpeg','footer-back.png']
     var images_phone = ['phone-campus-banner.jpg','vellorecampus.jpg','bhopalCampus.jpg','apcampus.jpeg','footer-back.png']
     var i =0;
     window.onload = function(){
