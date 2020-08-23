@@ -174,6 +174,14 @@ app.get("/feeCalc",(req,res)=>{
     res.render("feeCalc");
 });
 
+app.get("/books",(req,res)=>{
+    res.render("books");
+})
+
+
+app.get("/gallery",(req,res)=>{
+    res.render("gallery");
+})
 
 ////////////////////////////////////////////////////////////////////////////////////
 // ///////////// all the below are admin rotes: Not working yet/////////////////////
