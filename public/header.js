@@ -18,13 +18,13 @@ window.addEventListener("scroll", scrollEnd);
 //     //process text file line by line
 //     $('#div').html(data.replace('n',''));
 //  });
-//  jQuery.get('https://raw.githubusercontent.com/karanysingh/casual_work/master/drivepehosted.txt', function(data) {
-//     console.log(data);
-//     var drivepehosted = data
-//     $('#drivepehosted').append(drivepehosted);
-//     //process text file line by line
-//     $('#div').html(data.replace('n',''));
-//  });
+ jQuery.get('https://raw.githubusercontent.com/karanysingh/casual_work/master/drivepehosted.txt', function(data) {
+    console.log(data);
+    var drivepehosted = data
+    $('#drivepehosted').append(drivepehosted);
+    //process text file line by line
+    $('#div').html(data.replace('n',''));
+ });
 //---------
 
 
