@@ -1,0 +1,98 @@
+<%- include('header') %>
+<style>
+    #customHead {
+        background-color: rgba(128, 80, 250, 0.8);
+        box-shadow: 0 2px 4px 0 black;
+    }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
+<script>
+    window.setInterval(function () {
+        if (dark == 0) {
+            $('#customHead').css("background-color", "rgba(128, 80, 250, 0.8)");
+            $('#customHead').css("box-shadow", "0 2px 4px 0 black");
+        }
+        else if (dark == 1) {
+            $('#customHead').css("background-color", "rgb(25, 24, 32)");
+        }
+    }, 10);
+</script>
+
+<div class="gitHosted">
+
+
+</div>
+
+<style>
+    .form-control-1 {
+        height: 35px;
+    }
+</style>
+
+Please note that keep this link is anonymous upto you... using this link you'll be able to update your galllery
+
+<form class="container" method="POST" action="/updateGallery/<%= galleryData._id %>">
+    <label class="sr-only" for="inlineFormInputGroupUsername2">Facebook</label>
+    <div class="input-group mb-2 mr-sm-2">
+        <div class="input-group-prepend">
+            <div class="input-group-text">@</div>
+        </div>
+        <input type="text" class="form-control form-control-1" placeholder="Gallery Name"
+            name="galleryname" value="<%=galleryData.galleryname %>">
+    </div>
+
+    <div class="input-group mb-2 mr-sm-2">
+        <div class="input-group-prepend">
+            <div class="input-group-text">@</div>
+        </div>
+        <input type="text" class="form-control form-control-1" placeholder="Author"
+            name="author" value="<%=galleryData.author%>">
+    </div>
+
+
+    <label class="sr-only" for="inlineFormInputGroupUsername2">Instagram Username</label>
+    <div class="input-group mb-2 mr-sm-2">
+        <div class="input-group-prepend">
+            <div class="input-group-text">@</div>
+        </div>
+        <input type="text" class="form-control form-control-1"
+            placeholder="Instagram" name="instagram" value="<%=galleryData.socialMedia.instagram %>">
+    </div>
+
+    <label class="sr-only" for="inlineFormInputGroupUsername2">Facebook</label>
+    <div class="input-group mb-2 mr-sm-2">
+        <div class="input-group-prepend">
+            <div class="input-group-text">@</div>
+        </div>
+        <input type="text" class="form-control form-control-1" placeholder="Facebook"
+            name="facebook" value="<%=galleryData.socialMedia.facebook %>">
+    </div>
+
+    <label class="sr-only" for="inlineFormInputGroupUsername2">LinkedIn</label>
+    <div class="input-group mb-2 mr-sm-2">
+        <div class="input-group-prepend">
+            <div class="input-group-text">@</div>
+        </div>
+        <input type="text" class="form-control form-control-1"  placeholder="LinkedIn"
+            name="linkedin" value="<%=galleryData.socialMedia.linkedin %>">
+    </div>
+
+    <label class="sr-only" for="inlineFormInputGroupUsername2">Email-Id</label>
+    <div class="input-group mb-2 mr-sm-2">
+        <div class="input-group-prepend">
+            <div class="input-group-text">@</div>
+        </div>
+        <input type="text" class="form-control form-control-1"  placeholder="EmailId"
+            name="email" value="<%=galleryData.email %>">
+    </div>
+
+    <div class="form-group">
+        <textarea class="form-control" rows="5" placeholder="Embed Code" name="embedCode" value="<%=galleryData.embedCode %>" ></textarea>
+    </div>
+    
+    <button type="submit" class="btn btn-primary mb-2">Update</button>
+</form>
+
+
+<%- include('footer') %>

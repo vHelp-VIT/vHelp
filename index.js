@@ -22,12 +22,14 @@ app.use(express.static(__dirname + '/public'));
 
 
 var mongo = async () => {
-    // mongoose.connect("mongodb://localhost:27017/vhelpblog", { useNewUrlParser: true });
-    await mongoose.connect("mongodb+srv://shivansh-12:shivansh@cluster0.vvpfe.mongodb.net/vHelp?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
+    mongoose.connect("mongodb://localhost:27017/vhelpblog", { useNewUrlParser: true });
+    // await mongoose.connect("mongodb+srv://shivansh-12:shivansh@cluster0.vvpfe.mongodb.net/vHelp?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
 };
 mongo()
 
 const question = mongoose.model('question', { question: String, category: Object, answer: Object, email: String });
+
+const gallery = mongoose.model('gallery', { embedCode: String, email: String, socialMedia: Object, author: String, galleryname: String });
 
 
 app.get("/", (req, res) => {
@@ -35,11 +37,11 @@ app.get("/", (req, res) => {
     else res.render('index', { foo: 0 });
 });
 
-let cat = []
+
 
 
 app.post("/", (req, res) => {
-
+    let cat = []
     categories = function () {
 
         if (req.body.radio_acad == "on") {
@@ -71,13 +73,13 @@ app.post("/", (req, res) => {
     if (ques.length != undefined) {
         let cat = categories();
         const newQuestion = new question({ question: ques, category: cat, answer: [], email: query_email });
-        question_id=newQuestion._id;
+        question_id = newQuestion._id;
         newQuestion.save()
     }
     /////////// mailing option //////////////////
     let mailOptions = {
         from: 'vhelp55@gmail.com',
-        to:  'vhelp55@gmail.com' ,
+        to: 'vhelp55@gmail.com',
         subject: 'Got a new query!!',
         text: `Hey, we got a new query: ${ques}`,
         html: `<p><br> Answer a new question <a href=https://vhelp.herokuapp.com/see/${question_id}>Click Here</a>!!</p>`
@@ -91,14 +93,14 @@ app.post("/", (req, res) => {
     });
     ///////////////// mailing option ends /////////////////
 
-    question.find(function (err, data) {
-        if (err) {
-            console.log(error);
-        }
-        else {
-            console.log(data);
-        }
-    });
+    // question.find(function (err, data) {
+    //     if (err) {
+    //         console.log(error);
+    //     }
+    //     else {
+    //         console.log(data);
+    //     }
+    // });
     res.redirect('/?stat=posted');
 });
 
@@ -107,15 +109,14 @@ app.get("/explore/:cat", async (req, res) => {
     let required_category = req.params.cat;
     let filtered = await question.find({ category: { $in: [required_category] } })
     res.render("answers", { answers: filtered.reverse() });
-
 });
 
-app.get("/see/:id",async(req,res)=>{
-    let questionn_id=req.params.id;
+app.get("/see/:id", async (req, res) => {
+    let questionn_id = req.params.id;
     console.log(questionn_id);
     let send_show_me = await question.find({ _id: questionn_id });
     // console.log("Show me is:", show_me);
-    res.render("seequestion",{showme: send_show_me});
+    res.render("seequestion", { showme: send_show_me });
 });
 
 
@@ -124,7 +125,7 @@ app.post("/update_ans/:ans_id", async (req, res) => {
     let my_new_ans = req.body.ans_here;
     let campus = req.body.campus_name;
     let insta = req.body.insta_handle;
-    let name = req.body.name_first+" ";
+    let name = req.body.name_first + " ";
     let link = req.body.imp_link;
     let new_ans = {
         campus: campus,
@@ -159,29 +160,138 @@ app.post("/update_ans/:ans_id", async (req, res) => {
         });
         ///////////////// mailing option ends /////////////////
     }
-    else{
+    else {
         console.log("No mail id was found in database!!");
     }
 
     res.redirect('back');
 });
 
-app.get("/tentative",(req,res)=>{
+
+
+/////////////// only static routes////////////////////////////
+app.get("/tentative", (req, res) => {
     res.render("tentative");
 });
-
-app.get("/feeCalc",(req,res)=>{
+app.get("/feeCalc", (req, res) => {
     res.render("feeCalc");
 });
-
-app.get("/books",(req,res)=>{
+app.get("/books", (req, res) => {
     res.render("books");
 })
+/////////////////// only static routes end ////////////////////////
+
+app.get("/gallery", async (req, res) => {
+    await gallery.find((err, allGalleries) => {
+        if (err) console.log(err);
+        else res.render("gallery", { allGalleries: allGalleries.reverse() });
+    });
+});
+
+app.get("/featureGallery", async (req, res) => {
+    res.render("featureGallery");
+});
+
+app.post("/featureGallery", async (req, res) => {
+    let instagram = req.body.instagram;
+    let facebook = req.body.facebook;
+    let linkedin = req.body.linkedin;
+    let email = req.body.email;
+    let embedCode = req.body.embedCode;
+    let author = req.body.author;
+    let galleryname = req.body.galleryname;
+    let socialMedia = {
+        instagram: instagram,
+        facebook: facebook,
+        linkedin: linkedin,
+    }
+    const newgallery = new gallery({ embedCode: embedCode, socialMedia: socialMedia, email: email, galleryname: galleryname, author: author });
+    newgallery.save();
+    console.log(newgallery._id);
+    let gallery_id=newgallery._id;
+    let mail_to=email;
+    if (mail_to != undefined) {
+        /////////// mailing option //////////////////
+        let mailOptions = {
+            from: 'vhelp55@gmail.com',
+            to: mail_to,
+            subject: 'Your query has been Answered!!',
+            text: 'Someone answered your query!!. Click on the below link to view ' + gallery_id,
+            html: `<p>Hey,<br>You started a new gallery, to update  <a href=http://localhost:3000/updateGallery/${gallery_id}>Clicking Here</a>!!</p>`
+        };
+        transporter.sendMail(mailOptions, function (error, info) {
+            if (error) {
+                console.log(error);
+            } else {
+                console.log('Email sent: ' + info.response);
+            }
+        });
+        ///////////////// mailing option ends /////////////////
+    }
+    res.redirect("featureGallery");
+});
+
+app.get("/updateGallery/:gallery_id", async (req, res) => {
+    let galleryid = req.params.gallery_id;
+    console.log(galleryid);
+    gallery.findOne({ _id: galleryid }, function (err, gallerydoc) {
+        if (err) console.log(err);
+        else{
+            console.log(gallerydoc);
+            res.render("updateGallery", { galleryData: gallerydoc });
+        }
+    });
+});
+
+app.post("/updateGallery/:gallery_id", async (req, res) => {
+    let instagram = req.body.instagram;
+    let facebook = req.body.facebook;
+    let linkedin = req.body.linkedin;
+    let email = req.body.email;
+    let embedCode = req.body.embedCode;
+    let author = req.body.author;
+    let galleryname = req.body.galleryname;
+    let socialMedia = {
+        instagram: instagram,
+        facebook: facebook,
+        linkedin: linkedin,
+    }
+    let galleryid = req.params.gallery_id;
+    
+    gallery.findOne({ _id: galleryid }, function (err, doc) {
+        doc.socialMedia = socialMedia;
+        doc.email = email;
+        doc.embedCode = embedCode;
+        doc.author = author;
+        doc.galleryname = galleryname;
+        doc.save();
+    });
+    let mail_to=email;
+    if (mail_to != undefined) {
+        /////////// mailing option //////////////////
+        let mailOptions = {
+            from: 'vhelp55@gmail.com',
+            to: mail_to,
+            subject: 'Your query has been Answered!!',
+            text: 'Someone answered your query!!. Click on the below link to view ' + galleryid,
+            html: `<p>Hey,<br>Update your gallery <a href=http://localhost:3000/updateGallery/${galleryid}>Clicking Here</a>!!</p>`
+        };
+        transporter.sendMail(mailOptions, function (error, info) {
+            if (error) {
+                console.log(error);
+            } else {
+                console.log('Email sent: ' + info.response);
+            }
+        });
+        ///////////////// mailing option ends /////////////////
+    }
+    res.send("Done check your mail!!");
+});
 
 
-app.get("/gallery",(req,res)=>{
-    res.render("gallery");
-})
+
+
+
 
 ////////////////////////////////////////////////////////////////////////////////////
 // ///////////// all the below are admin rotes: Not working yet/////////////////////
