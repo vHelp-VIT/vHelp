@@ -22,14 +22,16 @@ app.use(express.static(__dirname + '/public'));
 
 
 var mongo = async () => {
-    mongoose.connect("mongodb://localhost:27017/vhelpblog", { useNewUrlParser: true });
-    // await mongoose.connect("mongodb+srv://shivansh-12:shivansh@cluster0.vvpfe.mongodb.net/vHelp?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
+    // mongoose.connect("mongodb://localhost:27017/vhelpblog", { useNewUrlParser: true });
+    await mongoose.connect("mongodb+srv://shivansh-12:shivansh@cluster0.vvpfe.mongodb.net/vHelp?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
 };
 mongo()
 
 const question = mongoose.model('question', { question: String, category: Object, answer: Object, email: String });
 
 const gallery = mongoose.model('gallery', { embedCode: String, email: String, socialMedia: Object, author: String, galleryname: String });
+
+const laptop = mongoose.model('laptop', { model: String, link: String, imageLink: String, description:String, price: String });
 
 
 app.get("/", (req, res) => {
@@ -290,8 +292,38 @@ app.post("/updateGallery/:gallery_id", async (req, res) => {
 
 
 
+app.get("/recommendation", async(req,res)=>{
+    await laptop.find((err, alllaptops) => {
+        if (err) console.log(err);
+        else res.render("recommendations", { laptops: alllaptops.reverse() });
+    });
+});
 
 
+
+// for posting laptop recommendations
+
+app.get("/postrecommendation", async(req,res)=>{
+    res.render("postRecommendation");
+});
+
+
+//
+app.post("/postrecommendation", async(req,res)=>{
+    let model_name=req.body.model;
+    let image_link=req.body.image_link;
+    let site_link=req.body.site_link;
+    let price=req.body.price;
+    let desc=req.body.description;
+    console.log(model_name)
+    console.log(image_link)
+    console.log(site_link)
+    console.log(price)
+    console.log(desc)
+    let newLaptop= new laptop({model: model_name, link: site_link, imageLink: image_link, price: price, description:desc});
+    newLaptop.save();
+    res.redirect("/postRecommendation");
+});
 
 ////////////////////////////////////////////////////////////////////////////////////
 // ///////////// all the below are admin rotes: Not working yet/////////////////////

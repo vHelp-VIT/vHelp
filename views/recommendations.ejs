@@ -1,0 +1,76 @@
+<%- include('header') %>
+<style>
+    #customHead {
+        background-color: rgba(128, 80, 250, 0.8);
+        box-shadow: 0 2px 4px 0 black;
+    }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
+<script>
+    window.setInterval(function () {
+        if (dark == 0) {
+            $('#customHead').css("background-color", "rgba(128, 80, 250, 0.8)");
+            $('#customHead').css("box-shadow", "0 2px 4px 0 black");
+        }
+        else if (dark == 1) {
+            $('#customHead').css("background-color", "rgb(25, 24, 32)");
+        }
+    }, 10);
+</script>
+
+<% for(let laptop of laptops){ %>
+<div class="container">
+    <div class="questContainer row">
+        <div class="col-12 col-md-5">
+            <% if(!laptop.imageLink){ %>
+                <img src="https://media.istockphoto.com/vectors/woman-avatar-on-laptop-in-video-chat-vector-design-vector-id1248571669" class="mr-3" alt="Avatar" style="max-height: 300px; width: 100%; margin-top: 10px; align-self: center;"  >
+            <% } %> 
+
+            <% if(laptop.imageLink){ %>
+            <img src="<%= laptop.imageLink %>" class="mr-3" alt="<%= laptop.model %>">
+            <% } %> 
+
+        </div>
+
+        <div class="col-12 col-md-7" style="margin-top: 20px;">
+            <h3 class="mt-0"><%=laptop.model%></h3>
+            <!-- ram processor price badges  -->
+            <!-- <p>
+                <span class="badge badge-pill badge-primary">Primary</span>
+                <span class="badge badge-pill badge-secondary">Secondary</span>
+                <span class="badge badge-pill badge-success">Success</span>
+                
+            </p> -->
+            
+
+
+            <style>
+                .desc_box{
+                    letter-spacing: 1px;
+                    direction: ltr;
+                    text-align: justify;
+                }
+            </style>
+
+            <p><b><u>Specifications??</u></b> </p>
+            <p class="desc_box">
+                <%- laptop.description %>
+            </p>
+
+            <span class="badge badge-light"><h4><i class="fa fa-inr" aria-hidden="true"></i> <%=laptop.price%></h4></span>
+            <p>
+                <a href="<%=laptop.link%>" target="_blank">Learn More</a>
+            </p>
+            
+        </div>
+    </div>
+</div>
+<% } %>
+
+
+
+
+
+
+<%- include('footer') %>

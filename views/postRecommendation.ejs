@@ -1,0 +1,39 @@
+<%- include('header') %>
+
+<style>
+    #customHead {
+        background-color: rgba(128, 80, 250, 0.8);
+        box-shadow: 0 2px 4px 0 black;
+    }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
+<script>
+    window.setInterval(function () {
+        if (dark == 0) {
+            $('#customHead').css("background-color", "rgba(128, 80, 250, 0.8)");
+            $('#customHead').css("box-shadow", "0 2px 4px 0 black");
+        }
+        else if (dark == 1) {
+            $('#customHead').css("background-color", "rgb(25, 24, 32)");
+        }
+    }, 10);
+</script>
+
+
+<div class="container">
+    Laptop recommendation
+    <form method="POST" action="postRecommendation">
+        <input type="text" placeholder="model name" name="model"/>
+        <input type="text" placeholder="image link" name="image_link"/>
+        <input type="text" placeholder="link" name="site_link"/>
+        <input type="text" placeholder="price" name="price"/>
+        <br>
+        <textarea placeholder="why are you recommending?" name="description" rows="10" cols="50"></textarea>
+        <input type="submit"/>
+    </form>
+</div>
+
+
+
+<%- include('footer') %>
