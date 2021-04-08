@@ -43,6 +43,9 @@ app.get("/", (req, res) => {
 
 
 app.post("/", (req, res) => {
+
+    res.send("We are not recieving queries.")
+
     let cat = []
     categories = function () {
 
