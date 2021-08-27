@@ -1,12 +1,13 @@
 const express = require('express')
-const bodyparser = require('body-parser')
-const request = require('request')
 const mongoose = require("mongoose")
+const connection = require("./app/config/db")
 var nodemailer = require('nodemailer');
 const app = express()
-app.use(bodyparser.urlencoded({ extended: true }));
+require('dotenv').config()
+connection()
 
 
+app.use(express.json());
 
 var transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -20,12 +21,13 @@ var transporter = nodemailer.createTransport({
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
+// Routes
+const query = require('./routes/query/query')
 
-var mongo = async () => {
-    // mongoose.connect("mongodb://localhost:27017/vhelpblog", { useNewUrlParser: true });
-    await mongoose.connect("mongodb+srv://shivansh-12:shivansh@cluster0.vvpfe.mongodb.net/vHelp?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
-};
-mongo()
+
+
+app.use('/query', query)
+
 
 const question = mongoose.model('question', { question: String, category: Object, answer: Object, email: String });
 
