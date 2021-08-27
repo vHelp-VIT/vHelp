@@ -1,22 +1,12 @@
 const express = require('express')
 const mongoose = require("mongoose")
 const connection = require("./app/config/db")
-const nodemailer = require('nodemailer')
 const app = express()
 require('dotenv').config()
 connection()
 
 
 app.use(express.json());
-
-var transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: 'vhelp55@gmail.com',
-        pass: 'shivansh12'
-    }
-});
-
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
@@ -61,101 +51,101 @@ app.get("/featureGallery", async (req, res) => {
     res.render("featureGallery");
 });
 
-app.post("/featureGallery", async (req, res) => {
-    let instagram = req.body.instagram;
-    let facebook = req.body.facebook;
-    let linkedin = req.body.linkedin;
-    let email = req.body.email;
-    let embedCode = req.body.embedCode;
-    let author = req.body.author;
-    let galleryname = req.body.galleryname;
-    let socialMedia = {
-        instagram: instagram,
-        facebook: facebook,
-        linkedin: linkedin,
-    }
-    const newgallery = new gallery({ embedCode: embedCode, socialMedia: socialMedia, email: email, galleryname: galleryname, author: author });
-    newgallery.save();
-    console.log(newgallery._id);
-    let gallery_id=newgallery._id;
-    let mail_to=email;
-    if (mail_to != undefined) {
-        /////////// mailing option //////////////////
-        let mailOptions = {
-            from: 'vhelp55@gmail.com',
-            to: mail_to,
-            subject: 'Your query has been Answered!!',
-            text: 'Someone answered your query!!. Click on the below link to view ' + gallery_id,
-            html: `<p>Hey,<br>You started a new gallery, to update  <a href=http://localhost:3000/updateGallery/${gallery_id}>Clicking Here</a>!!</p>`
-        };
-        transporter.sendMail(mailOptions, function (error, info) {
-            if (error) {
-                console.log(error);
-            } else {
-                console.log('Email sent: ' + info.response);
-            }
-        });
-        ///////////////// mailing option ends /////////////////
-    }
-    res.redirect("featureGallery");
-});
+// app.post("/featureGallery", async (req, res) => {
+//     let instagram = req.body.instagram;
+//     let facebook = req.body.facebook;
+//     let linkedin = req.body.linkedin;
+//     let email = req.body.email;
+//     let embedCode = req.body.embedCode;
+//     let author = req.body.author;
+//     let galleryname = req.body.galleryname;
+//     let socialMedia = {
+//         instagram: instagram,
+//         facebook: facebook,
+//         linkedin: linkedin,
+//     }
+//     const newgallery = new gallery({ embedCode: embedCode, socialMedia: socialMedia, email: email, galleryname: galleryname, author: author });
+//     newgallery.save();
+//     console.log(newgallery._id);
+//     let gallery_id=newgallery._id;
+//     let mail_to=email;
+//     if (mail_to != undefined) {
+//         /////////// mailing option //////////////////
+//         let mailOptions = {
+//             from: 'vhelp55@gmail.com',
+//             to: mail_to,
+//             subject: 'Your query has been Answered!!',
+//             text: 'Someone answered your query!!. Click on the below link to view ' + gallery_id,
+//             html: `<p>Hey,<br>You started a new gallery, to update  <a href=http://localhost:3000/updateGallery/${gallery_id}>Clicking Here</a>!!</p>`
+//         };
+//         transporter.sendMail(mailOptions, function (error, info) {
+//             if (error) {
+//                 console.log(error);
+//             } else {
+//                 console.log('Email sent: ' + info.response);
+//             }
+//         });
+//         ///////////////// mailing option ends /////////////////
+//     }
+//     res.redirect("featureGallery");
+// });
 
-app.get("/updateGallery/:gallery_id", async (req, res) => {
-    let galleryid = req.params.gallery_id;
-    console.log(galleryid);
-    gallery.findOne({ _id: galleryid }, function (err, gallerydoc) {
-        if (err) console.log(err);
-        else{
-            console.log(gallerydoc);
-            res.render("updateGallery", { galleryData: gallerydoc });
-        }
-    });
-});
+// app.get("/updateGallery/:gallery_id", async (req, res) => {
+//     let galleryid = req.params.gallery_id;
+//     console.log(galleryid);
+//     gallery.findOne({ _id: galleryid }, function (err, gallerydoc) {
+//         if (err) console.log(err);
+//         else{
+//             console.log(gallerydoc);
+//             res.render("updateGallery", { galleryData: gallerydoc });
+//         }
+//     });
+// });
 
-app.post("/updateGallery/:gallery_id", async (req, res) => {
-    let instagram = req.body.instagram;
-    let facebook = req.body.facebook;
-    let linkedin = req.body.linkedin;
-    let email = req.body.email;
-    let embedCode = req.body.embedCode;
-    let author = req.body.author;
-    let galleryname = req.body.galleryname;
-    let socialMedia = {
-        instagram: instagram,
-        facebook: facebook,
-        linkedin: linkedin,
-    }
-    let galleryid = req.params.gallery_id;
+// app.post("/updateGallery/:gallery_id", async (req, res) => {
+//     let instagram = req.body.instagram;
+//     let facebook = req.body.facebook;
+//     let linkedin = req.body.linkedin;
+//     let email = req.body.email;
+//     let embedCode = req.body.embedCode;
+//     let author = req.body.author;
+//     let galleryname = req.body.galleryname;
+//     let socialMedia = {
+//         instagram: instagram,
+//         facebook: facebook,
+//         linkedin: linkedin,
+//     }
+//     let galleryid = req.params.gallery_id;
     
-    gallery.findOne({ _id: galleryid }, function (err, doc) {
-        doc.socialMedia = socialMedia;
-        doc.email = email;
-        doc.embedCode = embedCode;
-        doc.author = author;
-        doc.galleryname = galleryname;
-        doc.save();
-    });
-    let mail_to=email;
-    if (mail_to != undefined) {
-        /////////// mailing option //////////////////
-        let mailOptions = {
-            from: 'vhelp55@gmail.com',
-            to: mail_to,
-            subject: 'Your query has been Answered!!',
-            text: 'Someone answered your query!!. Click on the below link to view ' + galleryid,
-            html: `<p>Hey,<br>Update your gallery <a href=http://localhost:3000/updateGallery/${galleryid}>Clicking Here</a>!!</p>`
-        };
-        transporter.sendMail(mailOptions, function (error, info) {
-            if (error) {
-                console.log(error);
-            } else {
-                console.log('Email sent: ' + info.response);
-            }
-        });
-        ///////////////// mailing option ends /////////////////
-    }
-    res.send("Done check your mail!!");
-});
+//     gallery.findOne({ _id: galleryid }, function (err, doc) {
+//         doc.socialMedia = socialMedia;
+//         doc.email = email;
+//         doc.embedCode = embedCode;
+//         doc.author = author;
+//         doc.galleryname = galleryname;
+//         doc.save();
+//     });
+//     let mail_to=email;
+//     if (mail_to != undefined) {
+//         /////////// mailing option //////////////////
+//         let mailOptions = {
+//             from: 'vhelp55@gmail.com',
+//             to: mail_to,
+//             subject: 'Your query has been Answered!!',
+//             text: 'Someone answered your query!!. Click on the below link to view ' + galleryid,
+//             html: `<p>Hey,<br>Update your gallery <a href=http://localhost:3000/updateGallery/${galleryid}>Clicking Here</a>!!</p>`
+//         };
+//         transporter.sendMail(mailOptions, function (error, info) {
+//             if (error) {
+//                 console.log(error);
+//             } else {
+//                 console.log('Email sent: ' + info.response);
+//             }
+//         });
+//         ///////////////// mailing option ends /////////////////
+//     }
+//     res.send("Done check your mail!!");
+// });
 
 
 
