@@ -1,7 +1,7 @@
 const express = require('express')
 const mongoose = require("mongoose")
 const connection = require("./app/config/db")
-var nodemailer = require('nodemailer');
+const nodemailer = require('nodemailer')
 const app = express()
 require('dotenv').config()
 connection()

@@ -44,7 +44,7 @@ query.post("/new", async (req, res, next) => {
         let cat = req.body.categories
  
         const newQuestion = new question({ question: req.body.question_area, category: cat, email: req.body.query_email });
-        newQuestion.save()
+        await newQuestion.save()
 
         // /////////// mailing option //////////////////
         // let mailOptions = {
