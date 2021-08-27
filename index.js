@@ -33,6 +33,12 @@ const laptop = mongoose.model('laptop', { model: String, link: String, imageLink
 
 
 /////////////// only static routes////////////////////////////
+
+app.get("/", (req, res) => {
+    res.render('index');
+});
+
+
 app.get("/tentative", (req, res) => {
     res.render("tentative");
 });
