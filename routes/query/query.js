@@ -21,16 +21,17 @@ query.get('/:category', async (req, res, next) => {
     }
 })
 
-query.get('/:id', async (req, res, next) => {
+query.get('/see/:id', async (req, res, next) => {
 
     try {
-
+        console.log('Question Id ', req.params.id)
         if (!req.params.id) throw new Error('Required Parameter Not Found!!')
 
-        let question = await question.find({ _id: req.params.id });
-        res.render("seequestion", { showme: question });
+        let quest = await question.find({ _id: req.params.id });
+        res.render("seequestion", { showme: quest });
 
     } catch (err) {
+        console.log('Error ', err)
         next(err)
     }
 

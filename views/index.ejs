@@ -27,12 +27,12 @@
                     style="height: 702px;  overflow-y: hidden;">
                     <div class="banner-content text-center" style="max-height: 500px;">
                         <img id="logo" src="/logo.png">
-                        <p class="tagline" style="font-size: 20px;">
+                        <!-- <p class="tagline" style="font-size: 20px;">
                             <span id="typewriter_text"></span>
                             <span style="font-size: 30px;">|</span>
                             </span>
                         </p>
-                        <script src="typing.js"></script>
+                        <script src="typing.js"></script> -->
                         <br><br><br>
                         <div onclick="scrollToContent()" class="arrow-down"></div>
                     </div>
@@ -61,67 +61,66 @@
 
             <div class="col-md-9">
                 <!--  question posting forum -->
-                    <div class="form-group" style="margin-top: 10px;">
-                        <h5 style="margin-left: 4px;">Queries Section</h5>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <input id="mailArea" class="form-control form-control-1" style="margin-top: 4px;" ;"
-                                    type="input" name="query_email" placeholder="mail@mail.com">
-                            </div>
-                            <div class="col-md-12">
-                                <textarea class="form-control" id="formContent" rows="8"
-                                    placeholder="What's on your Mind!! Ask away your doubt!!"
-                                    name="question_area"></textarea>
-                            </div>
-
+                <div class="form-group" style="margin-top: 10px;">
+                    <h5 style="margin-left: 4px;">Queries Section</h5>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <input id="mailArea" class="form-control form-control-1" style="margin-top: 4px;" ;"
+                                type="input" name="query_email" placeholder="mail@mail.com">
+                        </div>
+                        <div class="col-md-12">
+                            <textarea class="form-control" id="formContent" rows="8"
+                                placeholder="What's on your Mind!! Ask away your doubt!!"
+                                name="question_area"></textarea>
                         </div>
 
-                        <div class="row" style="margin-left: 10px">
-                            <p id="colShow"><img alt="collapse-icon" src="collapse.webp"
-                                    style="width: 20px; height: 20px;">
-                            </p>
-                        </div>
-                        <div class="row" style="margin-left: 10px;">
-                            <div class="questTags col-6 col-md-4">
-                                <input class="form-check-input" type="checkbox" name="radio_acad" id="radio_acad">
-                                <label class="form-check-label">
-                                    Admission/ Counselling
-                                </label>
-                            </div>
-                            <div class="questTags col-6 col-md-4">
-                                <input class="form-check-input" type="checkbox" name="radio_place">
-                                <label class="form-check-label">
-                                    Placement
-                                </label>
-                            </div>
-                            <div class="questTags col-6 col-md-4">
-                                <input class="form-check-input" type="checkbox" name="radio_infra">
-                                <label class="form-check-label">
-                                    Infrastructure
-                                </label>
-                            </div>
-
-                            <div class="questTags col-6 col-md-4">
-                                <input class="form-check-input" type="checkbox" name="radio_club">
-                                <label class="form-check-label">
-                                    Clubs/Teams
-                                </label>
-                            </div>
-                            <div class="questTags col-6 col-md-4">
-                                <input class="form-check-input" type="checkbox" name="radio_acti">
-                                <label class="form-check-label">
-                                    Activities
-                                </label>
-                            </div>
-                            <div class="questTags col-6 col-md-4">
-                                <input class="form-check-input" type="checkbox" name="radio_gen">
-                                <label class="form-check-label">
-                                    General FAQ's
-                                </label>
-                            </div>
-                        </div>
-                        <button id="postQuest" class=" btn btn-light float-right" onclick="postQuestion()">Post Question</button>
                     </div>
+
+                    <div class="row" style="margin-left: 10px">
+                        <p id="colShow"><img alt="collapse-icon" src="collapse.webp" style="width: 20px; height: 20px;">
+                        </p>
+                    </div>
+                    <div class="row" style="margin-left: 10px;">
+                        <div class="questTags col-6 col-md-4">
+                            <input class="form-check-input" type="checkbox" name="radio_acad" id="radio_acad">
+                            <label class="form-check-label">
+                                Admission/ Counselling
+                            </label>
+                        </div>
+                        <div class="questTags col-6 col-md-4">
+                            <input class="form-check-input" type="checkbox" name="radio_place" id="radio_place">
+                            <label class="form-check-label">
+                                Placement
+                            </label>
+                        </div>
+                        <div class="questTags col-6 col-md-4">
+                            <input class="form-check-input" type="checkbox" name="radio_infra" id="radio_infra">
+                            <label class="form-check-label">
+                                Infrastructure
+                            </label>
+                        </div>
+
+                        <div class="questTags col-6 col-md-4">
+                            <input class="form-check-input" type="checkbox" name="radio_club" id="radio_club">
+                            <label class="form-check-label">
+                                Clubs/Teams
+                            </label>
+                        </div>
+                        <div class="questTags col-6 col-md-4">
+                            <input class="form-check-input" type="checkbox" name="radio_acti" id="radio_acti">
+                            <label class="form-check-label">
+                                Activities
+                            </label>
+                        </div>
+                        <div class="questTags col-6 col-md-4">
+                            <input class="form-check-input" type="checkbox" name="radio_gen" id="radio_gen">
+                            <label class="form-check-label">
+                                General FAQ's
+                            </label>
+                        </div>
+                    </div>
+                    <button id="postQuest" class=" btn btn-light float-right" onclick="postQuestion()"><span id="postQuestionButton">Post Question</span></button>
+                </div>
             </div>
 
             <div class="col-md-3">
@@ -130,39 +129,32 @@
                         style="background-color: rgb(128, 80, 250);margin-bottom: -10px;cursor: default;"
                         class="list-group-item  d-flex justify-content-between align-items-center">
                         <p><b>Asked Questions!</b></p>
-                        <!-- <span class="badge badge-primary badge-pill">14</span> -->
                     </li>
                     <li class="list-group-item  d-flex justify-content-between align-items-center">
-                        <a alt="link-to-academics-questions" href="/explore/academics"><i class="fa fa-book"
+                        <a alt="link-to-academics-questions" href="/query/academics"><i class="fa fa-book"
                                 aria-hidden="true"></i>
                             Admission/ Counselling</a>
-                        <!-- <span class="badge badge-primary badge-pill">14</span> -->
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                        <a alt="link-to-placements-questions" href="/explore/placement"><i class="fa fa-coffee"
+                        <a alt="link-to-placements-questions" href="/query/placement"><i class="fa fa-coffee"
                                 aria-hidden="true"></i> Placements</a>
-                        <!-- <span class="badge badge-primary badge-pill">2</span> -->
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                        <a alt="link-to-infrastructure" href="/explore/infrastructure"><i class="fa fa-building"
+                        <a alt="link-to-infrastructure" href="/query/infrastructure"><i class="fa fa-building"
                                 aria-hidden="true"></i> Infrastructure</a>
-                        <!-- <span class="badge badge-primary badge-pill">1</span> -->
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                        <a alt="link-to-clubsteams-questions" href="/explore/clubs_teams"><i class="fa fa-cube"
+                        <a alt="link-to-clubsteams-questions" href="/query/clubs_teams"><i class="fa fa-cube"
                                 aria-hidden="true"></i> Clubs/Teams</a>
-                        <!-- <span class="badge badge-primary badge-pill">1</span> -->
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                        <a alt="link-to-activities-related-questions" href="/explore/activities"><i
+                        <a alt="link-to-activities-related-questions" href="/query/activities"><i
                                 class="fa fa-pencil-square-o" aria-hidden="true"></i> Activities</a>
-                        <!-- <span class="badge badge-primary badge-pill">1</span> -->
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                        <a alt="link-to-general-questions" href="/explore/general" <i class="fa fa-folder"
+                        <a alt="link-to-general-questions" href="/query/general"> <i class="fa fa-folder"
                             aria-hidden="true"></i>
                             General FAQ's</a>
-                        <!-- <span class="badge badge-primary badge-pill">1</span> -->
                     </li>
                 </ul>
             </div>
@@ -172,7 +164,7 @@
 
     </div>
 
-    <div class="container">
+    <!-- <div class="container">
         <div class="questContainer row d-flex justify-content-center">
             <div class="newBanner col-md-4">
                 <h6>vHelp</h6><a href="https://www.instagram.com/vhelp55/" target="_blank">
@@ -191,7 +183,7 @@
                     allowfullscreen></iframe>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="container">
         <div class="questContainer row">
